@@ -46,8 +46,15 @@ device = torch.device("cuda:{}".format(opt.gpu) if torch.cuda.is_available() els
 
 #train_tasks = create_task_flags('all', opt.dataset, with_noise=False)
 #print(train_tasks)
-train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
-pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+
+#train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+#pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+
+train_tasks = {'semantic': 23}
+pri_tasks = {'semantic': 23}
+
+#train_tasks = {'normals': 3}
+#pri_tasks = {'normals': 3}
 
 #pri_tasks = create_task_flags(opt.task, opt.dataset, with_noise=False)
 #print(pri_tasks)
@@ -118,7 +125,7 @@ if opt.load_model == True:
 
 if opt.dataset == 'sim_warehouse':
     print("\nSTEP. Loading datasets...")
-    batch_size = 16
+    batch_size = 4
     train_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/train/datalist_train_warehouse_sim.list', split='train'),batch_size=batch_size,num_workers=0, shuffle=True)#num_workers=0 otherwise there is an error. Need to see why
     eval_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/test/datalist_test_warehouse_sim.list', split='eval'),batch_size=1)
 
@@ -148,10 +155,17 @@ if opt.load_model == True:
 else:
     index = 0
 
+
+def force_cudnn_initialization():
+    s = 32
+    dev = torch.device('cuda')
+    torch.nn.functional.conv2d(torch.zeros(s, s, s, s, device=dev), torch.zeros(s, s, s, s, device=dev))
+
 while index < total_epoch:
     model.train()
-    
+    force_cudnn_initialization()
     for i,multitaskdata in ((enumerate(tqdm(train_loader)))):
+        
         #print(i,len(train_loader))
         image = multitaskdata['rgb'].to(device)
         train_target = {task_id: multitaskdata[task_id].to(device) for task_id in train_tasks.keys()}
