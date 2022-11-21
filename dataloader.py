@@ -85,7 +85,7 @@ def datasets_resolutions():
         'warehouse_sim': {
             'full' : (720, 1280),
             'half' : (360, 640),
-            'mini' : (160, 320)    
+            'mini' : (180, 320)    
         }
     }
     return resolution_dict
@@ -115,7 +115,7 @@ class DecnetDataloader(Dataset):
         self.root = '.'
         self.dataset_type = 'warehouse_sim'
         self.resolution_dict = datasets_resolutions()
-        self.resolution = self.resolution_dict[self.dataset_type]['mini']
+        self.resolution = self.resolution_dict[self.dataset_type]['half']
         self.varying_sparsities = False
         self.augment = True
         
@@ -146,7 +146,7 @@ class DecnetDataloader(Dataset):
                         "rgb": data_columns[0],
                         "depth": data_columns[1],
                         "semantic": data_columns[2],
-                        "normals" : data_columns[3]
+                        "normals" : data_columns[3].replace('normals','normals_npy')+'.npy'
                     })
                     
     def __len__(self):
@@ -214,7 +214,7 @@ class DecnetDataloader(Dataset):
             transformed_semantic = t_dep(pil_semantic).long()
             transformed_normals = t_dep(pil_normals).type(torch.cuda.FloatTensor)
     
-        one_hot_semantic = torch.nn.functional.one_hot(transformed_semantic.squeeze(),num_classes=23)
+        #one_hot_semantic = torch.nn.functional.one_hot(transformed_semantic.squeeze(),num_classes=23)
         return self.data_sample(file_id, transformed_rgb, transformed_depth, transformed_semantic.squeeze(), transformed_normals)
 
 
@@ -239,7 +239,10 @@ class DecnetDataloader(Dataset):
             rgb = rgb[:,:,:3]
         depth = np.array(Image.open(self.files[index]['depth']))
         semantic = np.load(self.files[index]['semantic']).astype(np.float32)
-        normals = np.array(Image.open(self.files[index]['normals']))
+        
+        #normals = np.array(Image.open(self.files[index]['normals']))
+        normals = np.load(self.files[index]['normals'])#.astype(np.float32)
+        
         file_id = self.files[index]['rgb']
         #random_sample_no = self.files[index]['random_sampling'] #Only for NYUv2
         transformed_data_sample = self.decnet_transform(file_id, rgb, depth, semantic, normals)

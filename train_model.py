@@ -13,20 +13,28 @@ from models.model_GuideDepth import GuideDepth
 from utils import *
 from dataloader import DecnetDataloader
 from tqdm import tqdm
+from autolambda_code import SimWarehouse#s NYUv2,SimWarehouse
+
 
 """ Script for training MTL models """
 from torch.utils.data import DataLoader
 
 parser = argparse.ArgumentParser(description='Multi-task/Auxiliary Learning: Dense Prediction Tasks')
 
-parser.add_argument('--network', default='DDRNet', type=str, help='e.g. SegNet_split, SegNet_mtan, ResNet_split, Resnet_mtan, EdgeSegNet')
+#Generic settings
+parser.add_argument('--seed', default=0, type=int, help='random seed ID')
+parser.add_argument('--gpu', default=0, type=int, help='gpu ID')
+#Training settings
+parser.add_argument('--batch_size', default=8, type=int, help='quite self-xplanatory')
+parser.add_argument('--total_epochs', default=50, type=int, help='quite self-xplanatory')
+#Task settings
 parser.add_argument('--weight', default='equal', type=str, help='weighting methods: equal, dwa, uncert')
 parser.add_argument('--task', default='all', type=str, help='primary tasks, use all for MTL setting')
-parser.add_argument('--dataset', default='sim_warehouse', type=str, help=',sim-warehouse,nyuv2, cityscapes')
-parser.add_argument('--seed', default=0, type=int, help='random seed ID')
+parser.add_argument('--dataset', default='sim_warehouse', type=str, help='Data from simulated warehouse (sim_warehouse) or NYUv2 indoor data (nyuv2)')
+#Network settings
+parser.add_argument('--network', default='DDRNet', type=str, help='e.g. SegNet_split, SegNet_mtan, ResNet_split, Resnet_mtan, EdgeSegNet')
 parser.add_argument('--load_model', action='store_true', help='pass flag to load checkpoint')
 parser.add_argument('--grad_method', default='none', type=str, help='graddrop, pcgrad, cagrad')
-parser.add_argument('--gpu', default=0, type=int, help='gpu ID')
 
 opt = parser.parse_args()
 
@@ -47,11 +55,11 @@ device = torch.device("cuda:{}".format(opt.gpu) if torch.cuda.is_available() els
 #train_tasks = create_task_flags('all', opt.dataset, with_noise=False)
 #print(train_tasks)
 
-#train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
-#pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
 
-train_tasks = {'semantic': 23}
-pri_tasks = {'semantic': 23}
+#train_tasks = {'semantic': 23}
+#pri_tasks = {'semantic': 23}
 
 #train_tasks = {'normals': 3}
 #pri_tasks = {'normals': 3}
@@ -87,7 +95,7 @@ if opt.load_model == True:
     checkpoint = torch.load(f"models/model_checkpoint_{model_name}_{dataset_name}.pth")
     model.load_state_dict(checkpoint["model_state_dict"]) 
 
-total_epoch = 200
+total_epoch = opt.total_epochs
 
 # choose task weighting here
 if opt.weight == 'uncert':
@@ -122,25 +130,66 @@ elif "DDRNet" in opt.network:
 if opt.load_model == True:
     optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     scheduler.load_state_dict(checkpoint["scheduler_state_dict"])
+    
+print("\nSTEP. Loading datasets...")
 
 if opt.dataset == 'sim_warehouse':
     print("\nSTEP. Loading datasets...")
-    batch_size = 4
+    '''
+    batch_size = opt.batch_size
     train_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/train/datalist_train_warehouse_sim.list', split='train'),batch_size=batch_size,num_workers=0, shuffle=True)#num_workers=0 otherwise there is an error. Need to see why
-    eval_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/test/datalist_test_warehouse_sim.list', split='eval'),batch_size=1)
-
-'''Not implemented yet
+    test_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/test/datalist_test_warehouse_sim.list', split='eval'),batch_size=1)
+    '''
+    dataset_path = 'dataset/sim_warehouse'
+    batch_size = opt.batch_size 
+    train_set = SimWarehouse(root=dataset_path, train=True, augmentation=True)
+    train_loader = torch.utils.data.DataLoader(
+        dataset=train_set,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=4
+    )
+    test_set = SimWarehouse(root=dataset_path, train=False)
+    test_loader = torch.utils.data.DataLoader(
+        dataset=test_set,
+        batch_size=batch_size,
+        shuffle=False
+    )    
 elif opt.dataset == 'nyuv2':
     dataset_path = 'dataset/nyuv2'
+    batch_size = opt.batch_size 
     train_set = NYUv2(root=dataset_path, train=True, augmentation=True)
+    train_loader = torch.utils.data.DataLoader(
+        dataset=train_set,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=4
+    )
     test_set = NYUv2(root=dataset_path, train=False)
-    batch_size = 16
-'''
+    test_loader = torch.utils.data.DataLoader(
+        dataset=test_set,
+        batch_size=batch_size,
+        shuffle=False
+    )    
+else:
+    raise ValueError
     
+#Visualize data for sanity check
+train_sample = next(iter(train_loader))  
+test_sample = next(iter(test_loader))
 
+
+data_sample = train_sample
+
+print(f"Data sanity check. RGB.shape: {data_sample['rgb'].shape},\tDepth.shape {data_sample['depth'].shape},\
+    \tSemantic.shape {data_sample['semantic'].shape},\tNormals.shape {data_sample['normals'].shape}")
+#print(test_sample)#
+
+#sanity_train_target = {task_id: data_sample[task_id].to(device) for task_id in train_tasks.keys()}
+#print('sanity_train_target',sanity_train_target.shape)
 # Train and evaluate multi-task network
 train_batch = len(train_loader)
-test_batch = len(eval_loader)
+test_batch = len(test_loader)
 
 #print(train_batch, test_batch)
 
@@ -171,6 +220,7 @@ while index < total_epoch:
         train_target = {task_id: multitaskdata[task_id].to(device) for task_id in train_tasks.keys()}
 
         optimizer.zero_grad()
+        #print(image.shape)
         train_pred = model(image)
 
         #print(train_tasks)
@@ -194,7 +244,7 @@ while index < total_epoch:
 
     model.eval()
     with torch.no_grad():
-        for multitaskdatatest in eval_loader:
+        for multitaskdatatest in test_loader:
             image = multitaskdatatest['rgb'].to(device)
             
             test_target = {task_id: multitaskdatatest[task_id].to(device) for task_id in train_tasks.keys()}
