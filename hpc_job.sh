@@ -1,9 +1,9 @@
 #!/bin/sh
 ### General options
 ### –- specify queue --
-#BSUB -q gpuv100
+#BSUB -q gpua100
 ### -- set the job Name --
-#BSUB -J auto_lambda
+#BSUB -J mtl-world
 ### -- ask for number of cores (default: 1) --
 #BSUB -n 1
 ### -- Select the resources: 1 gpu in exclusive process mode --
@@ -11,11 +11,11 @@
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
 #BSUB -W 24:00
 # request GB of system-memory
-#BSUB -R "rusage[mem=8GB]"
+#BSUB -R "rusage[mem=16GB]"
 ### -- set the email address --
 # please uncomment the following line and put in your e-mail address,
 # if you want to receive e-mail notifications on a non-default address
-#BSUB -u s165495@student.dtu.dk
+#BSUB -u @elektro.dtu.dk
 ### -- send notification at start --
 #BSUB -B
 ### -- send notification at completion--

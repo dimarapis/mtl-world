@@ -200,7 +200,8 @@ class TaskMetric:
 
             metric_str += ' {} {:.4f} {:.4f}'\
                 .format(task_id.capitalize(), self.metric[task_id][e, 0], self.metric[task_id][e, 1])
-
+            if task_id == 'depth':
+                depth_loss = self.metric[task_id][e, 0]
         if self.include_mtl:
             # Pre-computed single task learning performance using trainer_dense_single.py
             if self.dataset == 'nyuv2':
@@ -224,7 +225,8 @@ class TaskMetric:
 
             self.metric['all'][e] = delta_mtl / len(stl)
             metric_str += ' | All {:.4f}'.format(self.metric['all'][e])
-        return metric_str
+            
+        return metric_str,depth_loss
 
     def get_best_performance(self, task):
         e = self.epoch_counter

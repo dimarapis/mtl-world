@@ -84,6 +84,57 @@ class DataTransform(object):
         return data_dict
 
 
+class NYUv2(data.Dataset):
+    """
+    NYUv2 dataset, 3 tasks + 1 generated useless task
+    Included tasks:
+        1. Semantic Segmentation,
+        2. Depth prediction,
+        3. Surface Normal prediction,
+        4. Noise prediction [to test auxiliary learning, purely conflict gradients]
+    """
+    def __init__(self, root, train=True, augmentation=False):
+        self.train = train
+        self.root = os.path.expanduser(root)
+        self.augmentation = augmentation
+
+        # read the data file
+        if train:
+            self.data_path = root + '/train'
+        else:
+            self.data_path = root + '/test'
+
+        # calculate data length
+        self.data_len = len(fnmatch.filter(os.listdir(self.data_path + '/rgb_npy'), '*.npy'))
+        self.noise = torch.rand(self.data_len, 1, 288, 384)
+
+    def __getitem__(self, index):
+        # load data from the pre-processed npy files
+        file = self.data_path + '/rgb_npy/{:d}.npy'.format(index)
+
+        image = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/rgb_npy/{:d}.npy'.format(index)), -1, 0)).float()
+        semantic = torch.from_numpy(np.load(self.data_path + '/semantic_npy/{:d}.npy'.format(index))).long()
+        depth = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/depth_npy/{:d}.npy'.format(index)), -1, 0)).float()
+        normal = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/normals_npy/{:d}.npy'.format(index)), -1, 0)).float()
+        #noise = self.noise[index].float()
+
+        data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
+
+        
+        
+        # apply data augmentation if required
+        #if self.augmentation:
+        #    data_dict = DataTransform(crop_size=[288, 384], scales=[1.0, 1.2, 1.5])(data_dict)
+
+        #normalized_image = 2. * data_dict.pop('rgb') - 1.  # normalised to [-1, 1]
+        #data_dict['rgb'] = normalized_image
+        #return im, data_dict
+    
+        return data_dict
+    
+    def __len__(self):
+        return self.data_len
+
 class SimWarehouse(data.Dataset):
     """
     SimWarehouse dataset, 3 tasks + 1 generated useless task
@@ -143,9 +194,9 @@ class SimWarehouse(data.Dataset):
             image_np = np.load(self.files[index]['rgb'])
             if np.shape(image_np)[2] == 4:
                 image_np = image_np[:,:,:3]
-            image = torch.from_numpy(np.moveaxis(image_np, -1, 0)).float()
+            image = torch.from_numpy(np.moveaxis(image_np, -1, 0)).float() / 255.0
             semantic = torch.from_numpy(np.load(self.files[index]['semantic'])).long()
-            depth = torch.from_numpy(np.load(self.files[index]['depth'])).float()#, -1, 0)).float()
+            depth = torch.from_numpy(np.load(self.files[index]['depth'])).float() / 1000.0#, -1, 0)).float()
             normal = torch.from_numpy(np.moveaxis(np.load(self.files[index]['normals']), -1, 0)).float()
             #noise = self.noise[index].float()
         
@@ -179,7 +230,9 @@ class SimWarehouse(data.Dataset):
         # transformed_data_sample = DecnetDataloader.decnet_transform(file_id, rgb, depth, semantic, normals)
 
         # return transformed_data_sample
-        
+
+        # apply data augmentation if required
+            #data_dict['rgb'] = self.normalize(data_dict['rgb'])
             
             return data_dict
 
@@ -208,3 +261,7 @@ class SimWarehouse(data.Dataset):
     def __len__(self):
         #print('datalength',self.data_len)
         return self.data_len
+    
+    def normalize(self,data):
+        normalization = transforms.ToTensor()
+        return normalization(data)
