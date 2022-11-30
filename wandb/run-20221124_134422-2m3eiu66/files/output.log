@@ -1,0 +1,26 @@
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+  0%|                                                                                                                                                          | 0/100 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+  9%|█████████████▏                                                                                                                                    | 9/100 [00:00<00:05, 16.81it/s]
+STEP. Loading datasets...
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:04<00:00, 20.02it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 364, in <module>
+    wandb.log(current_loss, step = index)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1548, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1334, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary
+Entering evaluation phase...
+Epoch 0000 | TRAIN:(' Depth 2.9810 2.9810', 2.980989081154829) || TEST: Depth 1.7124 1.7124 | All -0.7593 | Best: All -0.7593
+Task Weighting | Depth 1.0000
+1.712360793799855 inf

@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.4.0-132-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.11",
+    "heartbeatAt": "2022-11-24T13:13:38.688051",
+    "startedAt": "2022-11-24T13:13:37.590822",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2070 Super with Max-Q Design",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--wandb"
+    ],
+    "state": "running",
+    "program": "train_model.py",
+    "codePath": "train_model.py",
+    "git": {
+        "remote": "https://github.com/dimarapis/mtl-world.git",
+        "commit": "666dad122adb28b0b3a8313cabe34b723e0b790b"
+    },
+    "email": "dimarapis@hotmaill.com",
+    "root": "/home/dim/mdpi_robotics/mtl-world",
+    "host": "dim-dtu",
+    "username": "dim",
+    "executable": "/home/dim/anaconda3/envs/pytorchenv/bin/python"
+}

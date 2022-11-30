@@ -9,27 +9,36 @@ from models.model_SegNet import SegNetSplit, SegNetMTAN
 from models.model_EdgeSegNet import EdgeSegNet
 from models.model_DDRNet import DualResNet, BasicBlock
 from models.model_GuideDepth import GuideDepth
-#from create_dataset import *
+
 from utils import *
 from dataloader import DecnetDataloader
 from tqdm import tqdm
 from autolambda_code import SimWarehouse, NYUv2
 import visualizer
 
+import segmentation_models_pytorch as smp 
+import wandb
+
+
+
 """ Script for training MTL models """
 from torch.utils.data import DataLoader
 
 parser = argparse.ArgumentParser(description='Multi-task/Auxiliary Learning: Dense Prediction Tasks')
 
+#Project settings
+parser.add_argument('--project_name', type=str, default='MTLwarehouse', help='Project name')
+parser.add_argument('--wandb', action='store_true', help='Use wandb logger')
 #Generic settings
 parser.add_argument('--seed', default=0, type=int, help='random seed ID')
 parser.add_argument('--gpu', default=0, type=int, help='gpu ID')
 #Training settings
-parser.add_argument('--batch_size', default=16, type=int, help='quite self-xplanatory')
-parser.add_argument('--total_epochs', default=100, type=int, help='quite self-xplanatory')
+parser.add_argument('--batch_size', default=8, type=int, help='quite self-xplanatory')
+parser.add_argument('--total_epochs', default=50, type=int, help='quite self-xplanatory')
+parser.add_argument('--lr', default=1e-4, type=float, help='learning rate')
 #Task settings
 parser.add_argument('--weight', default='equal', type=str, help='weighting methods: equal, dwa, uncert')
-parser.add_argument('--task', default='all', type=str, help='primary tasks, use all for MTL setting')
+parser.add_argument('--task', default='semantic', type=str, help='primary tasks, use all for MTL setting')
 parser.add_argument('--dataset', default='nyuv2', type=str, help='Data from simulated warehouse (sim_warehouse) or NYUv2 indoor data (nyuv2)')
 #Network settings
 parser.add_argument('--network', default='DDRNet', type=str, help='e.g. SegNet_split, SegNet_mtan, ResNet_split, Resnet_mtan, EdgeSegNet')
@@ -37,6 +46,14 @@ parser.add_argument('--load_model', action='store_true', help='pass flag to load
 parser.add_argument('--grad_method', default='none', type=str, help='graddrop, pcgrad, cagrad')
 
 opt = parser.parse_args()
+
+
+#Initialize weights and biases logger
+if opt.wandb == True:
+    print("Started logging in wandb")
+    wandb.init(project=str(opt.project_name),entity='wandbdimar',name='{}_{}'.format(str(opt.dataset)[0],opt.network))
+    wandb.config.update(opt)
+
 
 torch.manual_seed(opt.seed)
 np.random.seed(opt.seed)
@@ -55,11 +72,11 @@ device = torch.device("cuda:{}".format(opt.gpu) if torch.cuda.is_available() els
 #train_tasks = create_task_flags('all', opt.dataset, with_noise=False)
 #print(train_tasks)
 
-train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
-pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+#train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
+#pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
 
-#train_tasks = {'semantic': 23}
-#pri_tasks = {'semantic': 23}
+train_tasks = {'semantic': 23}
+pri_tasks = {'semantic': 23}
 
 #train_tasks = {'normals': 3}
 #pri_tasks = {'normals': 3}
@@ -88,6 +105,13 @@ elif opt.network == "GuidedDepth":
     model = GuideDepth(train_tasks).to(device) 
 elif opt.network == "DDRNet":
     model = DualResNet(BasicBlock, [2, 2, 2, 2], train_tasks, planes=32, spp_planes=128, head_planes=64).to(device)
+elif opt.network == "Segmentation":
+    model = smp.Unet(
+        encoder_name="resnet34",        # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
+        encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
+        in_channels=3,                  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
+        classes=23,                      # model output channels (number of classes in your dataset)
+    ).to(device)     
 else:
     raise ValueError 
    
@@ -106,7 +130,7 @@ if opt.weight in ['dwa', 'equal']:
     lambda_weight = np.ones([total_epoch, len(train_tasks)])
     #print('lambdaweight',lambda_weight)
     params = model.parameters()
-
+'''
 # define or load optimizer and scheduler
 if "ResNet" in opt.network:
     optimizer = optim.SGD(params, lr=0.1, weight_decay=1e-4, momentum=0.9)
@@ -122,11 +146,20 @@ elif "GuidedDepth" in opt.network:
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.5)
 elif "DDRNet" in opt.network:
     optimizer = optim.Adam(params, lr=1e-3)#, weight_decay=5e-4, momentum=0.9)
+    #optimizer = optim.Adam(params, lr=opt.lr)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
+    #scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[20,30,40,45], gamma=0.1)
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.5) # Just winging this one, 
     # should try ty implement the one in original paper
+elif "Segmentation" in opt.network:
+    optimizer = optim.Adam(params, lr=1e-3)#, weight_decay=5e-4, momentum=0.9)
+    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.5) # Just winging this one, 
+'''
 
+#UNIVERSAL OPTIMIZERS AND LR SCHEDULER
+optimizer = optim.Adam(params, lr=opt.lr)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
+scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[20,30,40,45], gamma=0.1)
 
-opt.load_model = False
+#opt.load_model = False
 
 if opt.load_model == True:
     checkpoint = torch.load(f"models/model_{model_name}_{dataset_name}_epoch34.pth")#        path = f"models/model_{model_name}_{dataset_name}_epoch{index}.pth"
@@ -199,8 +232,12 @@ test_batch = len(test_loader)
 #print(train_batch, test_batch)
 
 
-train_metric = TaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)
-test_metric = TaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset, include_mtl=True)
+#train_metric = TaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)
+#test_metric = TaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)#, include_mtl=True)
+
+
+train_metric = SingleTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)
+test_metric = SingleTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)#, include_mtl=True)
 
 # load loss and initialize index/epoch
 if opt.load_model == True:
@@ -243,9 +280,12 @@ while index < total_epoch:
         optimizer.zero_grad()
         #print(image.shape)
         train_pred = model(image)
-        #if i == 0:
+        print(f'train_pred[0]_shape {train_pred[0].shape}')
+        print(torch.min(train_pred[0]), torch.max(train_pred[0]))
+
+        if i == 0:
             #print(multitaskdata['file'])
-            #min_max_sanity_check(multitaskdata)
+            min_max_sanity_check(multitaskdata)
             #print(f'prediction {torch_min_max(train_pred[0])}')
         
         #print(train_tasks)
@@ -276,6 +316,7 @@ while index < total_epoch:
             test_target = {task_id: multitaskdatatest[task_id].to(device) for task_id in train_tasks.keys()}
 
             test_pred = model(image)
+            #print(f'test_pred[0]_shape {test_pred[0].shape}')
             if i_test == 0:
                 #print(multitaskdatatest['file'])
                 #min_max_sanity_check(multitaskdatatest)
@@ -327,6 +368,8 @@ while index < total_epoch:
     # Save full model
     current_loss = depth_loss
     print(current_loss,best_test_str)
+    if opt.wandb:
+        wandb.log({'current_loss':current_loss}, step = index)
 
     if current_loss < best_test_str:
         file = f"models/model_{model_name}_{dataset_name}_epoch{saving_epoch}.pth"

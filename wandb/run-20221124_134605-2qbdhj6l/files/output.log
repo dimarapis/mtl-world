@@ -1,0 +1,50 @@
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([8, 3, 288, 384]),	Depth.shape torch.Size([8, 1, 288, 384]),    	Semantic.shape torch.Size([8, 288, 384]),	Normals.shape torch.Size([8, 3, 288, 384])
+  0%|                                                                                                                                                          | 0/100 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:04<00:00, 20.16it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN:(' Depth 2.9588 2.9588', 2.958786174636218) || TEST: Depth 1.9407 1.9407 | All -0.9050 | Best: All -0.9050
+Task Weighting | Depth 1.0000
+1.9407162740851804 inf
+Saving full model
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:05<00:00, 18.52it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN:(' Depth 1.3627 1.3627', 1.3627303855224229) || TEST: Depth 1.0621 1.0621 | All -0.3444 | Best: All -0.3444
+Task Weighting | Depth 1.0000
+1.0621142684776923 1.9407162740851804
+Saving full model
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:05<00:00, 18.83it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN:(' Depth 1.0690 1.0690', 1.0690331150150898) || TEST: Depth 0.9461 0.9461 | All -0.2703 | Best: All -0.2703
+Task Weighting | Depth 1.0000
+0.9460623515047973 1.0621142684776923
+Saving full model
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:05<00:00, 18.67it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN:(' Depth 0.9658 0.9658', 0.9657613212957321) || TEST: Depth 0.9024 0.9024 | All -0.2424 | Best: All -0.2424
+Task Weighting | Depth 1.0000
+0.9023669733948175 0.9460623515047973
+Saving full model
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:05<00:00, 19.72it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN:(' Depth 0.9136 0.9136', 0.913601677072873) || TEST: Depth 0.8543 0.8543 | All -0.2118 | Best: All -0.2118
+Task Weighting | Depth 1.0000
+0.854340734441274 0.9023669733948175
+Saving full model
+

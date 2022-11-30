@@ -287,11 +287,11 @@ class DualResNet(nn.Module):
             self.decoders = nn.ModuleList([self.pred_task1])
             
         elif all(k in tasks for k in ('semantic')):
-            self.pred_task1 = SegmentHead(planes * 4, head_planes, 23)
+            self.pred_task1 = SegmentHead(planes * 4, head_planes, 13)
             self.decoders = nn.ModuleList([self.pred_task1])
             
         else:
-            self.pred_task1 = SegmentHead(planes * 4, head_planes, 1)
+            self.pred_task1 = SegmentHead(planes * 4, head_planes, 13)
             self.decoders = nn.ModuleList([self.pred_task1])            
         
         #raise Exception("Messed up")
