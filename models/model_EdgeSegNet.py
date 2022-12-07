@@ -121,11 +121,16 @@ class BilinearResizeModule(nn.Module):
 # --------------------------------------------------------------------------------
 class EdgeSegNet(nn.Module):
 
-    def __init__(self, tasks):
+    def __init__(self, dataset, tasks):
 
         super(EdgeSegNet, self).__init__()
 
         self.tasks = tasks
+        self.dataset = dataset
+        if self.dataset == 'sim_warehouse':
+            seg_head_size = 23
+        elif self.dataset == 'nyuv2':
+            seg_head_size = 13
 
         self.conv_7x7 = nn.Conv2d(in_channels=3, out_channels=13, kernel_size=7, stride=2, padding=3)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)

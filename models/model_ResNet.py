@@ -250,12 +250,17 @@ class MTANDeepLabv3(nn.Module):
 # Define Split Resnet
 # --------------------------------------------------------------------------------
 class MTLDeepLabv3(nn.Module):
-    def __init__(self, tasks):
+    def __init__(self, tasks,dataset):
         super(MTLDeepLabv3, self).__init__()
         backbone = ResnetDilated(resnet.resnet50())
         ch = [256, 512, 1024, 2048]
 
         self.tasks = tasks
+        self.dataset = dataset
+        if self.dataset == 'sim_warehouse':
+            seg_head_size = 23
+        elif self.dataset == 'nyuv2':
+            seg_head_size = 13
 
         self.shared_conv = nn.Sequential(backbone.conv1, backbone.bn1, backbone.relu1, backbone.maxpool)
         self.shared_layer1 = backbone.layer1

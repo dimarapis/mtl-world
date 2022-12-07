@@ -1,0 +1,53 @@
+#Notes for TRIP
+
+Prepare:
+
+    Depth, Segmentation, Normals, ALL
+    SegnetSingle, SegnetMTL_SPLIT, SegnetMTL_MTAN, ResnetSingle, ResNetMTL_SPLIT, ResNetMTL_MTAN, DDRNetSingle, DDRNetMTL_SPLIT, DDRNetMTL_MTAN
+    NYUv2, WarehouseSIM
+
+
+3 single models * 3 Tasks = 9 Configs
+6 MTL * All task = 6 Configs
+2 Datasets = Total * 2 = 30
+
+* NYUV2 METRICS
+    * SINGLE_MODELS
+        * DEPTH 
+            * DDRNetSingle OK
+            * SegnetSingle OK
+            * ResNetSingle
+        * SEGMENTATION 
+            * DDRNetSingle OK
+            * SegnetSingle
+            * ResNetSingle
+        * NORMALS
+            * DDRNetSingle  
+            * SegnetSingle
+            * ResNetSingle
+    * MTL MODELS (For now only all 3 tasks trained together)
+        * SPLIT
+            * DDRNetMTL_SPLIT
+            * SegnetMTL_SPLIT
+            * ResNetMTL_SPLIT
+        * MTAN
+            * DDRNetMTL_MTAN
+            * SegnetMTL_MTAN
+            * ResNetMTL_MTAN
+
+
+TODOs 
+* Wandb
+    * train loss (single or mtl)
+    * per task eval METRICS
+    * Image samples? not really
+
+
+CHECK_LIST
+* Task
+* Datasets
+* network
+* MTL_architecture
+* Batch
+* epochs 
+* weights etc saving (how for each tasks and all tasks)

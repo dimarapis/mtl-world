@@ -49,16 +49,17 @@ class ConfMatrix(object):
         self.mat = None
 
     def update(self, pred, target):
+        #print('pred.shape',pred.shape)
+        #print('target.shape',target.shape)
+        
         n = self.num_classes
-        #print(n)
-        #print(pred.shape)
-        #print(target.shape)
+        #print('n',n)
         
         if self.mat is None:
             self.mat = torch.zeros((n, n), dtype=torch.int64, device=pred.device)
         with torch.no_grad():
             k = (target >= 0) & (target < n)
-            inds = n * target[k].to(torch.int64) + pred[k].to(torch.int64)
+            inds = n * target[k].to(torch.int64) + pred[k]
             self.mat += torch.bincount(inds, minlength=n ** 2).reshape(n, n)
 
     def get_metrics(self):
@@ -160,11 +161,15 @@ class TaskMetric:
         self.epoch_counter = 0
         self.conf_mtx = {}
 
+        for task in self.train_tasks:
+            if task in ['semantic']:
+                self.conf_mtx[task] = ConfMatrix(self.train_tasks[task])   
+
         if include_mtl:  # include multi-task performance (relative averaged task improvement)
             self.metric['all'] = np.zeros(epochs)
-        for task in self.train_tasks:
-            if task in ['seg', 'part_seg','semantic']:
-                self.conf_mtx[task] = ConfMatrix(self.train_tasks[task])
+        #for task in self.train_tasks:
+        #    if task in ['seg', 'part_seg','semantic']:
+        #        self.conf_mtx[task] = ConfMatrix(self.train_tasks[task])
 
     def reset(self):
         """
@@ -195,6 +200,7 @@ class TaskMetric:
 
                 if task_id in ['seg', 'part_seg','semantic']:
                     # update confusion matrix (metric will be computed directly in the Confusion Matrix)
+
                     self.conf_mtx[task_id].update(pred.argmax(1).flatten(), gt.flatten())
 
                 if 'class' in task_id:
@@ -279,6 +285,9 @@ class SingleTaskMetric:
         self.epoch_counter = 0
         self.conf_mtx = {}
         
+        for task in self.train_tasks:
+            if task in ['semantic']:
+                self.conf_mtx[task] = ConfMatrix(self.train_tasks[task])        
         '''
         if include_mtl:  # include multi-task performance (relative averaged task improvement)
             self.metric['all'] = np.zeros(epochs)
@@ -313,11 +322,22 @@ class SingleTaskMetric:
             for loss, pred, (task_id, gt) in zip(task_loss, task_pred, task_gt.items()):
                 self.metric[task_id][e, 0] = r * self.metric[task_id][e, 0] + (1 - r) * loss.item()
                 
-                #DEPTH
-                invalid_idx = -1 if task_id == 'disp' else 0
-                valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to(pred.device)
-                abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
-                self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
+                #print(task_id)
+
+                if task_id in ['depth']:
+                    #print(task_id, 'passed_before')
+                    #DEPTH
+                    invalid_idx = -1 if task_id == 'disp' else 0
+                    valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to(pred.device)
+                    abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
+                    self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
+                    #print(task_id, 'passed_after')
+                
+                if task_id in ['semantic']:
+                    #print(task_id, 'passed')
+                    #print('popopred.shape', pred.shape)
+                    #print('popogt.shape', gt.shape)
+                    self.conf_mtx[task_id].update(pred.argmax(1).flatten(), gt.flatten())
 
                 
                 '''
@@ -388,16 +408,165 @@ class SingleTaskMetric:
         '''    
         return metric_str,loss
 
+    def get_best_performance(self, task):    
+        e = self.epoch_counter
+        if task in ['semantic']:  # higher better
+            return max(self.metric[task][:e, 1])
+        if task in ['depth', 'normal']:  # lower better
+            return min(self.metric[task][:e, 1])
+        if task in ['all']:  # higher better
+            return max(self.metric[task][:e])
+
+
+class OriginalTaskMetric:
+    def __init__(self, train_tasks, pri_tasks, batch_size, epochs, dataset, include_mtl=False):
+        self.train_tasks = train_tasks
+        self.pri_tasks = pri_tasks
+        self.batch_size = batch_size
+        self.dataset = dataset
+        self.include_mtl = include_mtl
+        self.metric = {key: np.zeros([epochs, 2]) for key in train_tasks.keys()}  # record loss & task-specific metric
+        self.data_counter = 0
+        self.epoch_counter = 0
+        self.conf_mtx = {}
+
+        if include_mtl:  # include multi-task performance (relative averaged task improvement)
+            self.metric['all'] = np.zeros(epochs)
+        for task in self.train_tasks:
+            if task in ['semantic']:
+                self.conf_mtx[task] = ConfMatrix(self.train_tasks[task])
+
+    def reset(self):
+        """
+        Reset data counter and confusion matrices.
+        """
+        self.epoch_counter += 1
+        self.data_counter = 0
+
+        if len(self.conf_mtx) > 0:
+            for i in self.conf_mtx:
+                self.conf_mtx[i].reset()
+
+    def update_metric(self, task_pred, task_gt, task_loss):
+        """
+        Update batch-wise metric for each task.
+            :param task_pred: [TASK_PRED1, TASK_PRED2, ...]
+            :param task_gt: {'TASK_ID1': TASK_GT1, 'TASK_ID2': TASK_GT2, ...}
+            :param task_loss: [TASK_LOSS1, TASK_LOSS2, ...]
+        """
+        curr_bs = task_pred[0].shape[0]
+        r = self.data_counter / (self.data_counter + curr_bs / self.batch_size)
+        e = self.epoch_counter
+        self.data_counter += 1
+
+        with torch.no_grad():
+            for loss, pred, (task_id, gt) in zip(task_loss, task_pred, task_gt.items()):
+                
+                self.metric[task_id][e, 0] = r * self.metric[task_id][e, 0] + (1 - r) * loss.item()
+
+                if task_id in ['semantic']:
+                    # update confusion matrix (metric will be computed directly in the Confusion Matrix)
+                    #print(pred.shape,gt.shape)
+
+                    self.conf_mtx[task_id].update(pred.argmax(1).flatten(), gt.flatten())
+
+                if task_id in ['depth']:
+                    # Abs. Err.
+                    invalid_idx = -1 if task_id == 'disp' else 0
+                    valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to(pred.device)
+                    abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
+                    self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
+
+                if task_id in ['normal']:
+                    # Mean Degree Err.
+                    valid_mask = (torch.sum(gt, dim=1) != 0).to(pred.device)
+                    degree_error = torch.acos(torch.clamp(torch.sum(pred * gt, dim=1).masked_select(valid_mask), -1, 1))
+                    mean_error = torch.mean(torch.rad2deg(degree_error)).item()
+                    self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * mean_error
+                    
+    def update_single_metric(self, task_pred, task_gt, task_loss):
+        """
+        Update batch-wise metric for each task.
+            :param task_pred: [TASK_PRED1, TASK_PRED2, ...]
+            :param task_gt: {'TASK_ID1': TASK_GT1, 'TASK_ID2': TASK_GT2, ...}
+            :param task_loss: [TASK_LOSS1, TASK_LOSS2, ...]
+        """
+        curr_bs = task_pred[0].shape[0]
+        r = self.data_counter / (self.data_counter + curr_bs / self.batch_size)
+        e = self.epoch_counter
+        self.data_counter += 1
+
+        with torch.no_grad():
+            loss = task_loss
+            pred = task_pred
+            task_id = list(task_gt.keys())[0]
+            gt = task_gt[task_id]
+            
+            #for loss, pred, (task_id, gt) in zip(task_loss, task_pred, task_gt.items()):
+
+            self.metric[task_id][e, 0] = r * self.metric[task_id][e, 0] + (1 - r) * loss.item()
+
+            if task_id in ['semantic']:
+                # update confusion matrix (metric will be computed directly in the Confusion Matrix)
+                self.conf_mtx[task_id].update(pred.argmax(1).flatten(), gt.flatten())
+
+            if task_id in ['depth']:
+                # Abs. Err.
+                invalid_idx = -1 if task_id == 'disp' else 0
+                valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to(pred.device)
+                abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
+                self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
+
+            if task_id in ['normal']:
+                # Mean Degree Err.
+                valid_mask = (torch.sum(gt, dim=1) != 0).to(pred.device)
+                degree_error = torch.acos(torch.clamp(torch.sum(pred * gt, dim=1).masked_select(valid_mask), -1, 1))
+                mean_error = torch.mean(torch.rad2deg(degree_error)).item()
+                self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * mean_error
+
+    def compute_metric(self, only_pri=False):
+        metric_str = ''
+        e = self.epoch_counter
+        tasks = self.pri_tasks if only_pri else self.train_tasks  # only print primary tasks performance in evaluation
+
+        for task_id in tasks:
+            if task_id in ['semantic']:  # mIoU for segmentation
+                self.metric[task_id][e, 1] = self.conf_mtx[task_id].get_metrics()
+
+            metric_str += ' {} {:.4f} {:.4f}'\
+                .format(task_id.capitalize(), self.metric[task_id][e, 0], self.metric[task_id][e, 1])
+
+        if self.include_mtl:
+            # Pre-computed single task learning performance using trainer_dense_single.py
+            if self.dataset == 'nyuv2':
+                stl = {'seg': 0.4337, 'depth': 0.5224, 'normal': 22.40}
+            elif self.dataset == 'cityscapes':
+                stl = {'seg': 0.5620, 'part_seg': 0.5274, 'disp': 0.84}
+            elif self.dataset == 'cifar100':
+                stl = {'class_0': 0.6865, 'class_1': 0.8100, 'class_2': 0.8234, 'class_3': 0.8371, 'class_4': 0.8910,
+                       'class_5': 0.8872, 'class_6': 0.8475, 'class_7': 0.8588, 'class_8': 0.8707, 'class_9': 0.9015,
+                       'class_10': 0.8976, 'class_11': 0.8488, 'class_12': 0.9033, 'class_13': 0.8441, 'class_14': 0.5537,
+                       'class_15': 0.7584, 'class_16': 0.7279, 'class_17': 0.7537, 'class_18': 0.9148, 'class_19': 0.9469}
+
+            delta_mtl = 0
+            for task_id in self.train_tasks:
+                if task_id in ['semantic'] in task_id:  # higher better
+                    delta_mtl += (self.metric[task_id][e, 1] - stl[task_id]) / stl[task_id]
+                elif task_id in ['depth', 'normal']: # lower better
+                    delta_mtl -= (self.metric[task_id][e, 1] - stl[task_id]) / stl[task_id]
+
+            self.metric['all'][e] = delta_mtl / len(stl)
+            metric_str += ' | All {:.4f}'.format(self.metric['all'][e])
+        return metric_str,self.metric[task_id][e, 0]
+
     def get_best_performance(self, task):
         e = self.epoch_counter
-        return min(self.metric[task][:e, 1])
-    
-        #if task in ['seg', 'part_seg', 'semantic'] or 'class' in task:  # higher better
-        #    return max(self.metric[task][:e, 1])
-        #if task in ['depth', 'normal', 'disp', 'normals']:  # lower better
-        #    return min(self.metric[task][:e, 1])
-        #if task in ['all']:  # higher better
-        #    return max(self.metric[task][:e])
+        if task in ['semantic']:  # higher better
+            return max(self.metric[task][:e, 1])
+        if task in ['depth', 'normal']:  # lower better
+            return min(self.metric[task][:e, 1])
+        if task in ['all']:  # higher better
+            return max(self.metric[task][:e])
 
 
 """

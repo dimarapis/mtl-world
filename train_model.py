@@ -5,13 +5,14 @@ import torch.optim as optim
 import torch.utils.data.sampler as sampler
 
 from models.model_ResNet import MTLDeepLabv3, MTANDeepLabv3
-from models.model_SegNet import SegNetSplit, SegNetMTAN
-from models.model_EdgeSegNet import EdgeSegNet
-from models.model_DDRNet import DualResNet, BasicBlock
+from models.model_SegNet import SegNetSplit, SegNetMTAN, SegNetSingle
+from models.model_DDRNet import DualResNetMTL, BasicBlock, DualResNetSingle
 from models.model_GuideDepth import GuideDepth
+from models.model_EdgeSegNet import EdgeSegNet
+
 
 from utils import *
-from dataloader import DecnetDataloader
+#from dataloader import DecnetDataloader
 from tqdm import tqdm
 from autolambda_code import SimWarehouse, NYUv2
 import visualizer
@@ -19,6 +20,9 @@ import visualizer
 import segmentation_models_pytorch as smp 
 import wandb
 
+
+
+    
 
 
 """ Script for training MTL models """
@@ -33,15 +37,16 @@ parser.add_argument('--wandb', action='store_true', help='Use wandb logger')
 parser.add_argument('--seed', default=0, type=int, help='random seed ID')
 parser.add_argument('--gpu', default=0, type=int, help='gpu ID')
 #Training settings
-parser.add_argument('--batch_size', default=8, type=int, help='quite self-xplanatory')
-parser.add_argument('--total_epochs', default=50, type=int, help='quite self-xplanatory')
+parser.add_argument('--batch_size', default=4, type=int, help='quite self-xplanatory')
+parser.add_argument('--total_epochs', default=100, type=int, help='quite self-xplanatory')
 parser.add_argument('--lr', default=1e-4, type=float, help='learning rate')
 #Task settings
 parser.add_argument('--weight', default='equal', type=str, help='weighting methods: equal, dwa, uncert')
-parser.add_argument('--task', default='semantic', type=str, help='primary tasks, use all for MTL setting')
+parser.add_argument('--task', default='semantic', type=str,choices='all,semantic,depth,normals', help='tasks for training, use all for MTL setting')
 parser.add_argument('--dataset', default='nyuv2', type=str, help='Data from simulated warehouse (sim_warehouse) or NYUv2 indoor data (nyuv2)')
 #Network settings
-parser.add_argument('--network', default='DDRNet', type=str, help='e.g. SegNet_split, SegNet_mtan, ResNet_split, Resnet_mtan, EdgeSegNet')
+parser.add_argument('--network', default='SegNet', type=str, choices='ResNet,SegNet,DDDRNet',help='Base network')
+parser.add_argument('--mtl_architecture', default ='Split',choices=['Split','MTAN'], type=str, help='Split or MTAN mtl architecture')
 parser.add_argument('--load_model', action='store_true', help='pass flag to load checkpoint')
 parser.add_argument('--grad_method', default='none', type=str, help='graddrop, pcgrad, cagrad')
 
@@ -69,18 +74,78 @@ if not os.path.exists('logging'):
 # define model, optimiser and scheduler
 device = torch.device("cuda:{}".format(opt.gpu) if torch.cuda.is_available() else "cpu")
 
-#train_tasks = create_task_flags('all', opt.dataset, with_noise=False)
-#print(train_tasks)
+    
+############################### 
+#BRANCH_1: MTL vs Single Task
+###############################
 
-#train_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
-#pri_tasks = {'depth': 1}#, 'semantic': 23}#, 'normals': 3}
-
-train_tasks = {'semantic': 23}
-pri_tasks = {'semantic': 23}
-
-#train_tasks = {'normals': 3}
-#pri_tasks = {'normals': 3}
-
+if opt.task == 'all':
+        
+    if opt.dataset == 'sim_warehouse':
+        train_tasks = {'depth': 1, 'semantic': 23, 'normals': 3}
+        pri_tasks = {'depth': 1, 'semantic': 23, 'normals': 3}
+    elif opt.dataset == 'nyuv2':
+        train_tasks = {'depth': 1, 'semantic': 13, 'normals': 3}
+        pri_tasks = {'depth': 1, 'semantic': 13, 'normals': 3}
+        
+    #train_tasks = create_task_flags('all', opt.dataset, with_noise=False)
+    network = opt.network + 'MLT' + opt.mtl_architecture
+    print(network)
+    
+    ############################### 
+    #UTILS CREATE NETWORK=
+    ###############################
+    
+    if network == 'ResNetMTL_split':
+        model = MTLDeepLabv3(train_tasks).to(device)
+    elif network == 'ResNetMTL_mtan':
+        model = MTANDeepLabv3(train_tasks).to(device)
+    elif network == "SegNetMTL_split":
+        model = SegNetSplit(train_tasks).to(device)
+    elif network == "SegNetMTL_mtan":
+        model = SegNetMTAN(train_tasks).to(device)
+    #elif network == "EdgeSegNet":
+    #    model = EdgeSegNet(train_tasks).to(device)
+    #elif network == "GuidedDepth":
+    #    model = GuideDepth(train_tasks).to(device) 
+    elif network == "DDRNetMTL":
+        model = DualResNetMTL(BasicBlock, [2, 2, 2, 2], train_tasks, planes=32, spp_planes=128, head_planes=64).to(device)
+    #elif network == "Segmentation":
+    #    model = smp.Unet(
+    #        encoder_name="resnet34",        # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
+    #        encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
+    #        in_channels=3,                  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
+    #        classes=23,                      # model output channels (number of classes in your dataset)
+    #    ).to(device)     
+    else:
+        raise ValueError 
+    
+    ###############################
+else:
+    if opt.task == 'semantic':
+        if opt.dataset == 'sim_warehouse':
+            train_tasks = {'semantic': 23}
+            pri_tasks = {'semantic': 23}
+        elif opt.dataset == 'nyuv2':
+            train_tasks = {'semantic': 13}
+            pri_tasks = {'semantic': 13}
+    elif opt.task == 'depth':
+        train_tasks = {'depth': 1}
+        pri_tasks = {'depth': 1}
+    elif opt.task == 'normals':
+        train_tasks = {'normals': 3}
+        pri_tasks = {'normals': 3}  
+        
+    network = opt.network + 'Single'
+    print(network)
+        
+    if network == "SegNetSingle":
+        model = SegNetSingle(train_tasks).to(device)
+    #elif network == "ResNetSingle":
+    #    raise Exception("Not implemented")
+    elif network == "DDRNetSingle":
+        model = DualResNetSingle(BasicBlock, [2, 2, 2, 2], train_tasks, opt.dataset, planes=32, spp_planes=128, head_planes=64).to(device)
+            
 #pri_tasks = create_task_flags(opt.task, opt.dataset, with_noise=False)
 #print(pri_tasks)
 train_tasks_str = ''.join(task.title() + ' + ' for task in train_tasks.keys())[:-3]
@@ -89,32 +154,7 @@ print('Dataset: {} | Training Task: {} | Primary Task: {} in Multi-task / Auxili
       .format(opt.dataset.title(), train_tasks_str, pri_tasks_str, opt.network.upper()))
 print('Applying Multi-task Methods: Weighting-based: {} + Gradient-based: {}'
       .format(opt.weight.title(), opt.grad_method.upper()))
-
 # define new or load excisting model and optimizer 
-if opt.network == 'ResNet_split':
-    model = MTLDeepLabv3(train_tasks).to(device)
-elif opt.network == 'ResNet_mtan':
-    model = MTANDeepLabv3(train_tasks).to(device)
-elif opt.network == "SegNet_split":
-    model = SegNetSplit(train_tasks).to(device)
-elif opt.network == "SegNet_mtan":
-    model = SegNetMTAN(train_tasks).to(device)
-elif opt.network == "EdgeSegNet":
-    model = EdgeSegNet(train_tasks).to(device)
-elif opt.network == "GuidedDepth":
-    model = GuideDepth(train_tasks).to(device) 
-elif opt.network == "DDRNet":
-    model = DualResNet(BasicBlock, [2, 2, 2, 2], train_tasks, planes=32, spp_planes=128, head_planes=64).to(device)
-elif opt.network == "Segmentation":
-    model = smp.Unet(
-        encoder_name="resnet34",        # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
-        encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
-        in_channels=3,                  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
-        classes=23,                      # model output channels (number of classes in your dataset)
-    ).to(device)     
-else:
-    raise ValueError 
-   
 
 total_epoch = opt.total_epochs
 saving_epoch = 0
@@ -130,36 +170,12 @@ if opt.weight in ['dwa', 'equal']:
     lambda_weight = np.ones([total_epoch, len(train_tasks)])
     #print('lambdaweight',lambda_weight)
     params = model.parameters()
-'''
-# define or load optimizer and scheduler
-if "ResNet" in opt.network:
-    optimizer = optim.SGD(params, lr=0.1, weight_decay=1e-4, momentum=0.9)
-    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, total_epoch)
-elif "SegNet" in opt.network:
-    optimizer = optim.Adam(params, lr=1e-4)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.5)
-elif "EdgeSegNet" in opt.network:
-    optimizer = optim.Adam(params, lr=1e-3)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=25, gamma=0.95)
-elif "GuidedDepth" in opt.network:
-    optimizer = optim.Adam(params, lr=1e-4)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.5)
-elif "DDRNet" in opt.network:
-    optimizer = optim.Adam(params, lr=1e-3)#, weight_decay=5e-4, momentum=0.9)
-    #optimizer = optim.Adam(params, lr=opt.lr)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
-    #scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[20,30,40,45], gamma=0.1)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.5) # Just winging this one, 
-    # should try ty implement the one in original paper
-elif "Segmentation" in opt.network:
-    optimizer = optim.Adam(params, lr=1e-3)#, weight_decay=5e-4, momentum=0.9)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.5) # Just winging this one, 
-'''
+    
 
 #UNIVERSAL OPTIMIZERS AND LR SCHEDULER
 optimizer = optim.Adam(params, lr=opt.lr)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
 scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[20,30,40,45], gamma=0.1)
 
-#opt.load_model = False
 
 if opt.load_model == True:
     checkpoint = torch.load(f"models/model_{model_name}_{dataset_name}_epoch34.pth")#        path = f"models/model_{model_name}_{dataset_name}_epoch{index}.pth"
@@ -236,8 +252,8 @@ test_batch = len(test_loader)
 #test_metric = TaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)#, include_mtl=True)
 
 
-train_metric = SingleTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)
-test_metric = SingleTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)#, include_mtl=True)
+train_metric = OriginalTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)
+test_metric = OriginalTaskMetric(train_tasks, pri_tasks, batch_size, total_epoch, opt.dataset)#, include_mtl=True)
 
 # load loss and initialize index/epoch
 if opt.load_model == True:
@@ -265,7 +281,6 @@ def torch_min_max(data):
     minmax = (torch.min(data.float()).item(),torch.mean(data.float()).item(),torch.median(data.float()).item(),torch.max(data.float()).item())
     return minmax
 
-best_test_str = np.inf
 
 while index < total_epoch:
     model.train()
@@ -280,8 +295,9 @@ while index < total_epoch:
         optimizer.zero_grad()
         #print(image.shape)
         train_pred = model(image)
-        print(f'train_pred[0]_shape {train_pred[0].shape}')
-        print(torch.min(train_pred[0]), torch.max(train_pred[0]))
+        
+        #print(f'train_pred_shape {train_pred.shape}')
+        #print(torch.min(train_pred[0]), torch.max(train_pred[0]))
 
         if i == 0:
             #print(multitaskdata['file'])
@@ -289,9 +305,18 @@ while index < total_epoch:
             #print(f'prediction {torch_min_max(train_pred[0])}')
         
         #print(train_tasks)
+        if opt.task == 'all':
+            train_loss = [compute_loss(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
+            train_loss_tmp = [0] * len(train_tasks)
+        else:
+            #print('getting in now')
+            #print(f'train_pred_shape {train_pred.shape}')
+            #print(f'train_target[task_id].shape {train_target["semantic"].shape}')
+            
 
-        train_loss = [compute_loss(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
-        train_loss_tmp = [0] * len(train_tasks)
+            train_loss = [compute_loss(train_pred, train_target[task_id], task_id) for task_id in train_tasks.keys()]
+            train_loss_tmp = [0] * len(train_tasks)
+
 
         if opt.weight in ['equal', 'dwa']:
             train_loss_tmp = [w * train_loss[i] for i, w in enumerate(lambda_weight[index])]#torch.tensor([1, 2, 3]))]#
@@ -299,16 +324,25 @@ while index < total_epoch:
         if opt.weight == 'uncert':
             train_loss_tmp = [1 / (2 * torch.exp(w)) * train_loss[i] + w / 2 for i, w in enumerate(logsigma)]
 
+
+    
         loss = sum(train_loss_tmp)
         loss.backward()
         optimizer.step()
-
-        train_metric.update_metric(train_pred, train_target, train_loss)
+        
+        
+        if opt.task == 'all':
+            train_metric.update_single_metric(train_pred, train_target, train_loss)
+            
+        else:
+            train_metric.update_single_metric(train_pred, train_target, train_loss[0])
+            
     train_str = train_metric.compute_metric()
     train_metric.reset()
 
     model.eval()
     with torch.no_grad():
+        
         i_test = 0
         for multitaskdatatest in test_loader:
             image = multitaskdatatest['rgb'].to(device)
@@ -333,10 +367,29 @@ while index < total_epoch:
             if i_test == 250:
                 visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
                   
-            test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in
+            #test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in
+            #            enumerate(train_tasks)]
+            
+                    #print(train_tasks)
+            if opt.task == 'all':
+                test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in
                          enumerate(train_tasks)]
+                
+                #train_loss = [compute_loss(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
+            else:
+                #print('getting in now')
+                #print(f'train_pred_shape {train_pred.shape}')
+                #print(f'train_target[task_id].shape {train_target["semantic"].shape}')
+                
+
+                test_loss = [compute_loss(test_pred, test_target[task_id], task_id) for task_id in test_target.keys()]
+                
             #print(test_loss)
-            test_metric.update_metric(test_pred, test_target, test_loss)
+            if opt.task == 'all':
+                test_metric.update_metric(test_pred, test_target, test_loss)
+            else:
+                test_metric.update_single_metric(test_pred, test_target, test_loss[0])
+
             i_test +=1
 
     test_str,depth_loss = test_metric.compute_metric()
@@ -366,12 +419,23 @@ while index < total_epoch:
             .format(opt.network, opt.dataset, opt.task, opt.weight, opt.grad_method, opt.seed), dict)
 
     # Save full model
-    current_loss = depth_loss
+    current_loss = test_metric.get_best_performance(opt.task)
+    if index == 0:
+        best_test_str = current_loss
+        
     print(current_loss,best_test_str)
     if opt.wandb:
         wandb.log({'current_loss':current_loss}, step = index)
 
-    if current_loss < best_test_str:
+
+    if opt.task == "all" or opt.task == "depth" or opt.task == "normals":
+        if current_loss <= best_test_str:
+            save_model = True
+    else:
+        if current_loss >= best_test_str:
+            save_model = True
+            
+    if save_model == True:
         file = f"models/model_{model_name}_{dataset_name}_epoch{saving_epoch}.pth"
         if os.path.exists(file):
             os.remove(f"models/model_{model_name}_{dataset_name}_epoch{saving_epoch}.pth")
