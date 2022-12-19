@@ -1,0 +1,17 @@
+SegNetSingle
+{'normals': 3}
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with SEGNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+  0%|                                                                                                                                                        | 0/199 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 297, in <module>
+    train_pred = model(image)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_SegNet.py", line 416, in forward
+    out = F.interpolate(self.head(x), size=[im_h, im_w], mode='bilinear', align_corners=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1178, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'SegNetSingle' object has no attribute 'head'

@@ -1,0 +1,138 @@
+SegNetSingle
+{'semantic': 13}
+  0%|                                                                                                                                                        | 0/199 [00:00<?, ?it/s]
+Dataset: Nyuv2 | Training Task: Semantic | Primary Task: Semantic in Multi-task / Auxiliary Learning Mode with SEGNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+rgb (0.0, 0.4536534547805786, 0.43921568989753723, 1.0)
+depth (0.0, 2.030102252960205, 1.9309452772140503, 6.50956916809082)
+semantic (-1.0, 7.145308971405029, 7.0, 12.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:54<00:00,  3.67it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN:(' Semantic 1.8461 0.0722', 1.8461252524002272) || TEST: Semantic 1.9197 0.0834 | Best: Semantic 0.0834
+Task Weighting | Semantic 1.0000
+0.08340801298618317 0.08340801298618317
+Saving full model
+rgb (0.0, 0.42617523670196533, 0.40784314274787903, 1.0)
+depth (0.0, 2.866334915161133, 2.8657379150390625, 9.115866661071777)
+semantic (-1.0, 6.169354438781738, 6.0, 12.0)
+normals (-0.999984622001648, -0.05269414559006691, -0.05091388151049614, 0.999984622001648)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:56<00:00,  3.55it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN:(' Semantic 1.6820 0.1013', 1.6820222813544254) || TEST: Semantic 1.7601 0.1050 | Best: Semantic 0.1050
+Task Weighting | Semantic 1.0000
+0.10498844087123871 0.08340801298618317
+Saving full model
+rgb (0.0, 0.3612893223762512, 0.3686274588108063, 1.0)
+depth (0.0, 2.5073137283325195, 2.4525535106658936, 6.314262866973877)
+semantic (-1.0, 6.038070201873779, 6.0, 12.0)
+normals (-0.999984622001648, -0.15847928822040558, -0.13692469894886017, 0.999984622001648)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:56<00:00,  3.51it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN:(' Semantic 1.6332 0.1102', 1.6331987369096634) || TEST: Semantic 1.8304 0.1150 | Best: Semantic 0.1150
+Task Weighting | Semantic 1.0000
+0.11497336626052856 0.10498844087123871
+Saving full model
+rgb (0.0, 0.38928741216659546, 0.3843137323856354, 1.0)
+depth (0.0, 2.1711506843566895, 1.9652215242385864, 8.516291618347168)
+semantic (-1.0, 6.634517192840576, 6.0, 12.0)
+normals (-0.999984622001648, -0.1572900265455246, -0.09740465134382248, 0.999984622001648)
+  5%|██████▌                                                                                                                                         | 9/199 [00:02<01:01,  3.08it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 331, in <module>
+    optimizer.step()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/lr_scheduler.py", line 65, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/adam.py", line 144, in step
+    eps=group['eps'])
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/_functional.py", line 86, in adam
+    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+KeyboardInterrupt

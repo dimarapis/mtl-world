@@ -140,12 +140,38 @@ def compute_loss(pred, gt, task_id):
     if task_id in ['normal', 'normals', 'depth', 'disp', 'noise']:
         # L1 Loss with Ignored Region (values are 0 or -1)
         invalid_idx = -1 if task_id == 'disp' else 0
-        valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to('cuda')
-        # loss = torch.sum(F.l1_loss(pred, gt, reduction='none').masked_select(valid_mask)) \
+        valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to('cuda:0')
+        #loss = torch.sum(F.l1_loss(pred, gt, reduction='none').masked_select(valid_mask)) \
         #         / torch.nonzero(valid_mask, as_tuple=False).size(0)
         loss = torch.mean(torch.abs(pred - gt).masked_select(valid_mask))
         
     
+    return loss
+
+def compute_loss_ole(pred, gt, task_id):
+    """
+    Compute task-specific loss.
+    """
+    #print("OLEEEE")
+    #print(task_id)
+    #print(pred.shape,gt.shape,torch.min(pred),torch.max(pred),torch.min(gt),torch.max(gt))
+
+    if task_id in ['seg', 'part_seg','semantic'] or 'class' in task_id:
+        #print('segmentation_branch', task_id)
+
+        # Cross Entropy Loss with Ignored Index (values are -1)
+        #print(pred.shape,gt.shape,torch.min(pred),torch.max(pred),torch.min(gt),torch.max(gt))
+        loss = F.cross_entropy(pred, gt, ignore_index=-1)
+
+    if task_id in ['normal', 'normals', 'depth', 'disp', 'noise']:
+        #print('normal/depth_branch', task_id)
+
+        # L1 Loss with Ignored Region (values are 0 or -1)
+        invalid_idx = -1 if task_id == 'disp' else 0
+        valid_mask = (torch.sum(gt, dim=1, keepdim=True) != invalid_idx).to(pred.device)
+        # loss = torch.sum(F.l1_loss(pred, gt, reduction='none').masked_select(valid_mask)) \
+        #         / torch.nonzero(valid_mask, as_tuple=False).size(0)
+        loss = torch.mean(torch.abs(pred - gt).masked_select(valid_mask))#.item()
     return loss
 
 
@@ -241,7 +267,7 @@ class TaskMetric:
         if self.include_mtl:
             # Pre-computed single task learning performance using trainer_dense_single.py
             if self.dataset == 'nyuv2':
-                stl = {'seg': 0.4337, 'depth': 0.5224, 'normal': 22.40}
+                stl = {'seg': 0.4337, 'depth': 0.5224, 'normals': 22.40}
             elif self.dataset == 'cityscapes':
                 stl = {'seg': 0.5620, 'part_seg': 0.5274, 'disp': 0.84}
             elif self.dataset == 'cifar100':
@@ -412,7 +438,7 @@ class SingleTaskMetric:
         e = self.epoch_counter
         if task in ['semantic']:  # higher better
             return max(self.metric[task][:e, 1])
-        if task in ['depth', 'normal']:  # lower better
+        if task in ['depth', 'normals']:  # lower better
             return min(self.metric[task][:e, 1])
         if task in ['all']:  # higher better
             return max(self.metric[task][:e])
@@ -462,7 +488,7 @@ class OriginalTaskMetric:
         with torch.no_grad():
             for loss, pred, (task_id, gt) in zip(task_loss, task_pred, task_gt.items()):
                 
-                self.metric[task_id][e, 0] = r * self.metric[task_id][e, 0] + (1 - r) * loss.item()
+                self.metric[task_id][e, 0] = r * self.metric[task_id][e, 0] + (1 - r) * loss#.item()
 
                 if task_id in ['semantic']:
                     # update confusion matrix (metric will be computed directly in the Confusion Matrix)
@@ -477,7 +503,7 @@ class OriginalTaskMetric:
                     abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
                     self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
 
-                if task_id in ['normal']:
+                if task_id in ['normals']:
                     # Mean Degree Err.
                     valid_mask = (torch.sum(gt, dim=1) != 0).to(pred.device)
                     degree_error = torch.acos(torch.clamp(torch.sum(pred * gt, dim=1).masked_select(valid_mask), -1, 1))
@@ -517,7 +543,7 @@ class OriginalTaskMetric:
                 abs_err = torch.mean(torch.abs(pred - gt).masked_select(valid_mask)).item()
                 self.metric[task_id][e, 1] = r * self.metric[task_id][e, 1] + (1 - r) * abs_err
 
-            if task_id in ['normal']:
+            if task_id in ['normals']:
                 # Mean Degree Err.
                 valid_mask = (torch.sum(gt, dim=1) != 0).to(pred.device)
                 degree_error = torch.acos(torch.clamp(torch.sum(pred * gt, dim=1).masked_select(valid_mask), -1, 1))
@@ -539,7 +565,7 @@ class OriginalTaskMetric:
         if self.include_mtl:
             # Pre-computed single task learning performance using trainer_dense_single.py
             if self.dataset == 'nyuv2':
-                stl = {'seg': 0.4337, 'depth': 0.5224, 'normal': 22.40}
+                stl = {'semantic': 0.4337, 'depth': 0.5224, 'normals': 22.40}
             elif self.dataset == 'cityscapes':
                 stl = {'seg': 0.5620, 'part_seg': 0.5274, 'disp': 0.84}
             elif self.dataset == 'cifar100':
@@ -550,20 +576,21 @@ class OriginalTaskMetric:
 
             delta_mtl = 0
             for task_id in self.train_tasks:
-                if task_id in ['semantic'] in task_id:  # higher better
+                if task_id in ['semantic']:# in task_id:  # higher better
                     delta_mtl += (self.metric[task_id][e, 1] - stl[task_id]) / stl[task_id]
-                elif task_id in ['depth', 'normal']: # lower better
+                elif task_id in ['depth', 'normals']: # lower better
                     delta_mtl -= (self.metric[task_id][e, 1] - stl[task_id]) / stl[task_id]
 
             self.metric['all'][e] = delta_mtl / len(stl)
             metric_str += ' | All {:.4f}'.format(self.metric['all'][e])
-        return metric_str,self.metric[task_id][e, 0]
+        return metric_str, self.metric#,self.metric[task_id][e, 0]
 
     def get_best_performance(self, task):
+        #print(self.metric)
         e = self.epoch_counter
         if task in ['semantic']:  # higher better
             return max(self.metric[task][:e, 1])
-        if task in ['depth', 'normal']:  # lower better
+        if task in ['depth', 'normals']:  # lower better
             return min(self.metric[task][:e, 1])
         if task in ['all']:  # higher better
             return max(self.metric[task][:e])

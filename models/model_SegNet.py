@@ -191,12 +191,18 @@ class SegNetMTAN(nn.Module):
 # Define SegNet Split
 # --------------------------------------------------------------------------------
 class SegNetSplit(nn.Module):
-    def __init__(self, tasks):
+    def __init__(self, tasks, dataset):
         super(SegNetSplit, self).__init__()
         # initialise network parameters
         filter = [64, 128, 256, 512, 512]
         self.tasks = tasks
 
+        self.dataset = dataset
+        if self.dataset == 'sim_warehouse':
+            seg_head_size = 23
+        elif self.dataset == 'nyuv2':
+            seg_head_size = 13
+            
         # define encoder decoder layers
         self.encoder_block = nn.ModuleList([self.conv_layer([3, filter[0]])])
         self.decoder_block = nn.ModuleList([self.conv_layer([filter[0], filter[0]])])
@@ -218,24 +224,15 @@ class SegNetSplit(nn.Module):
                                                          self.conv_layer([filter[i], filter[i]])))
 
         # define task specific decoders
-        if all (k in tasks for k in ('semantic', 'depth', 'normal')):
-            print('try here 1')
+        if all (k in tasks for k in ('semantic', 'depth', 'normals')):
+            #print('try here 1')
             self.pred_task1 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
-                                            nn.Conv2d(in_channels=filter[0], out_channels=13, kernel_size=1, padding=0))
+                                            nn.Conv2d(in_channels=filter[0], out_channels=seg_head_size, kernel_size=1, padding=0))
             self.pred_task2 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
                                             nn.Conv2d(in_channels=filter[0], out_channels=1, kernel_size=1, padding=0))
             self.pred_task3 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
                                             nn.Conv2d(in_channels=filter[0], out_channels=3, kernel_size=1, padding=0))
-        else:
-            print('try here 2')
-
-            self.pred_task1 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
-                                            nn.Conv2d(in_channels=filter[0], out_channels=13, kernel_size=1, padding=0))
-            self.pred_task2 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
-                                            nn.Conv2d(in_channels=filter[0], out_channels=1, kernel_size=1, padding=0))
-            self.pred_task3 = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
-                                            nn.Conv2d(in_channels=filter[0], out_channels=3, kernel_size=1, padding=0))
-        
+       
         self.decoders = nn.ModuleList([self.pred_task1, self.pred_task2, self.pred_task3])
         
         # Define task-specific decoders using ASPP modules
@@ -312,13 +309,18 @@ class SegNetSplit(nn.Module):
 # Define SegNet Split
 # --------------------------------------------------------------------------------
 class SegNetSingle(nn.Module):
-    def __init__(self, tasks):
+    def __init__(self, tasks,dataset):
         super(SegNetSingle, self).__init__()
         # initialise network parameters
         filter = [64, 128, 256, 512, 512]
         self.tasks = tasks
 
-        print(tasks)
+        self.dataset = dataset
+        if self.dataset == 'sim_warehouse':
+            seg_head_size = 23
+        elif self.dataset == 'nyuv2':
+            seg_head_size = 13
+        #print(tasks)
         # define encoder decoder layers
         self.encoder_block = nn.ModuleList([self.conv_layer([3, filter[0]])])
         self.decoder_block = nn.ModuleList([self.conv_layer([filter[0], filter[0]])])
@@ -342,11 +344,11 @@ class SegNetSingle(nn.Module):
         if list(tasks.keys())[0] == 'semantic':
         
             self.head = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
-                                            nn.Conv2d(in_channels=filter[0], out_channels=13, kernel_size=1, padding=0))
+                                            nn.Conv2d(in_channels=filter[0], out_channels=seg_head_size, kernel_size=1, padding=0))
         elif list(tasks.keys())[0] == 'depth':
             self.head = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1),
                                             nn.Conv2d(in_channels=filter[0], out_channels=1, kernel_size=1, padding=0))
-        elif list(tasks.keys())[0] == 'normal':
+        elif list(tasks.keys())[0] == 'normals':
             self.head = nn.Sequential(nn.Conv2d(in_channels=filter[0], out_channels=filter[0], kernel_size=3, padding=1), 
                                             nn.Conv2d(in_channels=filter[0], out_channels=3, kernel_size=1, padding=0))
             
@@ -416,5 +418,6 @@ class SegNetSingle(nn.Module):
             out = F.interpolate(self.head(x), size=[im_h, im_w], mode='bilinear', align_corners=True)
             if t == 'normal':
                 out = out / torch.norm(out, p=2, dim=1, keepdim=True)
+        #print('out_shape',out.shape)
         return out
     

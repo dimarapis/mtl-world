@@ -14,22 +14,22 @@ Prepare:
 * NYUV2 METRICS
     * SINGLE_MODELS
         * DEPTH 
-            * DDRNetSingle OK
+            * DDRNetSingle OK - WANDB
             * SegnetSingle OK
-            * ResNetSingle
+            * ResNetSingle OK
         * SEGMENTATION 
             * DDRNetSingle OK
-            * SegnetSingle
-            * ResNetSingle
+            * SegnetSingle OK 
+            * ResNetSingle OK
         * NORMALS
-            * DDRNetSingle  
-            * SegnetSingle
-            * ResNetSingle
+            * DDRNetSingle OK
+            * SegnetSingle OK
+            * ResNetSingle OK
     * MTL MODELS (For now only all 3 tasks trained together)
         * SPLIT
-            * DDRNetMTL_SPLIT
-            * SegnetMTL_SPLIT
-            * ResNetMTL_SPLIT
+            * DDRNetMTL_SPLIT OK 
+            * SegnetMTL_SPLIT OK
+            * ResNetMTL_SPLIT OK 
         * MTAN
             * DDRNetMTL_MTAN
             * SegnetMTL_MTAN
@@ -51,3 +51,5 @@ CHECK_LIST
 * Batch
 * epochs 
 * weights etc saving (how for each tasks and all tasks)
+
+* Normals what is in warehouseSIM and what is in NYUV2

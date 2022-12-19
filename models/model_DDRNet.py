@@ -273,7 +273,7 @@ class DualResNetMTL(nn.Module):
             self.pred_task1 = SegmentHead(planes * 4, head_planes, 1)
             self.pred_task2 = SegmentHead(planes * 4, head_planes, seg_head_size)
             self.pred_task3 = SegmentHead(planes * 4, head_planes, 3)
-            self.decoders = nn.ModuleList([self.pred_task1, self.pred_task2, self.pred_task3])
+            self.decoders = nn.ModuleList([self.pred_task2, self.pred_task1, self.pred_task3])
         else:
             raise Exception("Messed up")
     

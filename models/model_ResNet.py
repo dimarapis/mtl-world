@@ -298,3 +298,72 @@ class MTLDeepLabv3(nn.Module):
     def zero_grad_shared_modules(self):
         for mm in self.shared_modules():
             mm.zero_grad()
+            
+            
+            
+
+# --------------------------------------------------------------------------------
+# Define Resnet SINGLE
+# --------------------------------------------------------------------------------
+class ResNetSingle(nn.Module):
+    def __init__(self, tasks,dataset):
+        super(ResNetSingle, self).__init__()
+        backbone = ResnetDilated(resnet.resnet50())
+        ch = [256, 512, 1024, 2048]
+
+        self.tasks = tasks
+        self.dataset = dataset
+        if self.dataset == 'sim_warehouse':
+            seg_head_size = 23
+        elif self.dataset == 'nyuv2':
+            seg_head_size = 13
+
+        self.shared_conv = nn.Sequential(backbone.conv1, backbone.bn1, backbone.relu1, backbone.maxpool)
+        self.shared_layer1 = backbone.layer1
+        self.shared_layer2 = backbone.layer2
+        self.shared_layer3 = backbone.layer3
+        self.shared_layer4 = backbone.layer4
+
+        # Define task-specific decoders using ASPP modules
+        if list(tasks.keys())[0] == 'semantic':
+            self.head = DeepLabHead(ch[-1], seg_head_size)
+            
+        elif list(tasks.keys())[0] == 'depth':
+            self.head = DeepLabHead(ch[-1], 1)
+
+        elif list(tasks.keys())[0] == 'normals':
+            self.head = DeepLabHead(ch[-1], 3)
+
+            
+        #self.decoders = nn.ModuleList([DeepLabHead(ch[-1], self.tasks[t]) for t in self.tasks])
+
+    def forward(self, x):
+        _, _, im_h, im_w = x.shape
+        # Shared convolution
+        x = self.shared_conv(x)
+        x = self.shared_layer1(x)
+        x = self.shared_layer2(x)
+        x = self.shared_layer3(x)
+        x = self.shared_layer4(x)
+
+        # Task specific decoders
+        out = [0 for _ in self.tasks]
+        for i, t in enumerate(self.tasks):
+            out[i] = F.interpolate(self.head(x), size=[im_h, im_w], mode='bilinear', align_corners=True)
+            if t == 'normal':
+                out[i] = out[i] / torch.norm(out[i], p=2, dim=1, keepdim=True)
+        return out[0]
+
+    def shared_modules(self):
+        return [self.shared_conv,
+                self.shared_layer1,
+                self.shared_layer2,
+                self.shared_layer3,
+                self.shared_layer4]
+
+    def zero_grad_shared_modules(self):
+        for mm in self.shared_modules():
+            mm.zero_grad()
+            
+            
+            
