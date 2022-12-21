@@ -1,0 +1,78 @@
+DDRNetSingle
+{'normals': 3}
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.39it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Normals 3.7674 136.2065 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.35it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Normals 1.9350 111.8399 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.43it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Normals 0.9589 82.8224 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.32it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Normals 0.7458 77.9583 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.50it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Normals 0.5124 62.4705 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.51it/s]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Normals 0.5160 67.6949 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.50it/s]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Normals 0.5446 69.2177 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.34it/s]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Normals 0.4896 59.9783 || TEST: Normals 0.0000 0.0000 | Best: Normals 0.0000
+Task Weighting | Normals 1.0000
+Saving full model
+0.0 0.0
+
+

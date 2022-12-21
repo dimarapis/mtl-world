@@ -7,7 +7,6 @@ import torch
 import random
 import torch.nn.functional as F
 import numpy as np
-import torchmetrics
 
 
 """ Define task metrics, loss functions and model trainer """
@@ -128,7 +127,9 @@ def compute_loss(pred, gt, task_id):
     if task_id in ['seg', 'part_seg','semantic'] or 'class' in task_id:
         # Cross Entropy Loss with Ignored Index (values are -1)
         #print('predshape',pred.shape)
-        #print('gtshape',gt.shape)
+        #rint('gtshape',gt.shape)
+        #print('minmaxpred',torch.min(pred),torch.max(pred))
+        #print('minmaxgt',torch.min(gt),torch.max(gt))
         loss = F.cross_entropy(pred, gt, ignore_index=-1)
         #jaccard = torchmetrics.JaccardIndex(13, ignore_index=-1)
         #oss = jaccard(pred, gt)

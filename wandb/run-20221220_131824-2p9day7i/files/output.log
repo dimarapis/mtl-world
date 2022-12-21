@@ -1,0 +1,41 @@
+DDRNetSingle
+{'normals': 3}
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.54it/s]
+-0.9999846 0.9999846
+0.0 1.0
+-0.9999846 0.999965
+0.0 1.0
+-0.9999846 0.9999846
+0.0 1.0
+-0.9999846 0.99972594
+0.0 1.0
+Traceback (most recent call last):
+  File "train_model.py", line 379, in <module>
+    test_pred = model(image)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_DDRNet.py", line 498, in forward
+    x = self.layer4(self.relu(x))
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_DDRNet.py", line 42, in forward
+    out = self.relu(out)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py", line 1297, in relu
+    result = torch.relu_(input)
+KeyboardInterrupt

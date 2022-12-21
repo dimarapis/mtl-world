@@ -1,0 +1,24 @@
+DDRNetSingle
+{'depth': 1}
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+  0%|                                                                                                                                                                                                | 0/25 [00:00<?, ?it/s]
+  "See the documentation of nn.Upsample for details.".format(mode)
+
+ 80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                    | 20/25 [00:04<00:00,  5.34it/s]
+train_losses 6.177644682019222
+depth-shape (1, 288, 384)
+depth-shape (1, 288, 384)
+depth-shape (288, 384)
+depth-shape (1, 288, 384)
+depth-shape (1, 288, 384)
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.82it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 409, in <module>
+  File "train_model.py", line 409, in <listcomp>
+  File "/home/dim/mdpi_robotics/mtl-world/utils.py", line 145, in compute_loss
+    loss = torch.mean(torch.abs(pred - gt).masked_select(valid_mask))
+KeyboardInterrupt

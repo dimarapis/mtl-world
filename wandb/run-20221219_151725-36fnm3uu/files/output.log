@@ -1,0 +1,20 @@
+DDRNetSingle
+{'depth': 1}
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+  0%|                                                                                                                                                                                                | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+  4%|███████▎                                                                                                                                                                                | 1/25 [00:00<00:13,  1.78it/s]
+
+
+ 80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                    | 20/25 [00:04<00:00,  5.26it/s]
+train_losses 6.177480997524361
+depth-shape (1, 288, 384)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.82it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 380, in <module>
+    img1 = depth_colorize(test_pred[0].cpu().numpy())
+  File "train_model.py", line 296, in depth_colorize
+    depth.squeeze_(0)
+AttributeError: 'numpy.ndarray' object has no attribute 'squeeze_'

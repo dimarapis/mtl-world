@@ -1,0 +1,88 @@
+2022-12-20 13:45:36,529 INFO    MainThread:1189 [internal.py:wandb_internal():93] W&B internal server running at pid: 1189, started at: 2022-12-20 13:45:36.529261
+2022-12-20 13:45:36,531 INFO    WriterThread:1189 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/run-27g8ndu8.wandb
+2022-12-20 13:45:36,531 DEBUG   SenderThread:1189 [sender.py:send():232] send: header
+2022-12-20 13:45:36,531 DEBUG   SenderThread:1189 [sender.py:send():232] send: run
+2022-12-20 13:45:36,755 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: check_version
+2022-12-20 13:45:36,756 INFO    SenderThread:1189 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files
+2022-12-20 13:45:36,756 INFO    SenderThread:1189 [sender.py:_start_run_threads():814] run started: 27g8ndu8 with start time 1671540335
+2022-12-20 13:45:36,756 DEBUG   SenderThread:1189 [sender.py:send():232] send: summary
+2022-12-20 13:45:36,756 INFO    SenderThread:1189 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 13:45:36,757 DEBUG   SenderThread:1189 [sender.py:send_request():246] send_request: check_version
+2022-12-20 13:45:36,923 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: run_start
+2022-12-20 13:45:36,927 DEBUG   HandlerThread:1189 [meta.py:__init__():35] meta init
+2022-12-20 13:45:36,927 DEBUG   HandlerThread:1189 [meta.py:__init__():49] meta init done
+2022-12-20 13:45:36,927 DEBUG   HandlerThread:1189 [meta.py:probe():209] probe
+2022-12-20 13:45:36,933 DEBUG   HandlerThread:1189 [meta.py:_setup_git():199] setup git
+2022-12-20 13:45:36,946 DEBUG   HandlerThread:1189 [meta.py:_setup_git():206] setup git done
+2022-12-20 13:45:36,946 DEBUG   HandlerThread:1189 [meta.py:_save_pip():53] save pip
+2022-12-20 13:45:36,947 DEBUG   HandlerThread:1189 [meta.py:_save_pip():67] save pip done
+2022-12-20 13:45:36,947 DEBUG   HandlerThread:1189 [meta.py:_save_conda():74] save conda
+2022-12-20 13:45:37,504 DEBUG   HandlerThread:1189 [meta.py:_save_conda():84] save conda done
+2022-12-20 13:45:37,504 DEBUG   HandlerThread:1189 [meta.py:probe():247] probe done
+2022-12-20 13:45:37,507 DEBUG   SenderThread:1189 [sender.py:send():232] send: files
+2022-12-20 13:45:37,507 INFO    SenderThread:1189 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-12-20 13:45:37,512 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 13:45:37,512 DEBUG   SenderThread:1189 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 13:45:37,704 DEBUG   SenderThread:1189 [sender.py:send():232] send: telemetry
+2022-12-20 13:45:37,704 DEBUG   SenderThread:1189 [sender.py:send():232] send: config
+2022-12-20 13:45:37,758 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/conda-environment.yaml
+2022-12-20 13:45:37,758 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/wandb-summary.json
+2022-12-20 13:45:37,759 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/wandb-metadata.json
+2022-12-20 13:45:37,759 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:37,759 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/requirements.txt
+2022-12-20 13:45:38,114 INFO    Thread-11 :1189 [upload_job.py:push():132] Uploaded file /tmp/tmpb15qqq_cwandb/27mv0w5r-wandb-metadata.json
+2022-12-20 13:45:39,757 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:41,757 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:43,758 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:45,758 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:47,759 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:49,760 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:51,760 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:52,705 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 13:45:52,705 DEBUG   SenderThread:1189 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 13:45:53,761 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:56,762 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:45:58,762 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:00,763 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:02,764 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:04,764 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:05,149 DEBUG   SenderThread:1189 [sender.py:send():232] send: stats
+2022-12-20 13:46:06,765 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:07,765 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/config.yaml
+2022-12-20 13:46:07,953 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 13:46:07,954 DEBUG   SenderThread:1189 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 13:46:08,766 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:10,766 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:12,767 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:14,767 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:16,768 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:18,768 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:20,769 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:23,146 DEBUG   HandlerThread:1189 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 13:46:23,146 DEBUG   SenderThread:1189 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 13:46:23,770 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:25,770 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:27,771 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:29,771 INFO    Thread-7  :1189 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:30,049 WARNING MainThread:1189 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-12-20 13:46:30,062 DEBUG   SenderThread:1189 [sender.py:send():232] send: telemetry
+2022-12-20 13:46:30,217 WARNING MainThread:1189 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-12-20 13:46:30,217 ERROR   MainThread:1189 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-12-20 13:46:31,062 INFO    WriterThread:1189 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/run-27g8ndu8.wandb
+2022-12-20 13:46:31,062 INFO    SenderThread:1189 [sender.py:finish():1110] shutting down sender
+2022-12-20 13:46:31,062 INFO    SenderThread:1189 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-12-20 13:46:31,772 INFO    SenderThread:1189 [dir_watcher.py:finish():342] scan: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files
+2022-12-20 13:46:31,772 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/wandb-metadata.json wandb-metadata.json
+2022-12-20 13:46:31,772 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/config.yaml config.yaml
+2022-12-20 13:46:31,772 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/conda-environment.yaml conda-environment.yaml
+2022-12-20 13:46:31,773 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/wandb-summary.json wandb-summary.json
+2022-12-20 13:46:31,775 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/requirements.txt requirements.txt
+2022-12-20 13:46:31,775 INFO    SenderThread:1189 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log output.log
+2022-12-20 13:46:31,775 INFO    SenderThread:1189 [file_pusher.py:finish():145] shutting down file pusher
+2022-12-20 13:46:31,777 INFO    SenderThread:1189 [file_pusher.py:join():150] waiting for file pusher
+2022-12-20 13:46:32,324 INFO    Thread-12 :1189 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/config.yaml
+2022-12-20 13:46:32,336 INFO    Thread-14 :1189 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/wandb-summary.json
+2022-12-20 13:46:32,339 INFO    Thread-15 :1189 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/requirements.txt
+2022-12-20 13:46:32,374 INFO    Thread-13 :1189 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/conda-environment.yaml
+2022-12-20 13:46:32,545 INFO    Thread-16 :1189 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_134535-27g8ndu8/files/output.log
+2022-12-20 13:46:32,951 INFO    MainThread:1189 [internal.py:handle_exit():80] Internal process exited

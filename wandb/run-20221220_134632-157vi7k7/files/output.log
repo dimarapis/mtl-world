@@ -1,0 +1,99 @@
+
+DDRNetMTL_Split
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.38it/s]
+train_model.py:290: RuntimeWarning: invalid value encountered in true_divide
+  depth = (depth - np.min(depth)) / (np.max(depth) - np.min(depth))
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.9893 0.0518 Depth 4.7036 4.7036 Normals 2.2208 37.7131 || TEST: Semantic 2.0367 0.0559 Depth 1.9824 1.9824 Normals 1.1779 30.3523 | All -1.3403 | Best: All -1.3403
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.39it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.3979 0.0810 Depth 2.0965 2.0965 Normals 1.1937 40.4683 || TEST: Semantic 2.0285 0.0732 Depth 1.5911 1.5911 Normals 0.6121 43.9122 | All -1.2791 | Best: All -1.2791
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.30it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.1581 0.0879 Depth 1.4264 1.4264 Normals 0.7458 45.3360 || TEST: Semantic 1.9234 0.0849 Depth 1.0109 1.0109 Normals 0.4979 37.1908 | All -0.7999 | Best: All -0.7999
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.26it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.0311 0.0948 Depth 1.2092 1.2092 Normals 0.5913 50.2884 || TEST: Semantic 1.7913 0.0884 Depth 0.9574 0.9574 Normals 0.4311 39.2958 | All -0.7944 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.36it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.9359 0.0988 Depth 1.1011 1.1011 Normals 0.5180 50.1438 || TEST: Semantic 1.7401 0.0922 Depth 0.9776 0.9776 Normals 0.3840 42.2973 | All -0.8490 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.17it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.8712 0.1029 Depth 1.0053 1.0053 Normals 0.4703 54.4789 || TEST: Semantic 1.6638 0.0920 Depth 0.8644 0.8644 Normals 0.3662 46.3599 | All -0.8374 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.29it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.8236 0.1058 Depth 0.9220 0.9220 Normals 0.4331 53.5125 || TEST: Semantic 1.5975 0.0923 Depth 0.8416 0.8416 Normals 0.3572 49.6808 | All -0.8720 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.33it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.7680 0.1101 Depth 0.8600 0.8600 Normals 0.4169 54.1204 || TEST: Semantic 1.5370 0.0979 Depth 0.9311 0.9311 Normals 0.3478 45.5353 | All -0.8632 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.34it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.7513 0.1115 Depth 0.8721 0.8721 Normals 0.4136 53.0553 || TEST: Semantic 1.5279 0.0985 Depth 0.8837 0.8837 Normals 0.3365 47.6168 | All -0.8634 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.33it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.6845 0.1184 Depth 0.7931 0.7931 Normals 0.3951 54.7488 || TEST: Semantic 1.5075 0.1011 Depth 0.9334 0.9334 Normals 0.3325 52.1264 | All -0.9602 | Best: All -0.7944
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.31it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 404, in <module>
+    prediction_semantic = depth_colorize(F.softmax(test_pred[0], dim=0).argmax(0).cpu().numpy())
+  File "train_model.py", line 291, in depth_colorize
+    depth_colorized = 255 * cmap3(np.squeeze(depth))[:, :, :3]  # H, W, C
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/matplotlib/colors.py", line 642, in __call__
+    lut.take(xa, axis=0, mode='clip', out=rgba)
+KeyboardInterrupt

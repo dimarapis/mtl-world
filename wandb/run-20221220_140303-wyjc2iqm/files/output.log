@@ -1,0 +1,59 @@
+
+DDRNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.36it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.9907 0.0516 Depth 4.7061 4.7061 Normals 2.2209 37.8541 || TEST: Semantic 2.0452 0.0563 Depth 2.0220 2.0220 Normals 1.1189 29.5496 | All -1.3533 | Best: All -1.3533
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]
+Saving full model
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.31it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 2.4021 0.0802 Depth 2.1021 2.1021 Normals 1.1931 40.2553 || TEST: Semantic 2.1335 0.0732 Depth 1.5060 1.5060 Normals 0.6104 42.3178 | All -1.2011 | Best: All -1.2011
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-1.2010626336963428 -1.2010626336963428
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.28it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Semantic 2.1525 0.0878 Depth 1.4329 1.4329 Normals 0.7420 44.9176 || TEST: Semantic 1.9407 0.0844 Depth 1.0107 1.0107 Normals 0.5426 37.8349 | All -0.8098 | Best: All -0.8098
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-0.8097553439929402 -0.8097553439929402
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.22it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Semantic 2.0249 0.0935 Depth 1.2136 1.2136 Normals 0.5853 50.3560 || TEST: Semantic 1.7479 0.0876 Depth 1.1709 1.1709 Normals 0.4154 43.1042 | All -0.9879 | Best: All -0.8098
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9878878511407274 -0.8097553439929402
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.22it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Semantic 1.9326 0.0985 Depth 1.0952 1.0952 Normals 0.5120 50.4591 || TEST: Semantic 1.7097 0.0900 Depth 0.9910 0.9910 Normals 0.3739 44.6329 | All -0.8940 | Best: All -0.8098
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8940293513753365 -0.8097553439929402
+
+
+
+

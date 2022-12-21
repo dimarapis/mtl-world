@@ -1,0 +1,23 @@
+DDRNetSingle
+{'normals': 3}
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+  0%|                                                                                                                                                         | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+ 16%|███████████████████████▏                                                                                                                         | 4/25 [00:01<00:07,  2.85it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 311, in <module>
+    train_pred = model(image)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_DDRNet.py", line 510, in forward
+    self.spp(self.layer5(self.relu(x))),
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_DDRNet.py", line 173, in forward
+    mode='bilinear')+x_list[2])))
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py", line 3731, in interpolate
+    return torch._C._nn.upsample_bilinear2d(input, output_size, align_corners, scale_factors)
+KeyboardInterrupt

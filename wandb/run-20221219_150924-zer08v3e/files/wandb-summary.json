@@ -1,0 +1,1 @@
+{"training_loss": 1.228623783300233, "depth_test_metric": 0.9687639065038802, "sample": {"_type": "image-file", "sha256": "232fa8582caf3fa771f1883126708231508eb046b5eec7256af8591165e55d12", "size": 962, "path": "media/images/sample_2_232fa8582caf3fa771f1.png", "format": "png", "width": 3, "height": 288, "caption": "Sample"}, "_timestamp": 1671459029, "_runtime": 65, "_step": 3}

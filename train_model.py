@@ -3,6 +3,7 @@ import argparse
 import torch.nn as nn
 import torch.optim as optim
 import torch.utils.data.sampler as sampler
+import matplotlib.pyplot as plt
 
 from models.model_ResNet import MTLDeepLabv3, MTANDeepLabv3, ResNetSingle
 from models.model_SegNet import SegNetSplit, SegNetMTAN, SegNetSingle
@@ -17,7 +18,7 @@ from tqdm import tqdm
 from autolambda_code import SimWarehouse, NYUv2
 import visualizer
 
-import segmentation_models_pytorch as smp 
+#import segmentation_models_pytorch as smp 
 import wandb
 
 
@@ -38,11 +39,11 @@ parser.add_argument('--seed', default=29, type=int, help='random seed ID')
 parser.add_argument('--gpu', default=0, type=int, help='gpu ID')
 #Training settings
 parser.add_argument('--batch_size', default=32, type=int, help='quite self-xplanatory')
-parser.add_argument('--total_epochs', default=50, type=int, help='quite self-xplanatory')
+parser.add_argument('--total_epochs', default=30, type=int, help='quite self-xplanatory')
 parser.add_argument('--lr', default=1e-4, type=float, help='learning rate')
 #Task settings
 parser.add_argument('--weight', default='equal', type=str, help='weighting methods: equal, dwa, uncert')
-parser.add_argument('--task', default='depth', type=str,choices='all,semantic,depth,normals', help='tasks for training, use all for MTL setting')
+parser.add_argument('--task', default='all', type=str,choices='all,semantic,depth,normals', help='tasks for training, use all for MTL setting')
 parser.add_argument('--dataset', default='nyuv2', type=str, help='Data from simulated warehouse (sim_warehouse) or NYUv2 indoor data (nyuv2)')
 #Network settings
 parser.add_argument('--network', default='DDRNet', type=str, choices='ResNet,SegNet,DDDRNet',help='Base network')
@@ -179,7 +180,7 @@ if opt.weight in ['dwa', 'equal']:
 
 #UNIVERSAL OPTIMIZERS AND LR SCHEDULER
 optimizer = optim.Adam(params, lr=opt.lr)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
-scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[20,30,40,45], gamma=0.1)
+scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[15,20,25], gamma=0.1)
 
 
 if opt.load_model == True:
@@ -283,7 +284,22 @@ def min_max_sanity_check(returned_data_dict):
     print(f'semantic {torch_min_max(returned_data_dict["semantic"])}')
     print(f'normals {torch_min_max(returned_data_dict["normals"])}')
  
-    
+ 
+def depth_colorize(depth):
+    cmap3 = plt.cm.turbo
+    depth = (depth - np.min(depth)) / (np.max(depth) - np.min(depth))
+    depth_colorized = 255 * cmap3(np.squeeze(depth))[:, :, :3]  # H, W, C    
+    return depth_colorized.astype('uint8')
+
+
+def rgb_visualizer(image):
+    #print(np.min(image), np.max(image))
+    image = (image - np.min(image)) / (np.max(image) - np.min(image))
+    image = 255 * image
+    #print(np.min(image), np.max(image))
+
+    rgb = np.transpose(image, (1, 2, 0))
+    return rgb.astype('uint8')
 
 def torch_min_max(data):
     minmax = (torch.min(data.float()).item(),torch.mean(data.float()).item(),torch.median(data.float()).item(),torch.max(data.float()).item())
@@ -338,6 +354,8 @@ while index < total_epoch:
         #print(type(loss))
         loss.backward()
         optimizer.step()
+
+        #print(optimizer)
         
         
         if opt.task == 'all':
@@ -346,65 +364,134 @@ while index < total_epoch:
         else:
             train_metric.update_single_metric(train_pred, train_target, train_loss[0])
             
-    train_str, _ = train_metric.compute_metric()
+    train_str, train_losses = train_metric.compute_metric()
+    #print('train_losses',train_losses[opt.task][index][1])
+    
     train_metric.reset()
 
     model.eval()
     with torch.no_grad():
-        
         i_test = 0
         for multitaskdatatest in test_loader:
+            
             image = multitaskdatatest['rgb'].to(device)
             
             test_target = {task_id: multitaskdatatest[task_id].to(device) for task_id in train_tasks.keys()}
-
             test_pred = model(image)
-            #print(f'test_pred[0]_shape {test_pred[0].shape}')
-            if i_test == 0:
-                #print(multitaskdatatest['file'])
-                #min_max_sanity_check(multitaskdatatest)
-                #print(f'prediction {torch_min_max(test_pred[0])}')
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-            if i_test == 50:
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-            if i_test == 100:
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-            if i_test == 150:
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-            if i_test == 200:
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-            if i_test == 250:
-                visualizer.save_depth_as_uint8colored(test_pred[0],'results/'+opt.dataset+'/'+multitaskdatatest['file'][0].split('/')[-1]+'.png')
-                  
-            #test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in
-            #            enumerate(train_tasks)]
-            
-                    #print(train_tasks)
-            if opt.task == 'all':
-                test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in
-                         enumerate(train_tasks)]
-                
-                #train_loss = [compute_loss(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
-            else:
-                #print('getting in now')
-                #print(f'train_pred_shape {train_pred.shape}')
-                #print(f'train_target[task_id].shape {train_target["semantic"].shape}')
-                
+            #print(test_pred[2])
+            #print(test_pred[2].squeeze(0).shape)
+            if opt.task == 'depth':
+                gt = multitaskdatatest['depth'].to(device).squeeze(1)
+                gt_image = depth_colorize(gt.cpu().numpy())
+                prediction = test_pred[0]
+                prediction = depth_colorize(prediction.cpu().numpy())
+            elif opt.task == 'semantic':
+                gt = multitaskdatatest['semantic'].to(device).squeeze(1)
+                gt_image = depth_colorize(gt.cpu().numpy())
+                prediction = F.softmax(test_pred[0], dim=0).argmax(0)
+                prediction = depth_colorize(prediction.cpu().numpy())
+            elif opt.task == 'normals':
+                gt = multitaskdatatest['normals'].to(device).squeeze(1).squeeze(0)
+                gt_image = rgb_visualizer(gt.cpu().numpy())
+                #print(gt.shape)
+                prediction = rgb_visualizer(test_pred[0].cpu().numpy())
+                #prediction = F.softmax(test_pred[0], dim=0).argmax(0)
+            elif opt.task == 'all':
+                #gt_depth = multitaskdatatest['depth'].to(device).squeeze(1)
+                gt_image = depth_colorize(multitaskdatatest['depth'].to(device).squeeze(1).cpu().numpy())
+                prediction = depth_colorize(test_pred[1].cpu().numpy())
+                gt_semantic = depth_colorize(multitaskdatatest['semantic'].to(device).squeeze(1).cpu().numpy())           
+                prediction_semantic = depth_colorize(F.softmax(test_pred[0].squeeze(0), dim=0).argmax(0).cpu().numpy())       
+                gt_normals = rgb_visualizer(multitaskdatatest['normals'].to(device).squeeze(1).squeeze(0).cpu().numpy())
+                prediction_normals = rgb_visualizer(test_pred[2].squeeze(0).cpu().numpy())
 
-                test_loss = [compute_loss(test_pred, test_target[task_id], task_id) for task_id in test_target.keys()]
+            if i_test == 0:
+                img_list_0= []
+                image_rgb_0 = wandb.Image(image.permute(0,2,3,1).cpu().numpy(), caption="RGB_0")
+                image_gt_0 = wandb.Image(gt_image, caption="GT_0")
+                image_pred_0 = wandb.Image(prediction, caption="Pred_0")
+                img_list_0.append(image_rgb_0)
+                img_list_0.append(image_gt_0)
+                img_list_0.append(image_pred_0)
+                if opt.task == 'all':
+                    image_gt_0_1 = wandb.Image(gt_semantic, caption="GT_0_1")
+                    image_pred_0_1 = wandb.Image(prediction_semantic, caption="Pred_0_1")
+                    image_gt_0_2 = wandb.Image(gt_normals, caption="GT_0_2")
+                    image_pred_0_2 = wandb.Image(prediction_normals, caption="Pred_0_2")
+                    img_list_0.append(image_gt_0_1)
+                    img_list_0.append(image_pred_0_1)
+                    img_list_0.append(image_gt_0_2)
+                    img_list_0.append(image_pred_0_2)
+                    
                 
-            #print(test_loss)
+            if i_test == 50:
+                img_list_50= []
+                image_rgb_50 = wandb.Image(image.permute(0,2,3,1).cpu().numpy(), caption="RGB_50")
+                image_gt_50 = wandb.Image(gt_image, caption="GT_50")
+                image_pred_50 = wandb.Image(prediction, caption="Pred_50")
+                img_list_50.append(image_rgb_50)
+                img_list_50.append(image_gt_50)
+                img_list_50.append(image_pred_50)
+                if opt.task == 'all':
+                    image_gt_50_1 = wandb.Image(gt_semantic, caption="GT_50_1")
+                    image_pred_50_1 = wandb.Image(prediction_semantic, caption="Pred_50_1")
+                    image_gt_50_2 = wandb.Image(gt_normals, caption="GT_50_2")
+                    image_pred_50_2 = wandb.Image(prediction_normals, caption="Pred_50_2")
+                    img_list_50.append(image_gt_50_1)
+                    img_list_50.append(image_pred_50_1)
+                    img_list_50.append(image_gt_50_2)
+                    img_list_50.append(image_pred_50_2)
+            if i_test == 100:
+                img_list_100= []
+                image_rgb_100 = wandb.Image(image.permute(0,2,3,1).cpu().numpy(), caption="RGB_100")
+                image_gt_100 = wandb.Image(gt_image, caption="GT_100")
+                image_pred_100 = wandb.Image(prediction, caption="Pred_100")
+                img_list_100.append(image_rgb_100)
+                img_list_100.append(image_gt_100)
+                img_list_100.append(image_pred_100)    
+                if opt.task == 'all':
+                    image_gt_100_1 = wandb.Image(gt_semantic, caption="GT_100_1")
+                    image_pred_100_1 = wandb.Image(prediction_semantic, caption="Pred_100_1")
+                    image_gt_100_2 = wandb.Image(gt_normals, caption="GT_100_2")
+                    image_pred_100_2 = wandb.Image(prediction_normals, caption="Pred_100_2")
+                    img_list_100.append(image_gt_100_1)
+                    img_list_100.append(image_pred_100_1)
+                    img_list_100.append(image_gt_100_2)
+                    img_list_100.append(image_pred_100_2)        
+            if i_test == 150:
+                img_list_150= []
+                image_rgb_150 = wandb.Image(image.permute(0,2,3,1).cpu().numpy(), caption="RGB_150")
+                image_gt_150 = wandb.Image(gt_image, caption="GT_150")
+                image_pred_150 = wandb.Image(prediction, caption="Pred_150")
+                img_list_150.append(image_rgb_150)
+                img_list_150.append(image_gt_150)
+                img_list_150.append(image_pred_150)
+                if opt.task == 'all':
+                    image_gt_150_1 = wandb.Image(gt_semantic, caption="GT_150_1")
+                    image_pred_150_1 = wandb.Image(prediction_semantic, caption="Pred_150_1")
+                    image_gt_150_2 = wandb.Image(gt_normals, caption="GT_150_2")
+                    image_pred_150_2 = wandb.Image(prediction_normals, caption="Pred_150_2")
+                    img_list_150.append(image_gt_150_1)
+                    img_list_150.append(image_pred_150_1)
+                    img_list_150.append(image_gt_150_2)
+                    img_list_150.append(image_pred_150_2)
+
+
             if opt.task == 'all':
+                test_loss = [compute_loss(test_pred[i], test_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
                 test_metric.update_metric(test_pred, test_target, test_loss)
             else:
+                test_loss = [compute_loss(test_pred, test_target[task_id], task_id) for task_id in test_target.keys()]
                 test_metric.update_single_metric(test_pred, test_target, test_loss[0])
 
             i_test +=1
 
     test_str,metric = test_metric.compute_metric()
     test_metric.reset()
-
+    
     scheduler.step()
+    #print(optimizer)
+    
     print('Entering evaluation phase...')
     print('Epoch {:04d} | TRAIN:{} || TEST:{} | Best: {} {:.4f}'
           .format(index, train_str, test_str, opt.task.title(), test_metric.get_best_performance(opt.task)))
@@ -429,32 +516,48 @@ while index < total_epoch:
 
     # Save full model
     if opt.task == 'all':
-        current_loss = metric['all'][index]
+        current_test_metric = metric['all'][index]
         #print('current_loss', current_loss)
     else: 
-        current_loss = metric[opt.task][index][1]
-        #print('current_loss', current_loss)
+        current_test_metric = metric[opt.task][index][1]
+        print('current_loss', current_test_metric)
         
         
     #current_loss = test_metric.get_best_performance(opt.task)
     
     if index == 0:
-        best_test_str = current_loss
+        best_test_str = current_test_metric
         
     if opt.wandb:
-        wandb.log({'current_loss':current_loss}, step = index)
+        if opt.task == 'all':
+            
+            wandb.log({'training_loss_depth':train_losses['depth'][index][1],'training_loss_semantic':train_losses['semantic'][index][1],
+                       'training_loss_normals':train_losses['normals'][index][1],'depth_test_metric':current_test_metric, 'Images_0':img_list_0,    
+                       'Images_50':img_list_50, 'Images_100': img_list_100,'Images_150': img_list_150}, step = index)
+            #wandb.log({'train_loss':train_metric.metric[index], 'test_loss':test_metric.metric[index]}, step = index)
+        elif opt.task == 'semantic':
+            wandb.log({'training_loss':train_losses[opt.task][index][1],'depth_test_metric':current_test_metric, 'Images_0':img_list_0,    
+                       'Images_50':img_list_50, 'Images_100': img_list_100,'Images_150': img_list_150}, step = index)
+        elif opt.task == 'depth':
+            wandb.log({'training_loss':train_losses[opt.task][index][1],'depth_test_metric':current_test_metric, 'Images_0':img_list_0,    
+                       'Images_50':img_list_50, 'Images_100': img_list_100,'Images_150': img_list_150}, step = index)
+        elif opt.task == 'normals':
+            wandb.log({'training_loss':train_losses[opt.task][index][1],'depth_test_metric':current_test_metric, 'Images_0':img_list_0,    
+                       'Images_50':img_list_50, 'Images_100': img_list_100,'Images_150': img_list_150}, step = index)
+
+
 
 
     if opt.task == "depth" or opt.task == "normals":
-        if current_loss <= best_test_str:
-            best_test_str = current_loss
+        if current_test_metric <= best_test_str:
+            best_test_str = current_test_metric
 
             save_model = True
         else:
             save_model = False
     else:
-        if current_loss >= best_test_str:
-            best_test_str = current_loss
+        if current_test_metric >= best_test_str:
+            best_test_str = current_test_metric
 
             save_model = True
         else:
@@ -478,7 +581,7 @@ while index < total_epoch:
             'loss': loss,
             }, path)
         #break
-    print(current_loss,best_test_str)
+    print(current_test_metric,best_test_str)
 
     index += 1
 

@@ -1,0 +1,532 @@
+2022-12-20 10:47:31,554 INFO    MainThread:1756 [internal.py:wandb_internal():93] W&B internal server running at pid: 1756, started at: 2022-12-20 10:47:31.554307
+2022-12-20 10:47:31,555 INFO    WriterThread:1756 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/run-36g6dam6.wandb
+2022-12-20 10:47:31,556 DEBUG   SenderThread:1756 [sender.py:send():232] send: header
+2022-12-20 10:47:31,557 DEBUG   SenderThread:1756 [sender.py:send():232] send: run
+2022-12-20 10:47:31,803 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: check_version
+2022-12-20 10:47:31,808 INFO    SenderThread:1756 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files
+2022-12-20 10:47:31,809 INFO    SenderThread:1756 [sender.py:_start_run_threads():814] run started: 36g6dam6 with start time 1671529650
+2022-12-20 10:47:31,809 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:47:31,810 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:47:31,810 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: check_version
+2022-12-20 10:47:31,967 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: run_start
+2022-12-20 10:47:31,976 DEBUG   HandlerThread:1756 [meta.py:__init__():35] meta init
+2022-12-20 10:47:31,976 DEBUG   HandlerThread:1756 [meta.py:__init__():49] meta init done
+2022-12-20 10:47:31,977 DEBUG   HandlerThread:1756 [meta.py:probe():209] probe
+2022-12-20 10:47:31,985 DEBUG   HandlerThread:1756 [meta.py:_setup_git():199] setup git
+2022-12-20 10:47:31,999 DEBUG   HandlerThread:1756 [meta.py:_setup_git():206] setup git done
+2022-12-20 10:47:32,000 DEBUG   HandlerThread:1756 [meta.py:_save_pip():53] save pip
+2022-12-20 10:47:32,000 DEBUG   HandlerThread:1756 [meta.py:_save_pip():67] save pip done
+2022-12-20 10:47:32,000 DEBUG   HandlerThread:1756 [meta.py:_save_conda():74] save conda
+2022-12-20 10:47:32,511 DEBUG   HandlerThread:1756 [meta.py:_save_conda():84] save conda done
+2022-12-20 10:47:32,511 DEBUG   HandlerThread:1756 [meta.py:probe():247] probe done
+2022-12-20 10:47:32,514 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:32,515 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-12-20 10:47:32,519 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:47:32,519 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:47:32,748 DEBUG   SenderThread:1756 [sender.py:send():232] send: telemetry
+2022-12-20 10:47:32,748 DEBUG   SenderThread:1756 [sender.py:send():232] send: config
+2022-12-20 10:47:32,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/requirements.txt
+2022-12-20 10:47:32,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/conda-environment.yaml
+2022-12-20 10:47:32,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:47:32,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-metadata.json
+2022-12-20 10:47:32,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:33,140 INFO    Thread-11 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3qszo9t7-wandb-metadata.json
+2022-12-20 10:47:34,807 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:36,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:38,808 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:40,809 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:42,809 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:47,749 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:47:47,749 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:47:51,353 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,354 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_f20f90b3a68428fe5fc5.png with policy now
+2022-12-20 10:47:51,367 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,367 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_969d3d1ae5503510993e.png with policy now
+2022-12-20 10:47:51,370 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,371 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_242296471ec6b91e405b.png with policy now
+2022-12-20 10:47:51,411 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,412 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_e32b47ad0375090e3d49.png with policy now
+2022-12-20 10:47:51,428 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,429 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_53e3d0f9c48671fac68e.png with policy now
+2022-12-20 10:47:51,431 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,432 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_de1e75a3b1013ed3e503.png with policy now
+2022-12-20 10:47:51,454 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,455 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_2eff6567f00bdc98b5f5.png with policy now
+2022-12-20 10:47:51,460 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,460 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_4dc5c455793812efba7a.png with policy now
+2022-12-20 10:47:51,461 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,461 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_3b39b8a9dfc6fe9a5665.png with policy now
+2022-12-20 10:47:51,470 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,470 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_16011dc448130cc6122a.png with policy now
+2022-12-20 10:47:51,473 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,473 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_a5164e47db09809745e1.png with policy now
+2022-12-20 10:47:51,473 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:47:51,473 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_f1a7f9d8b9c14a823cec.png with policy now
+2022-12-20 10:47:51,478 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: partial_history
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_a5164e47db09809745e1.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_16011dc448130cc6122a.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_4dc5c455793812efba7a.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_f1a7f9d8b9c14a823cec.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_e32b47ad0375090e3d49.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_3b39b8a9dfc6fe9a5665.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_969d3d1ae5503510993e.png
+2022-12-20 10:47:51,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_53e3d0f9c48671fac68e.png
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_242296471ec6b91e405b.png
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_2eff6567f00bdc98b5f5.png
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_f20f90b3a68428fe5fc5.png
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_de1e75a3b1013ed3e503.png
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media
+2022-12-20 10:47:51,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images
+2022-12-20 10:47:51,993 INFO    Thread-13 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/268tbp5k-media/images/Images_0_0_969d3d1ae5503510993e.png
+2022-12-20 10:47:52,013 INFO    Thread-17 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/22s3zprd-media/images/Images_50_0_de1e75a3b1013ed3e503.png
+2022-12-20 10:47:52,023 INFO    Thread-14 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3bhfs5pt-media/images/Images_0_0_242296471ec6b91e405b.png
+2022-12-20 10:47:52,031 INFO    Thread-20 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/33ipu7mo-media/images/Images_100_0_3b39b8a9dfc6fe9a5665.png
+2022-12-20 10:47:52,039 INFO    Thread-12 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/d37zfk6j-media/images/Images_0_0_f20f90b3a68428fe5fc5.png
+2022-12-20 10:47:52,046 INFO    Thread-23 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3s8hrdg9-media/images/Images_150_0_f1a7f9d8b9c14a823cec.png
+2022-12-20 10:47:52,071 INFO    Thread-15 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/7vkj8y0r-media/images/Images_50_0_e32b47ad0375090e3d49.png
+2022-12-20 10:47:52,083 INFO    Thread-19 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3ozo2oz6-media/images/Images_100_0_4dc5c455793812efba7a.png
+2022-12-20 10:47:52,085 INFO    Thread-18 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3t010t9k-media/images/Images_100_0_2eff6567f00bdc98b5f5.png
+2022-12-20 10:47:52,090 INFO    Thread-22 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1vqouxqj-media/images/Images_150_0_a5164e47db09809745e1.png
+2022-12-20 10:47:52,111 INFO    Thread-16 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3hwxn23v-media/images/Images_50_0_53e3d0f9c48671fac68e.png
+2022-12-20 10:47:52,120 INFO    Thread-21 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3e0rkwyd-media/images/Images_150_0_16011dc448130cc6122a.png
+2022-12-20 10:47:52,812 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:54,813 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:56,814 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:47:58,814 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:00,212 DEBUG   SenderThread:1756 [sender.py:send():232] send: stats
+2022-12-20 10:48:02,816 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/config.yaml
+2022-12-20 10:48:02,951 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:48:02,951 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:48:06,550 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,550 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_f20f90b3a68428fe5fc5.png with policy now
+2022-12-20 10:48:06,553 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,553 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_969d3d1ae5503510993e.png with policy now
+2022-12-20 10:48:06,553 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,553 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_0_7c542036ef8297d709c1.png with policy now
+2022-12-20 10:48:06,563 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,563 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_e32b47ad0375090e3d49.png with policy now
+2022-12-20 10:48:06,566 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,566 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_53e3d0f9c48671fac68e.png with policy now
+2022-12-20 10:48:06,566 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,567 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_0_0479cdaf9379bda3b3cb.png with policy now
+2022-12-20 10:48:06,576 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,576 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_2eff6567f00bdc98b5f5.png with policy now
+2022-12-20 10:48:06,580 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,580 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_4dc5c455793812efba7a.png with policy now
+2022-12-20 10:48:06,580 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,581 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_0_8f0dc52755f92f5a87b6.png with policy now
+2022-12-20 10:48:06,591 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,592 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_16011dc448130cc6122a.png with policy now
+2022-12-20 10:48:06,596 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,596 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_a5164e47db09809745e1.png with policy now
+2022-12-20 10:48:06,596 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:06,596 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_0_50ef80468441e4b5e9b2.png with policy now
+2022-12-20 10:48:06,603 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: partial_history
+2022-12-20 10:48:06,605 DEBUG   SenderThread:1756 [sender.py:send():232] send: history
+2022-12-20 10:48:06,605 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:48:06,606 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:48:06,817 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:48:06,817 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_a5164e47db09809745e1.png
+2022-12-20 10:48:06,817 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_16011dc448130cc6122a.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_4dc5c455793812efba7a.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_50ef80468441e4b5e9b2.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_7c542036ef8297d709c1.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_e32b47ad0375090e3d49.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_969d3d1ae5503510993e.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:06,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_8f0dc52755f92f5a87b6.png
+2022-12-20 10:48:06,819 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_0479cdaf9379bda3b3cb.png
+2022-12-20 10:48:06,819 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images
+2022-12-20 10:48:07,137 INFO    Thread-29 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1asxi5hi-media/images/Images_50_0_0479cdaf9379bda3b3cb.png
+2022-12-20 10:48:07,177 INFO    Thread-35 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/28cul6kd-media/images/Images_150_0_50ef80468441e4b5e9b2.png
+2022-12-20 10:48:07,189 INFO    Thread-25 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/11wdtug6-media/images/Images_0_0_969d3d1ae5503510993e.png
+2022-12-20 10:48:07,197 INFO    Thread-31 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3u05c8po-media/images/Images_100_0_4dc5c455793812efba7a.png
+2022-12-20 10:48:07,204 INFO    Thread-28 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3qy82ytq-media/images/Images_50_0_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:07,206 INFO    Thread-24 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3reshsk3-media/images/Images_0_0_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:07,216 INFO    Thread-27 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1558e20x-media/images/Images_50_0_e32b47ad0375090e3d49.png
+2022-12-20 10:48:07,221 INFO    Thread-34 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1q0nfs1z-media/images/Images_150_0_a5164e47db09809745e1.png
+2022-12-20 10:48:07,222 INFO    Thread-26 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/to9pltlv-media/images/Images_0_0_7c542036ef8297d709c1.png
+2022-12-20 10:48:07,264 INFO    Thread-30 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/gtupd2bb-media/images/Images_100_0_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:07,265 INFO    Thread-32 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3qn6xnbc-media/images/Images_100_0_8f0dc52755f92f5a87b6.png
+2022-12-20 10:48:07,410 INFO    Thread-33 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/oyjvgc2o-media/images/Images_150_0_16011dc448130cc6122a.png
+2022-12-20 10:48:08,818 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:10,819 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:12,819 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:14,820 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:18,173 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:48:18,174 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:48:22,463 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,463 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_1_f20f90b3a68428fe5fc5.png with policy now
+2022-12-20 10:48:22,464 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,464 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_1_969d3d1ae5503510993e.png with policy now
+2022-12-20 10:48:22,464 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,464 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_1_c059ac1eb7b31ae9c75d.png with policy now
+2022-12-20 10:48:22,476 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,476 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_1_e32b47ad0375090e3d49.png with policy now
+2022-12-20 10:48:22,479 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,479 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_1_53e3d0f9c48671fac68e.png with policy now
+2022-12-20 10:48:22,480 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,480 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_1_20618f4e6d0b94b6eb0c.png with policy now
+2022-12-20 10:48:22,489 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,489 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_1_2eff6567f00bdc98b5f5.png with policy now
+2022-12-20 10:48:22,493 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,493 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_1_4dc5c455793812efba7a.png with policy now
+2022-12-20 10:48:22,494 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,494 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_1_2b623e8d69f23bac096d.png with policy now
+2022-12-20 10:48:22,504 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,504 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_1_16011dc448130cc6122a.png with policy now
+2022-12-20 10:48:22,508 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,508 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_1_a5164e47db09809745e1.png with policy now
+2022-12-20 10:48:22,510 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:22,510 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_1_e6d8b0a7b253464198a8.png with policy now
+2022-12-20 10:48:22,517 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: partial_history
+2022-12-20 10:48:22,518 DEBUG   SenderThread:1756 [sender.py:send():232] send: history
+2022-12-20 10:48:22,518 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:48:22,520 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:48:22,824 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:48:22,824 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_16011dc448130cc6122a.png
+2022-12-20 10:48:22,824 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:22,824 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_969d3d1ae5503510993e.png
+2022-12-20 10:48:22,824 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_20618f4e6d0b94b6eb0c.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_4dc5c455793812efba7a.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_e6d8b0a7b253464198a8.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_e32b47ad0375090e3d49.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_a5164e47db09809745e1.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_2b623e8d69f23bac096d.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_c059ac1eb7b31ae9c75d.png
+2022-12-20 10:48:22,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images
+2022-12-20 10:48:23,014 INFO    Thread-38 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1icauw5p-media/images/Images_0_1_c059ac1eb7b31ae9c75d.png
+2022-12-20 10:48:23,041 INFO    Thread-41 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2onmjlas-media/images/Images_50_1_20618f4e6d0b94b6eb0c.png
+2022-12-20 10:48:23,060 INFO    Thread-44 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/47d8vrk7-media/images/Images_100_1_2b623e8d69f23bac096d.png
+2022-12-20 10:48:23,062 INFO    Thread-37 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1jsm01c5-media/images/Images_0_1_969d3d1ae5503510993e.png
+2022-12-20 10:48:23,086 INFO    Thread-47 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1dvva8zn-media/images/Images_150_1_e6d8b0a7b253464198a8.png
+2022-12-20 10:48:23,088 INFO    Thread-40 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1azhjwj5-media/images/Images_50_1_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:23,096 INFO    Thread-43 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/361me1q8-media/images/Images_100_1_4dc5c455793812efba7a.png
+2022-12-20 10:48:23,114 INFO    Thread-39 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3rjp74bm-media/images/Images_50_1_e32b47ad0375090e3d49.png
+2022-12-20 10:48:23,131 INFO    Thread-46 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1zbcntz6-media/images/Images_150_1_a5164e47db09809745e1.png
+2022-12-20 10:48:23,132 INFO    Thread-36 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/gkmo5gjo-media/images/Images_0_1_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:23,135 INFO    Thread-42 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/16h8yqwe-media/images/Images_100_1_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:23,149 INFO    Thread-45 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/174umu8t-media/images/Images_150_1_16011dc448130cc6122a.png
+2022-12-20 10:48:24,825 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:26,826 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:28,827 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:30,453 DEBUG   SenderThread:1756 [sender.py:send():232] send: stats
+2022-12-20 10:48:30,828 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:33,382 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:48:33,382 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:48:39,449 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,449 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_2_f20f90b3a68428fe5fc5.png with policy now
+2022-12-20 10:48:39,453 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,453 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_2_969d3d1ae5503510993e.png with policy now
+2022-12-20 10:48:39,453 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,454 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_2_90ad347c759c0f39f1cb.png with policy now
+2022-12-20 10:48:39,464 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,465 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_2_e32b47ad0375090e3d49.png with policy now
+2022-12-20 10:48:39,465 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,466 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_2_53e3d0f9c48671fac68e.png with policy now
+2022-12-20 10:48:39,466 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,466 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_2_72ff0411d1065087a0b1.png with policy now
+2022-12-20 10:48:39,476 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,476 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_2_2eff6567f00bdc98b5f5.png with policy now
+2022-12-20 10:48:39,477 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,477 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_2_4dc5c455793812efba7a.png with policy now
+2022-12-20 10:48:39,477 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,477 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_2_d383625809e209ddec0b.png with policy now
+2022-12-20 10:48:39,489 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,490 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_2_16011dc448130cc6122a.png with policy now
+2022-12-20 10:48:39,491 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,491 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_2_a5164e47db09809745e1.png with policy now
+2022-12-20 10:48:39,492 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:39,492 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_2_407560bf2bcd7429005e.png with policy now
+2022-12-20 10:48:39,498 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: partial_history
+2022-12-20 10:48:39,499 DEBUG   SenderThread:1756 [sender.py:send():232] send: history
+2022-12-20 10:48:39,499 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:48:39,502 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:48:39,832 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:48:39,832 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_4dc5c455793812efba7a.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_a5164e47db09809745e1.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_90ad347c759c0f39f1cb.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_72ff0411d1065087a0b1.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_d383625809e209ddec0b.png
+2022-12-20 10:48:39,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_16011dc448130cc6122a.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_e32b47ad0375090e3d49.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_969d3d1ae5503510993e.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_407560bf2bcd7429005e.png
+2022-12-20 10:48:39,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images
+2022-12-20 10:48:40,023 INFO    Thread-50 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/274jqmtj-media/images/Images_0_2_90ad347c759c0f39f1cb.png
+2022-12-20 10:48:40,032 INFO    Thread-53 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/37ky9403-media/images/Images_50_2_72ff0411d1065087a0b1.png
+2022-12-20 10:48:40,060 INFO    Thread-56 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/9smrh271-media/images/Images_100_2_d383625809e209ddec0b.png
+2022-12-20 10:48:40,062 INFO    Thread-55 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2prizq3l-media/images/Images_100_2_4dc5c455793812efba7a.png
+2022-12-20 10:48:40,071 INFO    Thread-58 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2qdtxhqw-media/images/Images_150_2_a5164e47db09809745e1.png
+2022-12-20 10:48:40,089 INFO    Thread-59 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/31jfc3ub-media/images/Images_150_2_407560bf2bcd7429005e.png
+2022-12-20 10:48:40,108 INFO    Thread-52 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/b9usfg9t-media/images/Images_50_2_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:40,109 INFO    Thread-54 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3imkx2pz-media/images/Images_100_2_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:40,110 INFO    Thread-48 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/mslhtp4h-media/images/Images_0_2_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:40,111 INFO    Thread-49 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1zozwn7w-media/images/Images_0_2_969d3d1ae5503510993e.png
+2022-12-20 10:48:40,141 INFO    Thread-57 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1zjpgwwj-media/images/Images_150_2_16011dc448130cc6122a.png
+2022-12-20 10:48:40,149 INFO    Thread-51 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/13epd1h3-media/images/Images_50_2_e32b47ad0375090e3d49.png
+2022-12-20 10:48:40,833 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:42,834 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:44,835 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:46,836 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:48,583 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:48:48,584 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:48:55,547 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,548 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_3_f20f90b3a68428fe5fc5.png with policy now
+2022-12-20 10:48:55,548 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,548 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_3_969d3d1ae5503510993e.png with policy now
+2022-12-20 10:48:55,549 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,549 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_0_3_ed6a5d9498d3f2d5db9f.png with policy now
+2022-12-20 10:48:55,558 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,558 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_3_e32b47ad0375090e3d49.png with policy now
+2022-12-20 10:48:55,561 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,561 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_3_53e3d0f9c48671fac68e.png with policy now
+2022-12-20 10:48:55,561 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,561 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_50_3_0a5101758ffdc0bd9ee4.png with policy now
+2022-12-20 10:48:55,569 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,569 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_3_2eff6567f00bdc98b5f5.png with policy now
+2022-12-20 10:48:55,573 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,573 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_3_4dc5c455793812efba7a.png with policy now
+2022-12-20 10:48:55,574 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,574 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_100_3_7df090717004a82065fd.png with policy now
+2022-12-20 10:48:55,582 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,582 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_3_16011dc448130cc6122a.png with policy now
+2022-12-20 10:48:55,583 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,584 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_3_a5164e47db09809745e1.png with policy now
+2022-12-20 10:48:55,587 DEBUG   SenderThread:1756 [sender.py:send():232] send: files
+2022-12-20 10:48:55,587 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file media/images/Images_150_3_c0585fd50dd475fc5691.png with policy now
+2022-12-20 10:48:55,594 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: partial_history
+2022-12-20 10:48:55,594 DEBUG   SenderThread:1756 [sender.py:send():232] send: history
+2022-12-20 10:48:55,595 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:48:55,595 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:48:55,842 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:48:55,842 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_4dc5c455793812efba7a.png
+2022-12-20 10:48:55,842 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_0a5101758ffdc0bd9ee4.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_7df090717004a82065fd.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_969d3d1ae5503510993e.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_e32b47ad0375090e3d49.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_ed6a5d9498d3f2d5db9f.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_a5164e47db09809745e1.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_c0585fd50dd475fc5691.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_16011dc448130cc6122a.png
+2022-12-20 10:48:55,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images
+2022-12-20 10:48:56,134 INFO    Thread-62 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2jnc4l5o-media/images/Images_0_3_ed6a5d9498d3f2d5db9f.png
+2022-12-20 10:48:56,134 INFO    Thread-68 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/qrlefbq2-media/images/Images_100_3_7df090717004a82065fd.png
+2022-12-20 10:48:56,146 INFO    Thread-65 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/zdroyxu8-media/images/Images_50_3_0a5101758ffdc0bd9ee4.png
+2022-12-20 10:48:56,155 INFO    Thread-61 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3qq4v3vj-media/images/Images_0_3_969d3d1ae5503510993e.png
+2022-12-20 10:48:56,167 INFO    Thread-60 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/1rjhxsc3-media/images/Images_0_3_f20f90b3a68428fe5fc5.png
+2022-12-20 10:48:56,173 INFO    Thread-67 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2avolcva-media/images/Images_100_3_4dc5c455793812efba7a.png
+2022-12-20 10:48:56,174 INFO    Thread-64 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/227bz1an-media/images/Images_50_3_53e3d0f9c48671fac68e.png
+2022-12-20 10:48:56,176 INFO    Thread-71 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3swcuygv-media/images/Images_150_3_c0585fd50dd475fc5691.png
+2022-12-20 10:48:56,180 INFO    Thread-70 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/2qwplawy-media/images/Images_150_3_a5164e47db09809745e1.png
+2022-12-20 10:48:56,218 INFO    Thread-63 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/18122int-media/images/Images_50_3_e32b47ad0375090e3d49.png
+2022-12-20 10:48:56,219 INFO    Thread-66 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3j7i5zvd-media/images/Images_100_3_2eff6567f00bdc98b5f5.png
+2022-12-20 10:48:56,221 INFO    Thread-69 :1756 [upload_job.py:push():132] Uploaded file /tmp/tmpslyqaasbwandb/3gqos3bb-media/images/Images_150_3_16011dc448130cc6122a.png
+2022-12-20 10:48:56,842 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:48:58,843 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:00,665 DEBUG   SenderThread:1756 [sender.py:send():232] send: stats
+2022-12-20 10:49:00,844 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:02,845 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:03,779 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-20 10:49:03,779 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: stop_status
+2022-12-20 10:49:05,841 WARNING MainThread:1756 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-12-20 10:49:05,844 DEBUG   SenderThread:1756 [sender.py:send():232] send: telemetry
+2022-12-20 10:49:06,849 INFO    Thread-7  :1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:08,319 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:08,319 DEBUG   SenderThread:1756 [sender.py:send():232] send: exit
+2022-12-20 10:49:08,319 INFO    SenderThread:1756 [sender.py:send_exit():368] handling exit code: 255
+2022-12-20 10:49:08,320 INFO    SenderThread:1756 [sender.py:send_exit():370] handling runtime: 96
+2022-12-20 10:49:08,321 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:49:08,321 INFO    SenderThread:1756 [sender.py:send_exit():376] send defer
+2022-12-20 10:49:08,322 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:08,323 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,324 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 0
+2022-12-20 10:49:08,324 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,324 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-12-20 10:49:08,325 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 1
+2022-12-20 10:49:08,326 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,326 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 1
+2022-12-20 10:49:08,445 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:08,445 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,445 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-12-20 10:49:08,445 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 2
+2022-12-20 10:49:08,446 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:08,446 DEBUG   SenderThread:1756 [sender.py:send():232] send: stats
+2022-12-20 10:49:08,447 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,447 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 2
+2022-12-20 10:49:08,448 DEBUG   SenderThread:1756 [sender.py:send():232] send: history
+2022-12-20 10:49:08,448 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:49:08,449 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:49:08,449 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,449 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-12-20 10:49:08,449 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 3
+2022-12-20 10:49:08,449 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,449 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 3
+2022-12-20 10:49:08,449 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,449 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-12-20 10:49:08,449 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 4
+2022-12-20 10:49:08,449 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,449 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 4
+2022-12-20 10:49:08,450 DEBUG   SenderThread:1756 [sender.py:send():232] send: summary
+2022-12-20 10:49:08,450 INFO    SenderThread:1756 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-20 10:49:08,450 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,450 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-12-20 10:49:08,450 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 5
+2022-12-20 10:49:08,450 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,450 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 5
+2022-12-20 10:49:08,451 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,451 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-12-20 10:49:08,548 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:08,688 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 6
+2022-12-20 10:49:08,688 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:08,690 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,690 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 6
+2022-12-20 10:49:08,691 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,691 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-12-20 10:49:08,691 INFO    SenderThread:1756 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-12-20 10:49:08,792 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/config.yaml
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:finish():342] scan: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-metadata.json wandb-metadata.json
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/config.yaml config.yaml
+2022-12-20 10:49:08,851 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/conda-environment.yaml conda-environment.yaml
+2022-12-20 10:49:08,854 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json wandb-summary.json
+2022-12-20 10:49:08,856 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/requirements.txt requirements.txt
+2022-12-20 10:49:08,858 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log output.log
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_f20f90b3a68428fe5fc5.png media/images/Images_0_1_f20f90b3a68428fe5fc5.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_a5164e47db09809745e1.png media/images/Images_150_1_a5164e47db09809745e1.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_a5164e47db09809745e1.png media/images/Images_150_2_a5164e47db09809745e1.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_d383625809e209ddec0b.png media/images/Images_100_2_d383625809e209ddec0b.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_16011dc448130cc6122a.png media/images/Images_150_2_16011dc448130cc6122a.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_4dc5c455793812efba7a.png media/images/Images_100_0_4dc5c455793812efba7a.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_e32b47ad0375090e3d49.png media/images/Images_50_1_e32b47ad0375090e3d49.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_20618f4e6d0b94b6eb0c.png media/images/Images_50_1_20618f4e6d0b94b6eb0c.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_a5164e47db09809745e1.png media/images/Images_150_3_a5164e47db09809745e1.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_2eff6567f00bdc98b5f5.png media/images/Images_100_1_2eff6567f00bdc98b5f5.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_3b39b8a9dfc6fe9a5665.png media/images/Images_100_0_3b39b8a9dfc6fe9a5665.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_4dc5c455793812efba7a.png media/images/Images_100_2_4dc5c455793812efba7a.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_7c542036ef8297d709c1.png media/images/Images_0_0_7c542036ef8297d709c1.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_16011dc448130cc6122a.png media/images/Images_150_1_16011dc448130cc6122a.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_0a5101758ffdc0bd9ee4.png media/images/Images_50_3_0a5101758ffdc0bd9ee4.png
+2022-12-20 10:49:08,862 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_c0585fd50dd475fc5691.png media/images/Images_150_3_c0585fd50dd475fc5691.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_53e3d0f9c48671fac68e.png media/images/Images_50_3_53e3d0f9c48671fac68e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_53e3d0f9c48671fac68e.png media/images/Images_50_2_53e3d0f9c48671fac68e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_969d3d1ae5503510993e.png media/images/Images_0_3_969d3d1ae5503510993e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_3_e32b47ad0375090e3d49.png media/images/Images_50_3_e32b47ad0375090e3d49.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_2_2eff6567f00bdc98b5f5.png media/images/Images_100_2_2eff6567f00bdc98b5f5.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_2eff6567f00bdc98b5f5.png media/images/Images_100_3_2eff6567f00bdc98b5f5.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_f1a7f9d8b9c14a823cec.png media/images/Images_150_0_f1a7f9d8b9c14a823cec.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_53e3d0f9c48671fac68e.png media/images/Images_50_0_53e3d0f9c48671fac68e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_3_16011dc448130cc6122a.png media/images/Images_150_3_16011dc448130cc6122a.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_969d3d1ae5503510993e.png media/images/Images_0_0_969d3d1ae5503510993e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_f20f90b3a68428fe5fc5.png media/images/Images_0_2_f20f90b3a68428fe5fc5.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_969d3d1ae5503510993e.png media/images/Images_0_2_969d3d1ae5503510993e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_e32b47ad0375090e3d49.png media/images/Images_50_2_e32b47ad0375090e3d49.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_2_90ad347c759c0f39f1cb.png media/images/Images_0_2_90ad347c759c0f39f1cb.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_c059ac1eb7b31ae9c75d.png media/images/Images_0_1_c059ac1eb7b31ae9c75d.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_a5164e47db09809745e1.png media/images/Images_150_0_a5164e47db09809745e1.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_0479cdaf9379bda3b3cb.png media/images/Images_50_0_0479cdaf9379bda3b3cb.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_242296471ec6b91e405b.png media/images/Images_0_0_242296471ec6b91e405b.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_f20f90b3a68428fe5fc5.png media/images/Images_0_3_f20f90b3a68428fe5fc5.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_4dc5c455793812efba7a.png media/images/Images_100_3_4dc5c455793812efba7a.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_2_407560bf2bcd7429005e.png media/images/Images_150_2_407560bf2bcd7429005e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_3_ed6a5d9498d3f2d5db9f.png media/images/Images_0_3_ed6a5d9498d3f2d5db9f.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_e32b47ad0375090e3d49.png media/images/Images_50_0_e32b47ad0375090e3d49.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_1_969d3d1ae5503510993e.png media/images/Images_0_1_969d3d1ae5503510993e.png
+2022-12-20 10:49:08,863 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_16011dc448130cc6122a.png media/images/Images_150_0_16011dc448130cc6122a.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_0_de1e75a3b1013ed3e503.png media/images/Images_50_0_de1e75a3b1013ed3e503.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_1_53e3d0f9c48671fac68e.png media/images/Images_50_1_53e3d0f9c48671fac68e.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_2eff6567f00bdc98b5f5.png media/images/Images_100_0_2eff6567f00bdc98b5f5.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_50_2_72ff0411d1065087a0b1.png media/images/Images_50_2_72ff0411d1065087a0b1.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_0_8f0dc52755f92f5a87b6.png media/images/Images_100_0_8f0dc52755f92f5a87b6.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_0_50ef80468441e4b5e9b2.png media/images/Images_150_0_50ef80468441e4b5e9b2.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_150_1_e6d8b0a7b253464198a8.png media/images/Images_150_1_e6d8b0a7b253464198a8.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_4dc5c455793812efba7a.png media/images/Images_100_1_4dc5c455793812efba7a.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_0_0_f20f90b3a68428fe5fc5.png media/images/Images_0_0_f20f90b3a68428fe5fc5.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_1_2b623e8d69f23bac096d.png media/images/Images_100_1_2b623e8d69f23bac096d.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/media/images/Images_100_3_7df090717004a82065fd.png media/images/Images_100_3_7df090717004a82065fd.png
+2022-12-20 10:49:08,864 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 7
+2022-12-20 10:49:08,864 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:08,864 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:08,864 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 7
+2022-12-20 10:49:08,865 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:08,865 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-12-20 10:49:08,865 INFO    SenderThread:1756 [file_pusher.py:finish():145] shutting down file pusher
+2022-12-20 10:49:08,965 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:08,966 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,070 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,099 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,221 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,224 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,326 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,327 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,429 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,429 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,513 INFO    Thread-75 :1756 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/requirements.txt
+2022-12-20 10:49:09,519 INFO    Thread-73 :1756 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/conda-environment.yaml
+2022-12-20 10:49:09,521 INFO    Thread-72 :1756 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/config.yaml
+2022-12-20 10:49:09,532 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,532 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,558 INFO    Thread-76 :1756 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/output.log
+2022-12-20 10:49:09,634 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,635 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,738 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,738 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,840 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,840 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:09,943 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:09,944 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,048 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:10,048 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,152 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:10,152 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,255 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:10,255 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,303 INFO    Thread-74 :1756 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/files/wandb-summary.json
+2022-12-20 10:49:10,357 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:10,357 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,459 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:10,459 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:10,504 INFO    Thread-6  :1756 [sender.py:transition_state():389] send defer: 8
+2022-12-20 10:49:10,505 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:10,505 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 8
+2022-12-20 10:49:10,506 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:10,506 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-12-20 10:49:10,563 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:11,260 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 9
+2022-12-20 10:49:11,260 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:11,262 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:11,262 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 9
+2022-12-20 10:49:11,263 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:11,263 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-12-20 10:49:11,263 INFO    SenderThread:1756 [sender.py:transition_state():389] send defer: 10
+2022-12-20 10:49:11,265 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: defer
+2022-12-20 10:49:11,266 DEBUG   SenderThread:1756 [sender.py:send():232] send: final
+2022-12-20 10:49:11,266 INFO    HandlerThread:1756 [handler.py:handle_request_defer():164] handle defer: 10
+2022-12-20 10:49:11,267 DEBUG   SenderThread:1756 [sender.py:send():232] send: footer
+2022-12-20 10:49:11,268 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: defer
+2022-12-20 10:49:11,268 INFO    SenderThread:1756 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-12-20 10:49:11,364 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-20 10:49:11,364 DEBUG   SenderThread:1756 [sender.py:send_request():246] send_request: poll_exit
+2022-12-20 10:49:11,365 INFO    SenderThread:1756 [file_pusher.py:join():150] waiting for file pusher
+2022-12-20 10:49:11,893 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: sampled_history
+2022-12-20 10:49:11,896 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: get_summary
+2022-12-20 10:49:11,898 DEBUG   HandlerThread:1756 [handler.py:handle_request():141] handle_request: shutdown
+2022-12-20 10:49:11,899 INFO    HandlerThread:1756 [handler.py:finish():806] shutting down handler
+2022-12-20 10:49:12,267 INFO    WriterThread:1756 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221220_104730-36g6dam6/run-36g6dam6.wandb
+2022-12-20 10:49:12,791 INFO    SenderThread:1756 [sender.py:finish():1110] shutting down sender
+2022-12-20 10:49:12,791 INFO    SenderThread:1756 [file_pusher.py:finish():145] shutting down file pusher
+2022-12-20 10:49:12,791 INFO    SenderThread:1756 [file_pusher.py:join():150] waiting for file pusher
+2022-12-20 10:49:12,849 INFO    MainThread:1756 [internal.py:handle_exit():80] Internal process exited

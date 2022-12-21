@@ -1,0 +1,30 @@
+DDRNetSingle
+{'depth': 1}
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/multiprocessing/util.py", line 133, in _remove_temp_dir
+    rmtree(tempdir)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/shutil.py", line 498, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/shutil.py", line 496, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/tmp/pymp-dyothtdw'
+  0%|                                                                                                                                                                                                | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.81it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 6.1772 6.1772 || TEST: Depth 1.8161 1.8161 | Best: Depth 1.8161
+Task Weighting | Depth 1.0000
+Traceback (most recent call last):
+  File "train_model.py", line 452, in <module>
+    print(train_losses[index][1])
+KeyError: 0

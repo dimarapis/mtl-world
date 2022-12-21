@@ -1,0 +1,39 @@
+DDRNetSingle
+{'depth': 1}
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+  0%|                                                                                                                                                                                                | 0/25 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+ 24%|████████████████████████████████████████████▏                                                                                                                                           | 6/25 [00:01<00:04,  4.34it/s]
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.53it/s]
+train_losses 6.17656031598612
+depth-shape (1, 288, 384)
+depth-shape (1, 288, 384)
+Traceback (most recent call last):
+  File "train_model.py", line 367, in <module>
+    for multitaskdatatest in test_loader:
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/dim/mdpi_robotics/mtl-world/autolambda_code.py", line 115, in __getitem__
+    image = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/rgb_npy/{:d}.npy'.format(index)), -1, 0)).float()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/npyio.py", line 441, in load
+    pickle_kwargs=pickle_kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/format.py", line 729, in read_array
+    shape, fortran_order, dtype = _read_array_header(fp, version)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/format.py", line 593, in _read_array_header
+    header = _filter_header(header)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/format.py", line 557, in _filter_header
+    for token in tokenize.generate_tokens(StringIO(s).readline):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/tokenize.py", line 667, in _tokenize
+    yield TokenInfo(ENDMARKER, '', (lnum, 0), (lnum, 0), '')
+  File "<string>", line 1, in __new__
+KeyboardInterrupt

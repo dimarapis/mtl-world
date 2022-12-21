@@ -1,0 +1,154 @@
+2022-12-19 15:45:23,696 INFO    MainThread:20427 [internal.py:wandb_internal():93] W&B internal server running at pid: 20427, started at: 2022-12-19 15:45:23.696285
+2022-12-19 15:45:23,697 INFO    WriterThread:20427 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/run-1u349k3f.wandb
+2022-12-19 15:45:23,698 DEBUG   SenderThread:20427 [sender.py:send():232] send: header
+2022-12-19 15:45:23,698 DEBUG   SenderThread:20427 [sender.py:send():232] send: run
+2022-12-19 15:45:23,923 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: check_version
+2022-12-19 15:45:23,923 INFO    SenderThread:20427 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files
+2022-12-19 15:45:23,923 INFO    SenderThread:20427 [sender.py:_start_run_threads():814] run started: 1u349k3f with start time 1671461123
+2022-12-19 15:45:23,923 DEBUG   SenderThread:20427 [sender.py:send():232] send: summary
+2022-12-19 15:45:23,923 INFO    SenderThread:20427 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-19 15:45:23,923 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: check_version
+2022-12-19 15:45:24,072 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: run_start
+2022-12-19 15:45:24,080 DEBUG   HandlerThread:20427 [meta.py:__init__():35] meta init
+2022-12-19 15:45:24,081 DEBUG   HandlerThread:20427 [meta.py:__init__():49] meta init done
+2022-12-19 15:45:24,081 DEBUG   HandlerThread:20427 [meta.py:probe():209] probe
+2022-12-19 15:45:24,090 DEBUG   HandlerThread:20427 [meta.py:_setup_git():199] setup git
+2022-12-19 15:45:24,121 DEBUG   HandlerThread:20427 [meta.py:_setup_git():206] setup git done
+2022-12-19 15:45:24,121 DEBUG   HandlerThread:20427 [meta.py:_save_pip():53] save pip
+2022-12-19 15:45:24,121 DEBUG   HandlerThread:20427 [meta.py:_save_pip():67] save pip done
+2022-12-19 15:45:24,121 DEBUG   HandlerThread:20427 [meta.py:_save_conda():74] save conda
+2022-12-19 15:45:24,664 DEBUG   HandlerThread:20427 [meta.py:_save_conda():84] save conda done
+2022-12-19 15:45:24,664 DEBUG   HandlerThread:20427 [meta.py:probe():247] probe done
+2022-12-19 15:45:24,668 DEBUG   SenderThread:20427 [sender.py:send():232] send: files
+2022-12-19 15:45:24,669 INFO    SenderThread:20427 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-12-19 15:45:24,673 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: stop_status
+2022-12-19 15:45:24,673 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: stop_status
+2022-12-19 15:45:24,878 DEBUG   SenderThread:20427 [sender.py:send():232] send: telemetry
+2022-12-19 15:45:24,878 DEBUG   SenderThread:20427 [sender.py:send():232] send: config
+2022-12-19 15:45:24,924 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:24,924 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-metadata.json
+2022-12-19 15:45:24,924 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-summary.json
+2022-12-19 15:45:24,925 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/requirements.txt
+2022-12-19 15:45:24,925 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/conda-environment.yaml
+2022-12-19 15:45:25,309 INFO    Thread-11 :20427 [upload_job.py:push():132] Uploaded file /tmp/tmpau61kmmnwandb/zltkz5yc-wandb-metadata.json
+2022-12-19 15:45:26,924 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:28,924 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:30,925 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:32,925 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:33,633 DEBUG   SenderThread:20427 [sender.py:send():232] send: telemetry
+2022-12-19 15:45:34,927 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:36,225 DEBUG   SenderThread:20427 [sender.py:send():232] send: exit
+2022-12-19 15:45:36,226 INFO    SenderThread:20427 [sender.py:send_exit():368] handling exit code: 1
+2022-12-19 15:45:36,226 INFO    SenderThread:20427 [sender.py:send_exit():370] handling runtime: 12
+2022-12-19 15:45:36,227 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:36,228 INFO    SenderThread:20427 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-19 15:45:36,228 INFO    SenderThread:20427 [sender.py:send_exit():376] send defer
+2022-12-19 15:45:36,229 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:36,230 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,231 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 0
+2022-12-19 15:45:36,231 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,231 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-12-19 15:45:36,232 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 1
+2022-12-19 15:45:36,233 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,233 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 1
+2022-12-19 15:45:36,283 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,283 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-12-19 15:45:36,283 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 2
+2022-12-19 15:45:36,283 DEBUG   SenderThread:20427 [sender.py:send():232] send: stats
+2022-12-19 15:45:36,283 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,283 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 2
+2022-12-19 15:45:36,284 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,284 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-12-19 15:45:36,284 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 3
+2022-12-19 15:45:36,284 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,284 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 3
+2022-12-19 15:45:36,284 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,284 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-12-19 15:45:36,284 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 4
+2022-12-19 15:45:36,285 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,285 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 4
+2022-12-19 15:45:36,285 DEBUG   SenderThread:20427 [sender.py:send():232] send: summary
+2022-12-19 15:45:36,285 INFO    SenderThread:20427 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-12-19 15:45:36,285 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,285 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-12-19 15:45:36,286 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 5
+2022-12-19 15:45:36,286 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,286 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 5
+2022-12-19 15:45:36,286 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,286 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-12-19 15:45:36,331 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:36,538 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 6
+2022-12-19 15:45:36,538 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:36,540 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,540 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 6
+2022-12-19 15:45:36,541 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,541 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-12-19 15:45:36,541 INFO    SenderThread:20427 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-12-19 15:45:36,642 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:36,928 INFO    Thread-7  :20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/config.yaml
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-summary.json
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():342] scan: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-metadata.json wandb-metadata.json
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/config.yaml config.yaml
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/conda-environment.yaml conda-environment.yaml
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-summary.json wandb-summary.json
+2022-12-19 15:45:36,928 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/requirements.txt requirements.txt
+2022-12-19 15:45:36,929 INFO    SenderThread:20427 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log output.log
+2022-12-19 15:45:36,929 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 7
+2022-12-19 15:45:36,931 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:36,940 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:36,940 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 7
+2022-12-19 15:45:36,940 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:36,940 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-12-19 15:45:36,941 INFO    SenderThread:20427 [file_pusher.py:finish():145] shutting down file pusher
+2022-12-19 15:45:37,033 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,034 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,136 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,136 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,237 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,238 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,339 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,339 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,441 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,441 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,496 INFO    Thread-13 :20427 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/conda-environment.yaml
+2022-12-19 15:45:37,513 INFO    Thread-12 :20427 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/config.yaml
+2022-12-19 15:45:37,518 INFO    Thread-14 :20427 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/wandb-summary.json
+2022-12-19 15:45:37,524 INFO    Thread-15 :20427 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/requirements.txt
+2022-12-19 15:45:37,545 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,548 INFO    Thread-16 :20427 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/files/output.log
+2022-12-19 15:45:37,549 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,652 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,652 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,749 INFO    Thread-6  :20427 [sender.py:transition_state():389] send defer: 8
+2022-12-19 15:45:37,750 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:37,750 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 8
+2022-12-19 15:45:37,750 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:37,750 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-12-19 15:45:37,753 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:37,985 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 9
+2022-12-19 15:45:37,985 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:37,985 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:37,985 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 9
+2022-12-19 15:45:37,986 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:37,986 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-12-19 15:45:37,986 INFO    SenderThread:20427 [sender.py:transition_state():389] send defer: 10
+2022-12-19 15:45:37,986 DEBUG   SenderThread:20427 [sender.py:send():232] send: final
+2022-12-19 15:45:37,986 DEBUG   SenderThread:20427 [sender.py:send():232] send: footer
+2022-12-19 15:45:37,987 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: defer
+2022-12-19 15:45:37,987 INFO    HandlerThread:20427 [handler.py:handle_request_defer():164] handle defer: 10
+2022-12-19 15:45:37,987 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: defer
+2022-12-19 15:45:37,987 INFO    SenderThread:20427 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-12-19 15:45:38,086 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: poll_exit
+2022-12-19 15:45:38,087 DEBUG   SenderThread:20427 [sender.py:send_request():246] send_request: poll_exit
+2022-12-19 15:45:38,087 INFO    SenderThread:20427 [file_pusher.py:join():150] waiting for file pusher
+2022-12-19 15:45:38,573 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: sampled_history
+2022-12-19 15:45:38,575 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: get_summary
+2022-12-19 15:45:38,577 DEBUG   HandlerThread:20427 [handler.py:handle_request():141] handle_request: shutdown
+2022-12-19 15:45:38,578 INFO    HandlerThread:20427 [handler.py:finish():806] shutting down handler
+2022-12-19 15:45:38,987 INFO    WriterThread:20427 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20221219_154523-1u349k3f/run-1u349k3f.wandb
+2022-12-19 15:45:39,470 INFO    SenderThread:20427 [sender.py:finish():1110] shutting down sender
+2022-12-19 15:45:39,470 INFO    SenderThread:20427 [file_pusher.py:finish():145] shutting down file pusher
+2022-12-19 15:45:39,470 INFO    SenderThread:20427 [file_pusher.py:join():150] waiting for file pusher
+2022-12-19 15:45:39,471 INFO    MainThread:20427 [internal.py:handle_exit():80] Internal process exited
