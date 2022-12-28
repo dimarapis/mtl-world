@@ -53,3 +53,8 @@ CHECK_LIST
 * weights etc saving (how for each tasks and all tasks)
 
 * Normals what is in warehouseSIM and what is in NYUV2
+
+
+
+        #loss = torch.sum(F.l1_loss(pred, gt, reduction='none').masked_select(valid_mask)) \
+        #         / torch.nonzero(valid_mask, as_tuple=False).size(0)

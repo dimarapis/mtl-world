@@ -1,0 +1,643 @@
+SegNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with SEGNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+/zhome/e0/1/158047/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.39s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.4694 0.0393 Depth 1.6839 1.6839 Normals 0.5607 70.7945 || TEST: Semantic 2.1159 0.0207 Depth 1.1146 1.1146 Normals 0.3890 73.5517 | All -1.4565 | Best: All -1.4565
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 2.1627 0.0313 Depth 0.9796 0.9796 Normals 0.4476 67.7908 || TEST: Semantic 1.9224 0.0257 Depth 0.9290 0.9290 Normals 0.3694 70.0839 | All -1.2826 | Best: All -1.2826
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Semantic 2.0654 0.0363 Depth 0.9011 0.9011 Normals 0.4098 66.7906 || TEST: Semantic 1.8757 0.0443 Depth 0.7746 0.7746 Normals 0.3607 67.2051 | All -1.1270 | Best: All -1.1270
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Semantic 1.9684 0.0621 Depth 0.8784 0.8784 Normals 0.3826 63.6126 || TEST: Semantic 1.6688 0.0684 Depth 0.6097 0.6097 Normals 0.3696 61.3661 | All -0.9163 | Best: All -0.9163
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Semantic 1.8515 0.0837 Depth 0.8691 0.8691 Normals 0.3630 58.8073 || TEST: Semantic 1.5319 0.0831 Depth 0.6631 0.6631 Normals 0.3812 60.7135 | All -0.9294 | Best: All -0.9163
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9294114249367652 -0.9163446210679531
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Semantic 1.7758 0.0987 Depth 0.8546 0.8546 Normals 0.3553 58.2230 || TEST: Semantic 1.4582 0.0951 Depth 0.6809 0.6809 Normals 0.3656 58.9087 | All -0.9047 | Best: All -0.9047
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-0.9046752466829902 -0.9046752466829902
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Semantic 1.7296 0.1039 Depth 0.8257 0.8257 Normals 0.3469 57.9648 || TEST: Semantic 1.4513 0.0990 Depth 0.7062 0.7062 Normals 0.3621 57.1485 | All -0.8916 | Best: All -0.8916
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-0.8916207819538421 -0.8916207819538421
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Semantic 1.6710 0.1126 Depth 0.7990 0.7990 Normals 0.3417 57.6650 || TEST: Semantic 1.4299 0.1010 Depth 0.7807 0.7807 Normals 0.3484 61.2134 | All -0.9981 | Best: All -0.8916
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9981106382710182 -0.8916207819538421
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Semantic 1.6460 0.1135 Depth 0.7748 0.7748 Normals 0.3365 58.1142 || TEST: Semantic 1.3722 0.1072 Depth 0.6902 0.6902 Normals 0.3406 57.0773 | All -0.8740 | Best: All -0.8740
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-0.8740420053817578 -0.8740420053817578
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+Entering evaluation phase...
+Epoch 0009 | TRAIN: Semantic 1.6094 0.1180 Depth 0.7641 0.7641 Normals 0.3344 56.9612 || TEST: Semantic 1.3442 0.1123 Depth 0.8318 0.8318 Normals 0.3384 60.7159 | All -1.0146 | Best: All -0.8740
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-1.0146277699223434 -0.8740420053817578
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.37s/it]
+Entering evaluation phase...
+Epoch 0010 | TRAIN: Semantic 1.5784 0.1244 Depth 0.7177 0.7177 Normals 0.3313 57.2780 || TEST: Semantic 1.3266 0.1053 Depth 0.8713 0.8713 Normals 0.3308 59.1309 | All -1.0216 | Best: All -0.8740
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-1.021607177170458 -0.8740420053817578
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0011 | TRAIN: Semantic 1.5433 0.1344 Depth 0.6843 0.6843 Normals 0.3278 56.3610 || TEST: Semantic 1.3994 0.1143 Depth 0.9025 0.9025 Normals 0.3302 59.1248 | All -1.0346 | Best: All -0.8740
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-1.0345796326237604 -0.8740420053817578
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0012 | TRAIN: Semantic 1.5123 0.1365 Depth 0.6546 0.6546 Normals 0.3252 56.0549 || TEST: Semantic 1.2569 0.1214 Depth 0.6517 0.6517 Normals 0.3315 56.8512 | All -0.8352 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-0.8352330382481359 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.36s/it]
+Entering evaluation phase...
+Epoch 0013 | TRAIN: Semantic 1.4734 0.1451 Depth 0.6097 0.6097 Normals 0.3220 55.4781 || TEST: Semantic 1.2934 0.1192 Depth 0.7337 0.7337 Normals 0.3486 61.1527 | All -0.9533 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9532739811353249 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0014 | TRAIN: Semantic 1.4554 0.1466 Depth 0.5948 0.5948 Normals 0.3213 55.7793 || TEST: Semantic 1.2475 0.1259 Depth 0.7486 0.7486 Normals 0.3290 55.2881 | All -0.8703 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8703128747269803 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:35<00:00,  1.41s/it]
+Entering evaluation phase...
+Epoch 0015 | TRAIN: Semantic 1.3903 0.1597 Depth 0.5367 0.5367 Normals 0.3171 54.8749 || TEST: Semantic 1.2300 0.1332 Depth 0.8550 0.8550 Normals 0.3308 59.7683 | All -0.9993 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9992974866439868 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0016 | TRAIN: Semantic 1.3587 0.1647 Depth 0.5056 0.5056 Normals 0.3148 54.9292 || TEST: Semantic 1.2086 0.1336 Depth 0.7432 0.7432 Normals 0.3294 58.2906 | All -0.9056 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9056410810320065 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0017 | TRAIN: Semantic 1.3414 0.1670 Depth 0.4840 0.4840 Normals 0.3142 54.7082 || TEST: Semantic 1.2058 0.1323 Depth 0.7516 0.7516 Normals 0.3296 58.2822 | All -0.9119 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.911866719059511 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0018 | TRAIN: Semantic 1.3298 0.1680 Depth 0.4828 0.4828 Normals 0.3145 54.3471 || TEST: Semantic 1.2197 0.1326 Depth 0.7217 0.7217 Normals 0.3284 57.7062 | All -0.8839 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8839422629838757 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.39s/it]
+Entering evaluation phase...
+Epoch 0019 | TRAIN: Semantic 1.3179 0.1688 Depth 0.4773 0.4773 Normals 0.3137 54.6037 || TEST: Semantic 1.1999 0.1354 Depth 0.7447 0.7447 Normals 0.3307 58.7880 | All -0.9126 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.9125922050005256 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.39s/it]
+Entering evaluation phase...
+Epoch 0020 | TRAIN: Semantic 1.3042 0.1714 Depth 0.4616 0.4616 Normals 0.3132 54.9712 || TEST: Semantic 1.1903 0.1357 Depth 0.7132 0.7132 Normals 0.3304 58.5806 | All -0.8892 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8891741919738183 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.39s/it]
+Entering evaluation phase...
+Epoch 0021 | TRAIN: Semantic 1.3042 0.1715 Depth 0.4564 0.4564 Normals 0.3131 54.5827 || TEST: Semantic 1.1933 0.1345 Depth 0.6764 0.6764 Normals 0.3299 58.0403 | All -0.8586 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8586035793019939 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0022 | TRAIN: Semantic 1.3031 0.1712 Depth 0.4491 0.4491 Normals 0.3133 54.5127 || TEST: Semantic 1.1885 0.1350 Depth 0.6857 0.6857 Normals 0.3300 58.1793 | All -0.8662 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8661981279661553 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0023 | TRAIN: Semantic 1.3008 0.1718 Depth 0.4510 0.4510 Normals 0.3138 54.5419 || TEST: Semantic 1.1905 0.1351 Depth 0.6748 0.6748 Normals 0.3303 58.1764 | All -0.8591 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8591461116242026 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.40s/it]
+Entering evaluation phase...
+Epoch 0024 | TRAIN: Semantic 1.2973 0.1726 Depth 0.4576 0.4576 Normals 0.3130 54.4734 || TEST: Semantic 1.1984 0.1352 Depth 0.7176 0.7176 Normals 0.3301 58.0208 | All -0.8841 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8840520267213418 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:35<00:00,  1.41s/it]
+Entering evaluation phase...
+Epoch 0025 | TRAIN: Semantic 1.2960 0.1724 Depth 0.4506 0.4506 Normals 0.3131 54.3898 || TEST: Semantic 1.1905 0.1350 Depth 0.6793 0.6793 Normals 0.3302 58.0822 | All -0.8607 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8606660061072932 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.39s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0026 | TRAIN: Semantic 1.2968 0.1720 Depth 0.4517 0.4517 Normals 0.3134 54.3342 || TEST: Semantic 1.1953 0.1349 Depth 0.6788 0.6788 Normals 0.3302 57.7371 | All -0.8553 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.38s/it]
+Entering evaluation phase...
+Epoch 0027 | TRAIN: Semantic 1.2919 0.1737 Depth 0.4521 0.4521 Normals 0.3129 54.4681 || TEST: Semantic 1.1911 0.1355 Depth 0.6876 0.6876 Normals 0.3299 58.0127 | All -0.8646 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8646085655914678 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:35<00:00,  1.42s/it]
+Entering evaluation phase...
+Epoch 0028 | TRAIN: Semantic 1.2932 0.1727 Depth 0.4508 0.4508 Normals 0.3133 54.4681 || TEST: Semantic 1.1892 0.1353 Depth 0.6793 0.6793 Normals 0.3299 58.0979 | All -0.8607 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8606505524428764 -0.8352330382481359
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:34<00:00,  1.40s/it]
+Entering evaluation phase...
+Epoch 0029 | TRAIN: Semantic 1.2933 0.1724 Depth 0.4468 0.4468 Normals 0.3130 54.3902 || TEST: Semantic 1.1929 0.1356 Depth 0.7011 0.7011 Normals 0.3300 58.1246 | All -0.8748 | Best: All -0.8352
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+-0.8747511483350378 -0.8352330382481359
+Training complete

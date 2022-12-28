@@ -1,0 +1,30 @@
+{
+    "os": "Linux-3.10.0-1160.80.1.el7.x86_64-x86_64-with-glibc2.2.5",
+    "python": "3.8.11",
+    "heartbeatAt": "2022-12-21T09:53:35.756138",
+    "startedAt": "2022-12-21T09:53:33.461785",
+    "docker": null,
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 1,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "--wandb",
+        "--network",
+        "SegNet",
+        "--task",
+        "normals"
+    ],
+    "state": "running",
+    "program": "train_model.py",
+    "codePath": "train_model.py",
+    "git": {
+        "remote": "https://github.com/dimarapis/mtl-world.git",
+        "commit": "0c5f818f777ee4404dce0fc02564f5606c337389"
+    },
+    "email": "dimarapis@hotmail.com",
+    "root": "/zhome/e0/1/158047/mdpi_robotics/mtl-world",
+    "host": "n-62-20-13",
+    "username": "dimara",
+    "executable": "/appl/python/3.8.11/bin/python3"
+}

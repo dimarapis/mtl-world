@@ -1,0 +1,617 @@
+SegNetSingle
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with SEGNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+/zhome/e0/1/158047/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0% 0/25 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:31<00:00,  1.28s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Normals 0.7070 76.2593 || TEST: Normals 0.6482 77.8081 | Best: Normals 77.8081
+Task Weighting | Normals 1.0000
+current_loss 77.80811793750377
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Normals 0.3684 68.0456 || TEST: Normals 0.3461 67.3217 | Best: Normals 67.3217
+Task Weighting | Normals 1.0000
+current_loss 67.3217241065422
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Normals 0.3744 66.3956 || TEST: Normals 0.3436 65.8282 | Best: Normals 65.8282
+Task Weighting | Normals 1.0000
+current_loss 65.8281992980102
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Normals 0.3719 68.5889 || TEST: Normals 0.3466 66.7392 | Best: Normals 65.8282
+Task Weighting | Normals 1.0000
+current_loss 66.73917533828062
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.18s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Normals 0.3732 68.3820 || TEST: Normals 0.3458 66.9562 | Best: Normals 65.8282
+Task Weighting | Normals 1.0000
+current_loss 66.95621944839063
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Normals 0.3690 68.9531 || TEST: Normals 0.3425 65.5916 | Best: Normals 65.5916
+Task Weighting | Normals 1.0000
+current_loss 65.59155677930985
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Normals 0.3632 66.8094 || TEST: Normals 0.3336 64.1737 | Best: Normals 64.1737
+Task Weighting | Normals 1.0000
+current_loss 64.17366075877247
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Normals 0.3483 65.4715 || TEST: Normals 0.3338 62.4341 | Best: Normals 62.4341
+Task Weighting | Normals 1.0000
+current_loss 62.434136042472275
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Normals 0.3417 61.9934 || TEST: Normals 0.3389 60.8733 | Best: Normals 60.8733
+Task Weighting | Normals 1.0000
+current_loss 60.87327824476419
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0009 | TRAIN: Normals 0.3313 59.0073 || TEST: Normals 0.3376 61.3031 | Best: Normals 60.8733
+Task Weighting | Normals 1.0000
+current_loss 61.3031076538582
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+Entering evaluation phase...
+Epoch 0010 | TRAIN: Normals 0.3198 59.5388 || TEST: Normals 0.3407 60.4679 | Best: Normals 60.4679
+Task Weighting | Normals 1.0000
+current_loss 60.46788914639404
+Saving full model
+60.46788914639404 60.46788914639404
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+Entering evaluation phase...
+Epoch 0011 | TRAIN: Normals 0.3277 58.1070 || TEST: Normals 0.3337 60.3843 | Best: Normals 60.3843
+Task Weighting | Normals 1.0000
+current_loss 60.38432090139966
+Saving full model
+60.38432090139966 60.38432090139966
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+Entering evaluation phase...
+Epoch 0012 | TRAIN: Normals 0.3179 58.7730 || TEST: Normals 0.3260 58.8108 | Best: Normals 58.8108
+Task Weighting | Normals 1.0000
+current_loss 58.810780561112196
+Saving full model
+58.810780561112196 58.810780561112196
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0013 | TRAIN: Normals 0.3087 54.5861 || TEST: Normals 0.3283 59.5204 | Best: Normals 58.8108
+Task Weighting | Normals 1.0000
+current_loss 59.520443421855084
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0014 | TRAIN: Normals 0.3154 56.1203 || TEST: Normals 0.3290 58.9212 | Best: Normals 58.8108
+Task Weighting | Normals 1.0000
+current_loss 58.92124151049388
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0015 | TRAIN: Normals 0.3095 55.8563 || TEST: Normals 0.3206 55.5157 | Best: Normals 55.5157
+Task Weighting | Normals 1.0000
+current_loss 55.51573372012931
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0016 | TRAIN: Normals 0.2987 52.1811 || TEST: Normals 0.3200 55.5576 | Best: Normals 55.5157
+Task Weighting | Normals 1.0000
+current_loss 55.557642858098035
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+Entering evaluation phase...
+Epoch 0017 | TRAIN: Normals 0.3049 51.4080 || TEST: Normals 0.3179 55.6327 | Best: Normals 55.5157
+Task Weighting | Normals 1.0000
+current_loss 55.63272528702385
+55.63272528702385 55.51573372012931
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.15s/it]
+Entering evaluation phase...
+Epoch 0018 | TRAIN: Normals 0.2849 52.5947 || TEST: Normals 0.3157 55.3871 | Best: Normals 55.3871
+Task Weighting | Normals 1.0000
+current_loss 55.38711772870179
+Saving full model
+55.38711772870179 55.38711772870179
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.18s/it]
+Entering evaluation phase...
+Epoch 0019 | TRAIN: Normals 0.2975 51.3135 || TEST: Normals 0.3156 54.2456 | Best: Normals 54.2456
+Task Weighting | Normals 1.0000
+current_loss 54.24563550519529
+Saving full model
+54.24563550519529 54.24563550519529
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0020 | TRAIN: Normals 0.2872 48.7275 || TEST: Normals 0.3150 54.1606 | Best: Normals 54.1606
+Task Weighting | Normals 1.0000
+current_loss 54.160612154484184
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0021 | TRAIN: Normals 0.3001 55.4007 || TEST: Normals 0.3160 54.7829 | Best: Normals 54.1606
+Task Weighting | Normals 1.0000
+current_loss 54.78287674580199
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0022 | TRAIN: Normals 0.2864 50.3610 || TEST: Normals 0.3160 54.0127 | Best: Normals 54.0127
+Task Weighting | Normals 1.0000
+current_loss 54.0127024658612
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0023 | TRAIN: Normals 0.2837 48.8909 || TEST: Normals 0.3156 53.9446 | Best: Normals 53.9446
+Task Weighting | Normals 1.0000
+current_loss 53.944614234362724
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0024 | TRAIN: Normals 0.2904 50.3304 || TEST: Normals 0.3151 53.7592 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 53.759190704847796
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:28<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0025 | TRAIN: Normals 0.2854 49.8268 || TEST: Normals 0.3155 53.8048 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 53.80483553845943
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.16s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0026 | TRAIN: Normals 0.2929 53.7976 || TEST: Normals 0.3153 54.3412 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 54.34115245485212
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:30<00:00,  1.20s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0027 | TRAIN: Normals 0.2867 52.1666 || TEST: Normals 0.3155 54.4450 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 54.44495165422925
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+  0% 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0028 | TRAIN: Normals 0.2855 52.3066 || TEST: Normals 0.3156 54.0962 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 54.096155495695754
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.16s/it]
+Entering evaluation phase...
+Epoch 0029 | TRAIN: Normals 0.2972 51.6224 || TEST: Normals 0.3154 53.7615 | Best: Normals 53.7592
+Task Weighting | Normals 1.0000
+current_loss 53.76150456838997
+53.76150456838997 53.759190704847796
+Training complete

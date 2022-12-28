@@ -1,0 +1,68 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.14
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.11
+    start_time: 1671622492
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      4: 3.8.11
+      5: 0.12.14
+      8:
+      - 5
+batch_size:
+  desc: null
+  value: 32
+dataset:
+  desc: null
+  value: nyuv2
+gpu:
+  desc: null
+  value: 0
+grad_method:
+  desc: null
+  value: none
+load_model:
+  desc: null
+  value: false
+lr:
+  desc: null
+  value: 0.0001
+mtl_architecture:
+  desc: null
+  value: Split
+network:
+  desc: null
+  value: SegNet
+project_name:
+  desc: null
+  value: MTLwarehouse
+seed:
+  desc: null
+  value: 29
+task:
+  desc: null
+  value: all
+total_epochs:
+  desc: null
+  value: 30
+wandb:
+  desc: null
+  value: true
+weight:
+  desc: null
+  value: equal

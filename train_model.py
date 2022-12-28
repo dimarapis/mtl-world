@@ -151,7 +151,8 @@ else:
         model = ResNetSingle(train_tasks, opt.dataset).to(device)
     elif network == "DDRNetSingle":
         model = DualResNetSingle(BasicBlock, [2, 2, 2, 2], train_tasks, opt.dataset, planes=32, spp_planes=128, head_planes=64).to(device)
-            
+        #model.load_state_dict(torch.load('models/DDRNet23s_imagenet.pth'), strict= False)
+    
 #pri_tasks = create_task_flags(opt.task, opt.dataset, with_noise=False)
 #print(pri_tasks)
 train_tasks_str = ''.join(task.title() + ' + ' for task in train_tasks.keys())[:-3]

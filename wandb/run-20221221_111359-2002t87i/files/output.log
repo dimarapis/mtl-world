@@ -1,0 +1,164 @@
+SegNetSingle
+Dataset: Nyuv2 | Training Task: Normals | Primary Task: Normals in Multi-task / Auxiliary Learning Mode with SEGNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+/zhome/e0/1/158047/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),    	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.19s/it]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Normals 0.7071 76.2617 || TEST: Normals 0.6190 77.7468 | Best: Normals 77.7468
+Task Weighting | Normals 1.0000
+current_loss 77.74676074121216
+Saving full model
+77.74676074121216 77.74676074121216
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.20s/it]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Normals 0.3687 67.8691 || TEST: Normals 0.3463 67.3800 | Best: Normals 67.3800
+Task Weighting | Normals 1.0000
+current_loss 67.37996795290408
+Saving full model
+67.37996795290408 67.37996795290408
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Normals 0.3822 72.8077 || TEST: Normals 0.3459 67.5113 | Best: Normals 67.3800
+Task Weighting | Normals 1.0000
+current_loss 67.51130507554562
+67.51130507554562 67.37996795290408
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.18s/it]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Normals 0.3784 65.3546 || TEST: Normals 0.3495 66.3380 | Best: Normals 66.3380
+Task Weighting | Normals 1.0000
+current_loss 66.33800812995995
+Saving full model
+66.33800812995995 66.33800812995995
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Normals 0.3765 68.7459 || TEST: Normals 0.3931 67.1306 | Best: Normals 66.3380
+Task Weighting | Normals 1.0000
+current_loss 67.13056640397684
+67.13056640397684 66.33800812995995
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.18s/it]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Normals 0.3702 66.6279 || TEST: Normals 0.3494 65.6813 | Best: Normals 65.6813
+Task Weighting | Normals 1.0000
+current_loss 65.68125235379941
+Saving full model
+65.68125235379941 65.68125235379941
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 25/25 [00:29<00:00,  1.17s/it]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Normals 0.3689 68.5638 || TEST: Normals 0.3441 65.1493 | Best: Normals 65.1493
+Task Weighting | Normals 1.0000
+current_loss 65.14925854080076
+Saving full model
+65.14925854080076 65.14925854080076
+
+
+
+
+
+
+
+
+
+
+
+
+
+
