@@ -195,7 +195,7 @@ class SimWarehouse(data.Dataset):
             if np.shape(image_np)[2] == 4:
                 image_np = image_np[:,:,:3]
             image = torch.from_numpy(np.moveaxis(image_np, -1, 0)).float() / 255.0
-            semantic = torch.from_numpy(np.load(self.files[index]['semantic']).astype(np.int32)).long()
+            semantic = torch.from_numpy(np.load(self.files[index]['semantic'])).long()
             depth = torch.from_numpy(np.load(self.files[index]['depth'])).float() / 1000.0#, -1, 0)).float()
             normal = torch.from_numpy(np.moveaxis(np.load(self.files[index]['normals']), -1, 0)).float()
             #noise = self.noise[index].float()
