@@ -2,7 +2,7 @@ python3 train_model.py --wandb --network SegNet --task normals
 #!/bin/sh
 ### General options
 ### –- specify queue --
-#BSUB -q gpuv100
+#BSUB -q gpua100
 ### -- set the job Name --
 #BSUB -J mtl-world
 ### -- ask for number of cores (default: 1) --
@@ -31,6 +31,6 @@ python3 train_model.py --wandb --network SegNet --task normals
 module load numpy/1.21.1-python-3.8.11-openblas-0.3.17
 module load cuda/10.2
 
-python3 train_model.py --wandb --network SegNet --task all
+python3 train_model.py --wandb --network ResNet --task depth --dataset sim_warehouse
 
 ## submit by using: bsub < jobscript.sh

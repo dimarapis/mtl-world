@@ -1,0 +1,1045 @@
+ResNetSingle
+Dataset: Sim_Warehouse | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+/zhome/e0/1/158047/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Data sanity check. RGB.shape: torch.Size([32, 3, 360, 640]),	Depth.shape torch.Size([32, 1, 360, 640]),    	Semantic.shape torch.Size([32, 1, 360, 640]),	Normals.shape torch.Size([32, 3, 360, 640])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [02:03<00:00,  2.06s/it]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 1.1243 1.1243 || TEST: Depth 0.1137 0.1137 | Best: Depth 0.1137
+Task Weighting | Depth 1.0000
+current_loss 0.11365913617957377
+Saving full model
+0.11365913617957377 0.11365913617957377
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [01:00<00:00,  1.01s/it]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Depth 0.1848 0.1848 || TEST: Depth 0.7131 0.7131 | Best: Depth 0.1137
+Task Weighting | Depth 1.0000
+current_loss 0.7131455793144692
+0.7131455793144692 0.11365913617957377
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:57<00:00,  1.04it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Depth 0.1246 0.1246 || TEST: Depth 0.0924 0.0924 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.09243709434622356
+Saving full model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.00it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Depth 0.1384 0.1384 || TEST: Depth 0.2952 0.2952 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.29521037453991317
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Depth 0.0904 0.0904 || TEST: Depth 0.6809 0.6809 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.6809336012579527
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Depth 0.0886 0.0886 || TEST: Depth 0.5597 0.5597 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.5596959581992748
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.03it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Depth 0.0807 0.0807 || TEST: Depth 0.1760 0.1760 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.17597309402772154
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Depth 0.0705 0.0705 || TEST: Depth 0.6342 0.6342 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.6342024011680052
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Depth 0.0670 0.0670 || TEST: Depth 0.3763 0.3763 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.3763463518335106
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0009 | TRAIN: Depth 0.0745 0.0745 || TEST: Depth 0.7430 0.7430 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.7430173151219215
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.03it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0010 | TRAIN: Depth 0.0923 0.0923 || TEST: Depth 0.2397 0.2397 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.23971349756928514
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+Entering evaluation phase...
+Epoch 0011 | TRAIN: Depth 0.0633 0.0633 || TEST: Depth 0.1936 0.1936 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.19363514245641006
+0.19363514245641006 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0012 | TRAIN: Depth 0.0549 0.0549 || TEST: Depth 0.2529 0.2529 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.25294558220348834
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0013 | TRAIN: Depth 0.0532 0.0532 || TEST: Depth 0.2739 0.2739 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2738664684356508
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0014 | TRAIN: Depth 0.0584 0.0584 || TEST: Depth 0.1679 0.1679 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.16794955220688743
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0015 | TRAIN: Depth 0.0509 0.0509 || TEST: Depth 0.2056 0.2056 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.205646833689265
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+Entering evaluation phase...
+Epoch 0016 | TRAIN: Depth 0.0436 0.0436 || TEST: Depth 0.1989 0.1989 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.19891250671252528
+0.19891250671252528 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+Entering evaluation phase...
+Epoch 0017 | TRAIN: Depth 0.0454 0.0454 || TEST: Depth 0.1986 0.1986 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.19857418917184722
+0.19857418917184722 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+Entering evaluation phase...
+Epoch 0018 | TRAIN: Depth 0.0517 0.0517 || TEST: Depth 0.1813 0.1813 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.18130451793916535
+0.18130451793916535 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.00it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0019 | TRAIN: Depth 0.0717 0.0717 || TEST: Depth 0.2158 0.2158 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.21583107269040433
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0020 | TRAIN: Depth 0.0391 0.0391 || TEST: Depth 0.2117 0.2117 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2117480015992651
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0021 | TRAIN: Depth 0.0462 0.0462 || TEST: Depth 0.2099 0.2099 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2099449688185249
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0022 | TRAIN: Depth 0.0422 0.0422 || TEST: Depth 0.2038 0.2038 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2037765976520152
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0023 | TRAIN: Depth 0.0443 0.0443 || TEST: Depth 0.2125 0.2125 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.21246897901290193
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0024 | TRAIN: Depth 0.0459 0.0459 || TEST: Depth 0.2173 0.2173 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.21732311012891306
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+Entering evaluation phase...
+Epoch 0025 | TRAIN: Depth 0.0374 0.0374 || TEST: Depth 0.2019 0.2019 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2018830146445963
+0.2018830146445963 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+Entering evaluation phase...
+Epoch 0026 | TRAIN: Depth 0.0442 0.0442 || TEST: Depth 0.2098 0.2098 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.20978550405040322
+0.20978550405040322 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+Entering evaluation phase...
+Epoch 0027 | TRAIN: Depth 0.0380 0.0380 || TEST: Depth 0.2006 0.2006 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.20056274711851266
+0.20056274711851266 0.09243709434622356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:59<00:00,  1.01it/s]
+  0% 0/60 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0028 | TRAIN: Depth 0.0445 0.0445 || TEST: Depth 0.2099 0.2099 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.20985330008998343
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 60/60 [00:58<00:00,  1.02it/s]
+Entering evaluation phase...
+Epoch 0029 | TRAIN: Depth 0.0372 0.0372 || TEST: Depth 0.2079 0.2079 | Best: Depth 0.0924
+Task Weighting | Depth 1.0000
+current_loss 0.2079491663774026
+0.2079491663774026 0.09243709434622356
+Training complete

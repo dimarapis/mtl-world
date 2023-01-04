@@ -292,6 +292,17 @@ def depth_colorize(depth):
     depth_colorized = 255 * cmap3(np.squeeze(depth))[:, :, :3]  # H, W, C    
     return depth_colorized.astype('uint8')
 
+def depth_colorize_gt(depth): 
+    cmap3 = plt.cm.turbo 
+    depth_x = (depth - np.min(depth)) / (np.max(depth) - np.min(depth)) 
+    depth_colorized = 255 * cmap3(np.squeeze(depth_x))[:, :, :3]  # H, W, C 
+    return depth_colorized.astype('uint8'), np.min(depth),np.max(depth)
+
+def depth_colorize_pred(depth,min_val,max_val): 
+    cmap3 = plt.cm.turbo 
+    depth_x = (depth - min_val) / (max_val - min_val) 
+    depth_colorized = 255 * cmap3(np.squeeze(depth_x))[:, :, :3]  # H, W, C 
+    return depth_colorized.astype('uint8')
 
 def rgb_visualizer(image):
     #print(np.min(image), np.max(image))
@@ -383,9 +394,10 @@ while index < total_epoch:
             #print(test_pred[2].squeeze(0).shape)
             if opt.task == 'depth':
                 gt = multitaskdatatest['depth'].to(device).squeeze(1)
-                gt_image = depth_colorize(gt.cpu().numpy())
+                gt_image,gt_min_val,gt_max_val = depth_colorize_gt(gt.cpu().numpy())
+                
                 prediction = test_pred[0]
-                prediction = depth_colorize(prediction.cpu().numpy())
+                prediction = depth_colorize_pred(prediction.cpu().numpy(),gt_min_val,gt_max_val)
             elif opt.task == 'semantic':
                 gt = multitaskdatatest['semantic'].to(device).squeeze(1)
                 gt_image = depth_colorize(gt.cpu().numpy())
