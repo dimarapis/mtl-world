@@ -43,10 +43,10 @@ parser.add_argument('--total_epochs', default=30, type=int, help='quite self-xpl
 parser.add_argument('--lr', default=1e-4, type=float, help='learning rate')
 #Task settings
 parser.add_argument('--weight', default='equal', type=str, help='weighting methods: equal, dwa, uncert')
-parser.add_argument('--task', default='all', type=str,choices='all,semantic,depth,normals', help='tasks for training, use all for MTL setting')
+parser.add_argument('--task', default='depth', type=str,choices='all,semantic,depth,normals', help='tasks for training, use all for MTL setting')
 parser.add_argument('--dataset', default='nyuv2', type=str, help='Data from simulated warehouse (sim_warehouse) or NYUv2 indoor data (nyuv2)')
 #Network settings
-parser.add_argument('--network', default='DDRNet', type=str, choices='ResNet,SegNet,DDDRNet',help='Base network')
+parser.add_argument('--network', default='ResNet', type=str, choices='ResNet,SegNet,DDDRNet',help='Base network')
 parser.add_argument('--mtl_architecture', default ='Split',choices=['Split','MTAN'], type=str, help='Split or MTAN architecture for MTL setting')
 parser.add_argument('--load_model', action='store_true', help='pass flag to load checkpoint')
 parser.add_argument('--grad_method', default='none', type=str, help='graddrop, pcgrad, cagrad')
