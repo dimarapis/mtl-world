@@ -1,0 +1,105 @@
+2023-01-23 22:22:44,232 INFO    MainThread:10329 [internal.py:wandb_internal():93] W&B internal server running at pid: 10329, started at: 2023-01-23 22:22:44.231673
+2023-01-23 22:22:44,233 INFO    WriterThread:10329 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/run-35m8a8d2.wandb
+2023-01-23 22:22:44,235 DEBUG   SenderThread:10329 [sender.py:send():232] send: header
+2023-01-23 22:22:44,235 DEBUG   SenderThread:10329 [sender.py:send():232] send: run
+2023-01-23 22:22:44,809 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: check_version
+2023-01-23 22:22:44,809 INFO    SenderThread:10329 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files
+2023-01-23 22:22:44,810 INFO    SenderThread:10329 [sender.py:_start_run_threads():814] run started: 35m8a8d2 with start time 1674508963
+2023-01-23 22:22:44,810 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:22:44,811 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:22:44,811 DEBUG   SenderThread:10329 [sender.py:send_request():246] send_request: check_version
+2023-01-23 22:22:44,941 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: run_start
+2023-01-23 22:22:44,949 DEBUG   HandlerThread:10329 [meta.py:__init__():35] meta init
+2023-01-23 22:22:44,949 DEBUG   HandlerThread:10329 [meta.py:__init__():49] meta init done
+2023-01-23 22:22:44,950 DEBUG   HandlerThread:10329 [meta.py:probe():209] probe
+2023-01-23 22:22:44,957 DEBUG   HandlerThread:10329 [meta.py:_setup_git():199] setup git
+2023-01-23 22:22:44,985 DEBUG   HandlerThread:10329 [meta.py:_setup_git():206] setup git done
+2023-01-23 22:22:44,985 DEBUG   HandlerThread:10329 [meta.py:_save_pip():53] save pip
+2023-01-23 22:22:44,986 DEBUG   HandlerThread:10329 [meta.py:_save_pip():67] save pip done
+2023-01-23 22:22:44,986 DEBUG   HandlerThread:10329 [meta.py:_save_conda():74] save conda
+2023-01-23 22:22:45,810 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/conda-environment.yaml
+2023-01-23 22:22:45,810 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/requirements.txt
+2023-01-23 22:22:45,810 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:22:48,198 DEBUG   HandlerThread:10329 [meta.py:_save_conda():84] save conda done
+2023-01-23 22:22:48,198 DEBUG   HandlerThread:10329 [meta.py:probe():247] probe done
+2023-01-23 22:22:48,308 DEBUG   SenderThread:10329 [sender.py:send():232] send: files
+2023-01-23 22:22:48,308 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2023-01-23 22:22:48,313 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-23 22:22:48,314 DEBUG   SenderThread:10329 [sender.py:send_request():246] send_request: stop_status
+2023-01-23 22:22:48,567 DEBUG   SenderThread:10329 [sender.py:send():232] send: telemetry
+2023-01-23 22:22:48,810 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/conda-environment.yaml
+2023-01-23 22:22:48,810 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-metadata.json
+2023-01-23 22:22:48,811 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:22:49,076 INFO    Thread-11 :10329 [upload_job.py:push():132] Uploaded file /tmp/tmpt73b70gkwandb/2tdkdax8-wandb-metadata.json
+2023-01-23 22:22:50,811 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:22:52,811 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:22:56,995 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:22:58,813 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:02,371 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:02,372 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:02,372 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:02,375 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:02,814 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:03,568 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-23 22:23:03,569 DEBUG   SenderThread:10329 [sender.py:send_request():246] send_request: stop_status
+2023-01-23 22:23:04,815 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:07,295 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:07,296 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:07,296 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:07,297 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:07,815 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:08,816 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:12,222 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:12,223 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:12,223 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:12,226 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:12,817 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:13,254 DEBUG   SenderThread:10329 [sender.py:send():232] send: stats
+2023-01-23 22:23:14,817 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:14,817 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/config.yaml
+2023-01-23 22:23:17,850 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:17,851 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:17,851 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:17,854 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:18,819 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:18,819 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:18,821 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-23 22:23:18,821 DEBUG   SenderThread:10329 [sender.py:send_request():246] send_request: stop_status
+2023-01-23 22:23:20,819 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:23,630 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:23,631 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:23,631 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:23,632 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:23,820 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:24,820 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:26,821 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:29,221 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:29,222 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:29,222 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:29,223 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:29,822 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:30,822 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:32,823 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:34,080 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-23 22:23:34,080 DEBUG   SenderThread:10329 [sender.py:send_request():246] send_request: stop_status
+2023-01-23 22:23:34,937 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:34,937 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:34,938 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:34,938 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:35,823 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:36,824 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:40,706 DEBUG   HandlerThread:10329 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-23 22:23:40,707 DEBUG   SenderThread:10329 [sender.py:send():232] send: history
+2023-01-23 22:23:40,707 DEBUG   SenderThread:10329 [sender.py:send():232] send: summary
+2023-01-23 22:23:40,710 INFO    SenderThread:10329 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 22:23:40,825 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/wandb-summary.json
+2023-01-23 22:23:42,825 INFO    Thread-7  :10329 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/files/output.log
+2023-01-23 22:23:42,928 WARNING MainThread:10329 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2023-01-23 22:23:43,412 WARNING MainThread:10329 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2023-01-23 22:23:43,412 ERROR   MainThread:10329 [internal.py:wandb_internal():156] Internal process interrupted.
+2023-01-23 22:23:43,492 INFO    HandlerThread:10329 [handler.py:finish():806] shutting down handler
+2023-01-23 22:23:43,492 INFO    WriterThread:10329 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_222243-35m8a8d2/run-35m8a8d2.wandb
+2023-01-23 22:23:43,492 DEBUG   SenderThread:10329 [sender.py:send():232] send: stats
+2023-01-23 22:23:43,493 INFO    SenderThread:10329 [sender.py:finish():1110] shutting down sender
+2023-01-23 22:23:43,493 INFO    SenderThread:10329 [dir_watcher.py:finish():312] shutting down directory watcher
+2023-01-23 22:23:43,805 INFO    MainThread:10329 [internal.py:handle_exit():80] Internal process exited

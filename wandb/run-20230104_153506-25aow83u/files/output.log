@@ -1,0 +1,351 @@
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [01:40<00:00,  1.98it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 2.0315 2.0315 || TEST: Depth 1.0864 1.0864 | Best: Depth 1.0864
+Task Weighting | Depth 1.0000
+current_loss 1.0863828351540568
+Saving full model
+1.0863828351540568 1.0863828351540568
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [01:46<00:00,  1.87it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Depth 0.9239 0.9239 || TEST: Depth 0.9089 0.9089 | Best: Depth 0.9089
+Task Weighting | Depth 1.0000
+current_loss 0.9088900090966103
+Saving full model
+0.9088900090966103 0.9088900090966103
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [01:47<00:00,  1.86it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Depth 0.8812 0.8812 || TEST: Depth 1.0115 1.0115 | Best: Depth 0.9089
+Task Weighting | Depth 1.0000
+current_loss 1.0115253188099778
+1.0115253188099778 0.9088900090966103
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [01:42<00:00,  1.93it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Depth 0.8082 0.8082 || TEST: Depth 0.8131 0.8131 | Best: Depth 0.8131
+Task Weighting | Depth 1.0000
+current_loss 0.8131285662094351
+Saving full model
+0.8131285662094351 0.8131285662094351
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [01:43<00:00,  1.93it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Depth 0.8061 0.8061 || TEST: Depth 0.8092 0.8092 | Best: Depth 0.8092
+Task Weighting | Depth 1.0000
+current_loss 0.8091738037548785
+Saving full model
+  0%|                                                                                                                   | 0/199 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

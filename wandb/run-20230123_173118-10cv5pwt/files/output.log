@@ -1,0 +1,124 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+train_model.py:305: RuntimeWarning: invalid value encountered in true_divide
+  depth = (depth - np.min(depth)) / (np.max(depth) - np.min(depth))
+Traceback (most recent call last):
+  File "train_model.py", line 544, in <module>
+    np.save('logging/mtl_dense_{}_{}_{}_{}_{}_{}_.npy'
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 354, in __getattr__
+    key=key, value=None, cause=e, type_override=ConfigAttributeError
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/base.py", line 196, in _format_and_raise
+    type_override=type_override,
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 818, in format_and_raise
+    _raise(ex, cause)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 716, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set end OC_CAUSE=1 for full backtrace
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 438, in _get_impl
+    node = self._get_node(key=key, throw_on_missing_key=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 470, in _get_node
+    raise ConfigKeyError(f"Missing key {key}")
+omegaconf.errors.ConfigAttributeError: Missing key grad_method
+    full_key: grad_method
+    object_type=dict
+{'semantic': array([[2.54248857, 0.00419739],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ]]), 'depth': array([[2.71062255, 2.71062216],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ],
+       [0.        , 0.        ]]), 'normals': array([[ 0.47422174, 91.38116169],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ],
+       [ 0.        ,  0.        ]]), 'all': array([-2.75287491,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ])}
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.7708 0.0039 Depth 3.5495 3.5495 Normals 0.5170 90.8665 || TEST: Semantic 2.5425 0.0042 Depth 2.7106 2.7106 Normals 0.4742 91.3812 | All -2.7529 | Best: All -2.7529
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000

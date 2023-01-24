@@ -1,4 +1,3 @@
-python3 train_model.py --wandb --network SegNet --task normals
 #!/bin/sh
 ### General options
 ### –- specify queue --

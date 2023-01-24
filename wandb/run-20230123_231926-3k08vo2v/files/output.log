@@ -1,0 +1,37 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+  2%|████▍                                                                                                                                                                                  | 4/164 [00:14<09:23,  3.52s/it]
+Traceback (most recent call last):
+  File "train_model.py", line 405, in <module>
+    test_pred = model(image)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_ResNet.py", line 286, in forward
+    out[i] = F.interpolate(self.decoders[i](x), size=[im_h, im_w], mode='bilinear', align_corners=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_ResNet.py", line 74, in forward
+    res.append(conv(x))
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 448, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 445, in _conv_forward
+    self.padding, self.dilation, self.groups)
+KeyboardInterrupt

@@ -1,0 +1,6 @@
+wandb_version: 1
+
+hyperparameters.learning_rate:
+  value: 0.002339417017190928
+training.optimizer:
+  value: sgd

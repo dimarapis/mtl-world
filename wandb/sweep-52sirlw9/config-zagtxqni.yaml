@@ -1,0 +1,6 @@
+wandb_version: 1
+
+hyperparameters.learning_rate:
+  value: 0.004403297649192054
+training.optimizer:
+  value: adam

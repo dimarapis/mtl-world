@@ -1,0 +1,84 @@
+
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 2.9559 2.9559 || TEST: Depth 2.4626 2.4626 | Best: Depth 2.4626
+Task Weighting | Depth 1.0000
+current_loss 2.462570905685425
+Variable does not exist
+Saving full model
+2.462570905685425 2.462570905685425
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Depth 2.9701 2.9701 || TEST: Depth 2.4680 2.4680 | Best: Depth 2.4626
+Task Weighting | Depth 1.0000
+current_loss 2.468017578125
+2.468017578125 2.462570905685425
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Depth 2.5498 2.5498 || TEST: Depth 2.4730 2.4730 | Best: Depth 2.4626
+Task Weighting | Depth 1.0000
+current_loss 2.4729886054992676
+2.4729886054992676 2.462570905685425
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Depth 2.6014 2.6014 || TEST: Depth 2.4609 2.4609 | Best: Depth 2.4609
+Task Weighting | Depth 1.0000
+current_loss 2.4609053134918213
+Saving full model
+2.4609053134918213 2.4609053134918213
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Depth 2.4588 2.4588 || TEST: Depth 2.4464 2.4464 | Best: Depth 2.4464
+Task Weighting | Depth 1.0000
+current_loss 2.446375846862793
+Saving full model
+2.446375846862793 2.446375846862793
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Depth 1.8694 1.8694 || TEST: Depth 2.4197 2.4197 | Best: Depth 2.4197
+Task Weighting | Depth 1.0000
+current_loss 2.4197025299072266
+Saving full model
+2.4197025299072266 2.4197025299072266
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Depth 2.4674 2.4674 || TEST: Depth 2.3633 2.3633 | Best: Depth 2.3633
+Task Weighting | Depth 1.0000
+current_loss 2.363320827484131
+Saving full model
+2.363320827484131 2.363320827484131
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Depth 2.2351 2.2351 || TEST: Depth 2.3045 2.3045 | Best: Depth 2.3045
+Task Weighting | Depth 1.0000
+current_loss 2.3045151233673096
+Saving full model
+2.3045151233673096 2.3045151233673096
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Depth 2.0962 2.0962 || TEST: Depth 2.2605 2.2605 | Best: Depth 2.2605
+Task Weighting | Depth 1.0000
+current_loss 2.2605397701263428
+Saving full model
+2.2605397701263428 2.2605397701263428
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 152, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 138, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 405, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "train_model.py", line 382, in <module>
+    loss.backward()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/autograd/__init__.py", line 156, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag
+KeyboardInterrupt

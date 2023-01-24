@@ -90,7 +90,7 @@ def datasets_resolutions():
     }
     return resolution_dict
     
-def crops():#OLNY FOR FUL SCALE NOW
+def crops():#ONLY FULL SCALE NOW
     crops = {
         'kitti' : [128, 381, 45, 1196],
         'nyuv2' : [20, 460, 24, 616],

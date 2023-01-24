@@ -1,0 +1,136 @@
+2023-01-24 10:30:22,269 INFO    MainThread:13634 [internal.py:wandb_internal():93] W&B internal server running at pid: 13634, started at: 2023-01-24 10:30:22.268574
+2023-01-24 10:30:22,278 INFO    WriterThread:13634 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/run-3erbbiox.wandb
+2023-01-24 10:30:22,281 DEBUG   SenderThread:13634 [sender.py:send():232] send: header
+2023-01-24 10:30:22,282 DEBUG   SenderThread:13634 [sender.py:send():232] send: run
+2023-01-24 10:30:22,592 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: check_version
+2023-01-24 10:30:22,594 INFO    SenderThread:13634 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files
+2023-01-24 10:30:22,594 INFO    SenderThread:13634 [sender.py:_start_run_threads():814] run started: 3erbbiox with start time 1674552621
+2023-01-24 10:30:22,595 DEBUG   SenderThread:13634 [sender.py:send():232] send: summary
+2023-01-24 10:30:22,595 INFO    SenderThread:13634 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-24 10:30:22,595 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: check_version
+2023-01-24 10:30:22,786 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: run_start
+2023-01-24 10:30:22,789 DEBUG   HandlerThread:13634 [meta.py:__init__():35] meta init
+2023-01-24 10:30:22,789 DEBUG   HandlerThread:13634 [meta.py:__init__():49] meta init done
+2023-01-24 10:30:22,789 DEBUG   HandlerThread:13634 [meta.py:probe():209] probe
+2023-01-24 10:30:22,796 DEBUG   HandlerThread:13634 [meta.py:_setup_git():199] setup git
+2023-01-24 10:30:22,811 DEBUG   HandlerThread:13634 [meta.py:_setup_git():206] setup git done
+2023-01-24 10:30:22,812 DEBUG   HandlerThread:13634 [meta.py:_save_pip():53] save pip
+2023-01-24 10:30:22,813 DEBUG   HandlerThread:13634 [meta.py:_save_pip():67] save pip done
+2023-01-24 10:30:22,813 DEBUG   HandlerThread:13634 [meta.py:_save_conda():74] save conda
+2023-01-24 10:30:23,596 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/wandb-summary.json
+2023-01-24 10:30:23,597 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/requirements.txt
+2023-01-24 10:30:23,597 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/conda-environment.yaml
+2023-01-24 10:30:27,276 DEBUG   HandlerThread:13634 [meta.py:_save_conda():84] save conda done
+2023-01-24 10:30:27,276 DEBUG   HandlerThread:13634 [meta.py:probe():247] probe done
+2023-01-24 10:30:27,604 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/conda-environment.yaml
+2023-01-24 10:30:27,604 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/wandb-metadata.json
+2023-01-24 10:30:27,788 DEBUG   SenderThread:13634 [sender.py:send():232] send: files
+2023-01-24 10:30:27,789 INFO    SenderThread:13634 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2023-01-24 10:30:27,816 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:30:27,816 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:30:28,107 DEBUG   SenderThread:13634 [sender.py:send():232] send: telemetry
+2023-01-24 10:30:28,506 INFO    Thread-11 :13634 [upload_job.py:push():132] Uploaded file /tmp/tmppoocybulwandb/3w1b5084-wandb-metadata.json
+2023-01-24 10:30:28,604 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:30,605 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:34,606 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:36,607 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:38,607 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:40,608 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:42,609 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:43,109 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:30:43,109 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:30:44,609 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:46,610 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:48,610 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:50,611 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:51,225 DEBUG   SenderThread:13634 [sender.py:send():232] send: stats
+2023-01-24 10:30:52,611 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:53,612 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/config.yaml
+2023-01-24 10:30:54,612 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:56,612 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:30:58,330 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:30:58,330 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:30:58,613 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:00,613 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:02,614 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:04,615 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:06,615 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:08,616 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:10,616 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:12,617 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:13,549 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:31:13,549 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:31:14,617 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:16,618 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:18,618 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:20,619 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:21,478 DEBUG   SenderThread:13634 [sender.py:send():232] send: stats
+2023-01-24 10:31:22,619 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:24,487 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-24 10:31:24,620 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:26,620 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:28,621 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:28,766 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:31:28,767 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:31:30,621 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:32,622 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:34,622 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:36,623 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:38,624 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:40,624 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:42,625 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:43,993 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:31:43,993 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:31:44,625 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:46,626 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:48,626 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:50,627 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:51,753 DEBUG   SenderThread:13634 [sender.py:send():232] send: stats
+2023-01-24 10:31:52,627 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:54,628 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:56,628 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:58,629 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:31:59,222 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:31:59,222 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:32:00,629 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:02,630 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:04,630 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:06,631 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:08,631 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:10,632 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:12,632 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:14,443 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:32:14,443 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:32:14,633 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:16,504 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: partial_history
+2023-01-24 10:32:16,505 DEBUG   SenderThread:13634 [sender.py:send():232] send: history
+2023-01-24 10:32:16,505 DEBUG   SenderThread:13634 [sender.py:send():232] send: summary
+2023-01-24 10:32:16,505 INFO    SenderThread:13634 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-24 10:32:16,634 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/wandb-summary.json
+2023-01-24 10:32:16,634 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:18,634 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:20,635 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:22,021 DEBUG   SenderThread:13634 [sender.py:send():232] send: stats
+2023-01-24 10:32:22,636 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:24,636 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:26,637 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:28,637 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:29,679 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:32:29,679 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:32:30,638 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:32,638 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:34,639 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:36,639 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:38,640 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:40,642 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:44,645 INFO    Thread-7  :13634 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/files/output.log
+2023-01-24 10:32:44,672 WARNING MainThread:13634 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2023-01-24 10:32:44,875 WARNING MainThread:13634 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2023-01-24 10:32:44,875 ERROR   MainThread:13634 [internal.py:wandb_internal():156] Internal process interrupted.
+2023-01-24 10:32:44,900 DEBUG   HandlerThread:13634 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-24 10:32:44,901 INFO    HandlerThread:13634 [handler.py:finish():806] shutting down handler
+2023-01-24 10:32:44,901 DEBUG   SenderThread:13634 [sender.py:send_request():246] send_request: stop_status
+2023-01-24 10:32:45,098 INFO    WriterThread:13634 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_103021-3erbbiox/run-3erbbiox.wandb
+2023-01-24 10:32:45,151 INFO    SenderThread:13634 [sender.py:finish():1110] shutting down sender
+2023-01-24 10:32:45,151 INFO    SenderThread:13634 [dir_watcher.py:finish():312] shutting down directory watcher
+2023-01-24 10:32:45,178 INFO    MainThread:13634 [internal.py:handle_exit():80] Internal process exited

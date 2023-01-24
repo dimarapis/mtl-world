@@ -1,0 +1,62 @@
+
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 43%|████████████████████████████████████████████████████████████████▍                                                                                      | 70/164 [01:07<01:30,  1.04it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 407, in <module>
+    test_pred = model(image)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/mdpi_robotics/mtl-world/models/model_ResNet.py", line 347, in forward
+    x = self.shared_layer4(x)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torchvision/models/resnet.py", line 128, in forward
+    out = self.conv2(out)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 448, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 445, in _conv_forward
+    self.padding, self.dilation, self.groups)
+KeyboardInterrupt

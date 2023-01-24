@@ -1,0 +1,54 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 654/654 [00:57<00:00, 11.42it/s]
+ Semantic 2.5425 0.0042 Depth 2.7106 2.7106 Normals 0.4742 91.3812 | All -2.7529
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.7708 0.0039 Depth 3.5495 3.5495 Normals 0.5170 90.8665 || TEST: Semantic 2.5425 0.0042 Depth 2.7106 2.7106 Normals 0.4742 91.3812 | All -2.7529 | Best: All -2.7529
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+-2.7528749123473832 -2.7528749123473832
+
+
+
+
+ 16%|████████████████████████████▋                                                                                                                                                           | 102/654 [00:10<00:55,  9.88it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 430, in <module>
+    prediction = depth_colorize(test_pred[1].cpu().numpy())
+  File "train_model.py", line 306, in depth_colorize
+    depth_colorized = 255 * cmap3(np.squeeze(depth))[:, :, :3]  # H, W, C
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/matplotlib/colors.py", line 642, in __call__
+    lut.take(xa, axis=0, mode='clip', out=rgba)
+KeyboardInterrupt

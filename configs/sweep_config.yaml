@@ -1,0 +1,11 @@
+method: random
+metric:
+  name: test_str
+  goal: minimize
+parameters:
+  training.learning_rate:
+    min: 0.00001
+    max: 0.01
+  training.optimizer:
+    values: ["adam", "sgd"]
+  

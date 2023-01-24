@@ -1,0 +1,53 @@
+
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉   | 643/654 [00:34<00:00, 20.26it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 2.9559 2.9559 || TEST: Depth 2.7417 2.7417 | Best: Depth 2.7417
+Task Weighting | Depth 1.0000
+current_loss 2.7416537008850073
+Saving full model
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 654/654 [00:34<00:00, 18.92it/s]
+
+
+ 19%|███████████████████████████████████▋                                                                                                                                                    | 127/654 [00:07<00:29, 17.65it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 402, in <module>
+    for multitaskdatatest in tqdm(test_loader):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/dim/mdpi_robotics/mtl-world/autolambda_code.py", line 118, in __getitem__
+    normal = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/normals_npy/{:d}.npy'.format(index)), -1, 0)).float()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/npyio.py", line 441, in load
+    pickle_kwargs=pickle_kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/lib/format.py", line 753, in read_array
+    array = numpy.fromfile(fp, dtype=dtype, count=count)
+KeyboardInterrupt

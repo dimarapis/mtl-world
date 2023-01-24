@@ -1,0 +1,46 @@
+2023-01-23 23:04:59,983 INFO    MainThread:19489 [internal.py:wandb_internal():93] W&B internal server running at pid: 19489, started at: 2023-01-23 23:04:59.983675
+2023-01-23 23:04:59,985 INFO    WriterThread:19489 [datastore.py:open_for_write():75] open: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/run-3qh6kep0.wandb
+2023-01-23 23:04:59,987 DEBUG   SenderThread:19489 [sender.py:send():232] send: header
+2023-01-23 23:04:59,988 DEBUG   SenderThread:19489 [sender.py:send():232] send: run
+2023-01-23 23:05:00,307 DEBUG   HandlerThread:19489 [handler.py:handle_request():141] handle_request: check_version
+2023-01-23 23:05:00,309 INFO    SenderThread:19489 [dir_watcher.py:__init__():197] watching files in: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files
+2023-01-23 23:05:00,309 INFO    SenderThread:19489 [sender.py:_start_run_threads():814] run started: 3qh6kep0 with start time 1674511499
+2023-01-23 23:05:00,309 DEBUG   SenderThread:19489 [sender.py:send():232] send: summary
+2023-01-23 23:05:00,310 INFO    SenderThread:19489 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2023-01-23 23:05:00,311 DEBUG   SenderThread:19489 [sender.py:send_request():246] send_request: check_version
+2023-01-23 23:05:00,448 DEBUG   HandlerThread:19489 [handler.py:handle_request():141] handle_request: run_start
+2023-01-23 23:05:00,450 DEBUG   HandlerThread:19489 [meta.py:__init__():35] meta init
+2023-01-23 23:05:00,450 DEBUG   HandlerThread:19489 [meta.py:__init__():49] meta init done
+2023-01-23 23:05:00,450 DEBUG   HandlerThread:19489 [meta.py:probe():209] probe
+2023-01-23 23:05:00,456 DEBUG   HandlerThread:19489 [meta.py:_setup_git():199] setup git
+2023-01-23 23:05:00,468 DEBUG   HandlerThread:19489 [meta.py:_setup_git():206] setup git done
+2023-01-23 23:05:00,468 DEBUG   HandlerThread:19489 [meta.py:_save_pip():53] save pip
+2023-01-23 23:05:00,469 DEBUG   HandlerThread:19489 [meta.py:_save_pip():67] save pip done
+2023-01-23 23:05:00,469 DEBUG   HandlerThread:19489 [meta.py:_save_conda():74] save conda
+2023-01-23 23:05:01,310 INFO    Thread-7  :19489 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/conda-environment.yaml
+2023-01-23 23:05:01,310 INFO    Thread-7  :19489 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/requirements.txt
+2023-01-23 23:05:01,310 INFO    Thread-7  :19489 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/wandb-summary.json
+2023-01-23 23:05:01,528 WARNING MainThread:19489 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2023-01-23 23:05:01,636 DEBUG   HandlerThread:19489 [meta.py:_save_conda():84] save conda done
+2023-01-23 23:05:01,636 DEBUG   HandlerThread:19489 [meta.py:probe():247] probe done
+2023-01-23 23:05:01,772 DEBUG   SenderThread:19489 [sender.py:send():232] send: files
+2023-01-23 23:05:01,772 INFO    SenderThread:19489 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2023-01-23 23:05:02,038 WARNING MainThread:19489 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2023-01-23 23:05:02,041 ERROR   MainThread:19489 [internal.py:wandb_internal():156] Internal process interrupted.
+2023-01-23 23:05:02,309 INFO    Thread-7  :19489 [dir_watcher.py:_on_file_created():244] file/dir created: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/wandb-metadata.json
+2023-01-23 23:05:02,500 INFO    Thread-11 :19489 [upload_job.py:push():132] Uploaded file /tmp/tmp1jx93_w3wandb/ri1zm8od-wandb-metadata.json
+2023-01-23 23:05:02,772 INFO    SenderThread:19489 [sender.py:finish():1110] shutting down sender
+2023-01-23 23:05:02,773 INFO    SenderThread:19489 [dir_watcher.py:finish():312] shutting down directory watcher
+2023-01-23 23:05:02,773 INFO    WriterThread:19489 [datastore.py:close():279] close: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/run-3qh6kep0.wandb
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():342] scan: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/wandb-metadata.json wandb-metadata.json
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/config.yaml config.yaml
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/conda-environment.yaml conda-environment.yaml
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/wandb-summary.json wandb-summary.json
+2023-01-23 23:05:03,310 INFO    SenderThread:19489 [dir_watcher.py:finish():356] scan save: /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/requirements.txt requirements.txt
+2023-01-23 23:05:03,311 INFO    SenderThread:19489 [file_pusher.py:finish():145] shutting down file pusher
+2023-01-23 23:05:03,314 INFO    SenderThread:19489 [file_pusher.py:join():150] waiting for file pusher
+2023-01-23 23:05:04,097 INFO    Thread-14 :19489 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/requirements.txt
+2023-01-23 23:05:04,100 INFO    Thread-13 :19489 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/wandb-summary.json
+2023-01-23 23:05:04,103 INFO    Thread-12 :19489 [upload_job.py:push():132] Uploaded file /home/dim/mdpi_robotics/mtl-world/wandb/run-20230123_230459-3qh6kep0/files/config.yaml
+2023-01-23 23:05:04,609 INFO    MainThread:19489 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,80 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉    | 160/164 [00:47<00:01,  3.40it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.7708 0.0039 Depth 3.5495 3.5495 Normals 0.5170 90.8665 || TEST: Semantic 2.5482 0.0042 Depth 2.6849 2.6849 Normals 0.4882 91.3250 | All -2.7357 | Best: All -2.7357
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+Saving full model
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 164/164 [00:48<00:00,  3.35it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉   | 161/164 [00:48<00:00,  3.10it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 2.4606 0.0723 Depth 2.4308 2.4308 Normals 0.6063 62.1005 || TEST: Semantic 2.5444 0.0045 Depth 2.6602 2.6602 Normals 0.4894 91.3817 | All -2.7205 | Best: All -2.7205
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Saving full model
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 164/164 [00:49<00:00,  3.31it/s]
+
+
+
+
+
+
+
+
+
+
+

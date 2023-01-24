@@ -1,0 +1,51 @@
+wandb_version: 1
+
+_content:
+  desc: null
+  value:
+    data: '{''path'': ''dataset'', ''dataset'': ''nyuv2'', ''augmentation.trigger'':
+      False, ''batch_size'': 32, ''input_size'': None}'
+    network: '{''tasks'': ''all'', ''weighting'': ''equal'', ''backbone'': ''ResNet'',
+      ''mtl_architecture'': ''Split'', ''pretrained'': False, ''grad_method'': None,
+      ''t_checkpoint'': False, ''o_checkpoint'': None}'
+    reproduceability: '{''t_seed'': True, ''o_seed'': 29}'
+    training: '{''epochs'': 30, ''optimizer'': ''sgd'', ''learning_rate'': 0.0001,
+      ''weight_decay'': 1e-05, ''early_stop'': False, ''scheduler'': ''multisteplr'',
+      ''step'': 10, ''loss_function'': ''cross_entropy''}'
+    wandb: '{''t_logger'': True, ''project_name'': ''MTLwarehouse'', ''entity'': ''wandbdimar''}'
+_flags_cache:
+  desc: null
+  value:
+    struct: null
+_metadata:
+  desc: null
+  value: ContainerMetadata(ref_type=typing.Any, object_type=None, optional=True, key=None,
+    flags={}, flags_root=False, resolver_cache=defaultdict(<class 'dict'>, {}), key_type=typing.Any,
+    element_type=typing.Any)
+_parent:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.16
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.11
+    start_time: 1674486928
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      4: 3.7.11
+      5: 0.12.16
+      8:
+      - 5

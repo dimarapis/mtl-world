@@ -1,0 +1,14 @@
+
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Depth 2.9559 2.9559 || TEST: Depth 2.4626 2.4626 | Best: Depth 2.4626
+Task Weighting | Depth 1.0000
+current_loss 2.462570905685425
+Traceback (most recent call last):
+  File "train_model.py", line 579, in <module>
+    wandb.log({'training_loss':train_losses[opt.network.tasks][index][1],'test_metric':current_test_metric, 'Images_0':img_list_0,
+NameError: name 'img_list_0' is not defined

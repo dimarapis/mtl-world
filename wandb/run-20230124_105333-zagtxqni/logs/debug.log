@@ -1,0 +1,214 @@
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_setup.py:_flush():76] Loading settings from /home/dim/.config/wandb/settings
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_setup.py:_flush():76] Loading settings from wandb/settings
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'wandbdimar', 'project': 'MTLwarehouse-Sweep', 'root_dir': '/home/dim/mdpi_robotics/mtl-world', 'run_id': 'zagtxqni', 'sweep_param_path': '/home/dim/mdpi_robotics/mtl-world/wandb/sweep-52sirlw9/config-zagtxqni.yaml', 'sweep_id': '52sirlw9'}
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': 'train_model.py'}
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_init.py:_log_setup():428] Logging user logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105333-zagtxqni/logs/debug.log
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_init.py:_log_setup():429] Logging internal logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105333-zagtxqni/logs/debug-internal.log
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_init.py:init():462] calling init triggers
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_init.py:init():466] wandb.init called with sweep_config: {'hyperparameters.learning_rate': 0.004403297649192054, 'training.optimizer': 'adam'}
+config: {}
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [wandb_init.py:init():515] starting backend
+2023-01-24 10:53:33,105 INFO    Thread-7  :9096 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-24 10:53:33,108 INFO    Thread-7  :9096 [backend.py:ensure_launched():217] starting backend process...
+2023-01-24 10:53:33,111 INFO    Thread-7  :9096 [backend.py:ensure_launched():222] started backend process with pid: 9412
+2023-01-24 10:53:33,112 INFO    Thread-7  :9096 [wandb_init.py:init():525] backend started and connected
+2023-01-24 10:53:33,117 INFO    Thread-7  :9096 [wandb_init.py:init():596] updated telemetry
+2023-01-24 10:53:33,129 INFO    Thread-7  :9096 [wandb_init.py:init():628] communicating run to backend with 30 second timeout
+2023-01-24 10:53:34,142 INFO    Thread-7  :9096 [wandb_run.py:_on_init():1924] communicating current version
+2023-01-24 10:53:34,283 INFO    Thread-7  :9096 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.13.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-01-24 10:53:34,283 INFO    Thread-7  :9096 [wandb_init.py:init():662] starting run threads in backend
+2023-01-24 10:53:37,351 INFO    Thread-7  :9096 [wandb_run.py:_config_callback():1136] config_cb None None {'hyperparameters.learning_rate': 0.004403297649192054, 'training.optimizer': 'adam'}
+2023-01-24 10:53:37,355 INFO    Thread-7  :9096 [wandb_run.py:_console_start():1898] atexit reg
+2023-01-24 10:53:37,355 INFO    Thread-7  :9096 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2023-01-24 10:53:37,355 INFO    Thread-7  :9096 [wandb_run.py:_redirect():1776] Redirecting console.
+2023-01-24 10:53:37,355 ERROR   Thread-7  :9096 [wandb_run.py:_redirect():1835] Failed to redirect.
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1828, in _redirect
+    out_redir.install()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 702, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 652, in add_fd
+    self._register()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 637, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2023-01-24 10:53:37,356 INFO    Thread-7  :9096 [wandb_init.py:init():688] run started, returning control to user process
+2023-01-24 10:53:37,356 INFO    Thread-7  :9096 [wandb_run.py:_finish():1685] finishing run wandbdimar/MTLwarehouse-Sweep/zagtxqni
+2023-01-24 10:53:37,356 INFO    Thread-7  :9096 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2023-01-24 10:53:37,358 INFO    Thread-7  :9096 [wandb_run.py:_restore():1839] restore
+2023-01-24 10:53:37,562 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  total_bytes: 784
+}
+
+2023-01-24 10:53:37,871 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 784
+}
+
+2023-01-24 10:53:38,147 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,248 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,349 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,450 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8015
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,552 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8015
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,653 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8015
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,754 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8015
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,855 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:38,956 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:39,057 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:39,158 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:39,259 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:39,503 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+
+2023-01-24 10:53:40,016 INFO    Thread-7  :9096 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8498
+  total_bytes: 8498
+}
+local_info {
+}
+
+2023-01-24 10:53:41,119 INFO    Thread-7  :9096 [wandb_run.py:_restore():1839] restore
+2023-01-24 10:53:41,119 ERROR   Thread-7  :9096 [wandb_run.py:_atexit_cleanup():1888] Problem finishing run
+Traceback (most recent call last):
+  File "train_model.py", line 77, in train_sweep
+    opt[ks[0]][ks[1]] = v
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 373, in __getitem__
+    self._format_and_raise(key=key, value=None, cause=e)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/base.py", line 196, in _format_and_raise
+    type_override=type_override,
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 818, in format_and_raise
+    _raise(ex, cause)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 716, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set end OC_CAUSE=1 for full backtrace
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 367, in __getitem__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 438, in _get_impl
+    node = self._get_node(key=key, throw_on_missing_key=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 470, in _get_node
+    raise ConfigKeyError(f"Missing key {key}")
+omegaconf.errors.ConfigKeyError: Missing key hyperparameters
+    full_key: hyperparameters
+    object_type=dict
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1876, in _atexit_cleanup
+    self._on_finish()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2010, in _on_finish
+    self._backend.cleanup()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 246, in cleanup
+    self.interface.join()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 478, in join
+    self._router.join()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/interface/router.py", line 99, in join
+    self._thread.join()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+Exception

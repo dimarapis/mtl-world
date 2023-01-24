@@ -1,0 +1,66 @@
+
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Failed to enable GUI event loop integration for 'qt'
+Traceback (most recent call last):
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/matplotlibtools.py", line 30, in do_enable_gui
+    enable_gui(guiname)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 540, in enable_gui
+    return gui_hook(app)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 176, in enable_qt
+    from pydev_ipython.qt_for_kernel import QT_API, QT_API_PYQT5
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_for_kernel.py", line 116, in <module>
+    QtCore, QtGui, QtSvg, QT_API = load_qt(api_opts)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 276, in load_qt
+    if not can_import(api):
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 152, in can_import
+    if not has_binding(api):
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 120, in has_binding
+    imp.find_module('QtCore', mod.__path__)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/imp.py", line 270, in find_module
+    "not {}".format(type(path)))
+RuntimeError: 'path' must be None or a list, not <class '_frozen_importlib_external._NamespacePath'>
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 438, in _get_impl
+    node = self._get_node(key=key, throw_on_missing_key=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 470, in _get_node
+    raise ConfigKeyError(f"Missing key {key}")
+omegaconf.errors.ConfigKeyError: Missing key seed
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 322, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 136, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home/dim/.vscode/extensions/ms-python.python-2022.20.2/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/home/dim/mdpi_robotics/mtl-world/train_model.py", line 67, in <module>
+    seed = opt.reproduceability.o_seed
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 354, in __getattr__
+    key=key, value=None, cause=e, type_override=ConfigAttributeError
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/base.py", line 196, in _format_and_raise
+    type_override=type_override,
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 818, in format_and_raise
+    _raise(ex, cause)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/_utils.py", line 716, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set end OC_CAUSE=1 for full backtrace
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 438, in _get_impl
+    node = self._get_node(key=key, throw_on_missing_key=True)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/omegaconf/dictconfig.py", line 470, in _get_node
+    raise ConfigKeyError(f"Missing key {key}")
+omegaconf.errors.ConfigAttributeError: Missing key seed
+    full_key: reproduceability.seed
+    object_type=dict

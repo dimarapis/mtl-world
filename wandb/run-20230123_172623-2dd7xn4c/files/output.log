@@ -1,0 +1,27 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+  1%|▋                                                                                                                                        | 1/199 [00:01<05:05,  1.54s/it]
+
+
+
+
+
+
+  5%|██████▊                                                                                                                                 | 10/199 [00:15<04:51,  1.54s/it]
+Traceback (most recent call last):
+  File "train_model.py", line 382, in <module>
+    optimizer.step()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/lr_scheduler.py", line 65, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/adam.py", line 144, in step
+    eps=group['eps'])
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/optim/_functional.py", line 86, in adam
+    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+KeyboardInterrupt

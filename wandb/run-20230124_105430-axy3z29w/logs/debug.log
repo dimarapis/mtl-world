@@ -1,0 +1,125 @@
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_setup.py:_flush():76] Loading settings from /home/dim/.config/wandb/settings
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_setup.py:_flush():76] Loading settings from wandb/settings
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'wandbdimar', 'project': 'MTLwarehouse-Sweep', 'root_dir': '/home/dim/mdpi_robotics/mtl-world', 'sweep_id': '8h0ct4ks', 'run_id': 'axy3z29w', 'sweep_param_path': '/home/dim/mdpi_robotics/mtl-world/wandb/sweep-8h0ct4ks/config-axy3z29w.yaml'}
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': 'train_model.py'}
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_init.py:_log_setup():428] Logging user logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105430-axy3z29w/logs/debug.log
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_init.py:_log_setup():429] Logging internal logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105430-axy3z29w/logs/debug-internal.log
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_init.py:init():462] calling init triggers
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_init.py:init():466] wandb.init called with sweep_config: {'training.learning_rate': 0.005815682618384595, 'training.optimizer': 'sgd'}
+config: {'data': {'path': 'dataset', 'dataset': 'nyuv2', 'augmentation.trigger': False, 'batch_size': 4, 'input_size': None}, 'network': {'tasks': 'all', 'weighting': 'equal', 'backbone': 'ResNet', 'mtl_architecture': 'Split', 'pretrained': False, 'grad_method': None}, 'training': {'epochs': 10, 'optimizer': 'sgd', 'learning_rate': 0.005815682618384595, 'weight_decay': 1e-05, 'early_stop': False, 'scheduler': 'multisteplr', 'step': 10, 'loss_function': 'cross_entropy', 't_checkpoint': False, 'o_checkpoint': None}, 'reproduceability': {'t_seed': True, 'o_seed': 29}, 'wandb': {'t_logger': True, 'project_name': 'MTLwarehouse', 'entity': 'wandbdimar'}, 'sweep': {'sweep_t': True, 'sweep_o': 'configs/sweep_config.yaml'}}
+2023-01-24 10:54:30,467 INFO    Thread-2  :9623 [wandb_init.py:init():510] wandb.init() called when a run is still active
+2023-01-24 10:54:36,994 INFO    Thread-2  :9623 [wandb_run.py:_finish():1685] finishing run wandbdimar/MTLwarehouse-Sweep/axy3z29w
+2023-01-24 10:54:36,994 INFO    Thread-2  :9623 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2023-01-24 10:54:36,995 INFO    Thread-2  :9623 [wandb_run.py:_restore():1839] restore
+2023-01-24 10:54:36,998 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 784
+}
+
+2023-01-24 10:54:37,298 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 784
+}
+
+2023-01-24 10:54:38,080 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,181 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,282 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,383 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 1408
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,484 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,585 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,686 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,787 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:38,888 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:39,402 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+
+2023-01-24 10:54:39,940 INFO    Thread-2  :9623 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8523
+  total_bytes: 8523
+}
+local_info {
+}
+
+2023-01-24 10:54:41,136 INFO    Thread-2  :9623 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2023-01-24 10:54:41,136 INFO    Thread-2  :9623 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2023-01-24 10:54:41,137 INFO    Thread-2  :9623 [wandb_run.py:_footer_sync_info():3060] logging synced files

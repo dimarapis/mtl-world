@@ -1,0 +1,144 @@
+2023-01-24 10:53:22,791 INFO    Thread-2  :9096 [wandb_setup.py:_flush():76] Loading settings from /home/dim/.config/wandb/settings
+2023-01-24 10:53:22,791 INFO    Thread-2  :9096 [wandb_setup.py:_flush():76] Loading settings from wandb/settings
+2023-01-24 10:53:22,792 INFO    Thread-2  :9096 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'wandbdimar', 'project': 'MTLwarehouse-Sweep', 'root_dir': '/home/dim/mdpi_robotics/mtl-world', 'sweep_id': '52sirlw9', 'run_id': 'mccdgmfv', 'sweep_param_path': '/home/dim/mdpi_robotics/mtl-world/wandb/sweep-52sirlw9/config-mccdgmfv.yaml'}
+2023-01-24 10:53:22,792 INFO    Thread-2  :9096 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': 'train_model.py'}
+2023-01-24 10:53:22,792 INFO    Thread-2  :9096 [wandb_init.py:_log_setup():428] Logging user logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105322-mccdgmfv/logs/debug.log
+2023-01-24 10:53:22,793 INFO    Thread-2  :9096 [wandb_init.py:_log_setup():429] Logging internal logs to /home/dim/mdpi_robotics/mtl-world/wandb/run-20230124_105322-mccdgmfv/logs/debug-internal.log
+2023-01-24 10:53:22,793 INFO    Thread-2  :9096 [wandb_init.py:init():462] calling init triggers
+2023-01-24 10:53:22,793 INFO    Thread-2  :9096 [wandb_init.py:init():466] wandb.init called with sweep_config: {'hyperparameters.learning_rate': 0.002339417017190928, 'training.optimizer': 'sgd'}
+config: {}
+2023-01-24 10:53:22,794 INFO    Thread-2  :9096 [wandb_init.py:init():515] starting backend
+2023-01-24 10:53:22,794 INFO    Thread-2  :9096 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-24 10:53:22,823 INFO    Thread-2  :9096 [backend.py:ensure_launched():217] starting backend process...
+2023-01-24 10:53:22,828 INFO    Thread-2  :9096 [backend.py:ensure_launched():222] started backend process with pid: 9141
+2023-01-24 10:53:22,829 INFO    Thread-2  :9096 [wandb_init.py:init():525] backend started and connected
+2023-01-24 10:53:22,835 INFO    Thread-2  :9096 [wandb_init.py:init():596] updated telemetry
+2023-01-24 10:53:22,846 INFO    Thread-2  :9096 [wandb_init.py:init():628] communicating run to backend with 30 second timeout
+2023-01-24 10:53:23,852 INFO    Thread-2  :9096 [wandb_run.py:_on_init():1924] communicating current version
+2023-01-24 10:53:24,047 INFO    Thread-2  :9096 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.13.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-01-24 10:53:24,048 INFO    Thread-2  :9096 [wandb_init.py:init():662] starting run threads in backend
+2023-01-24 10:53:27,213 INFO    Thread-2  :9096 [wandb_run.py:_config_callback():1136] config_cb None None {'hyperparameters.learning_rate': 0.002339417017190928, 'training.optimizer': 'sgd'}
+2023-01-24 10:53:27,217 INFO    Thread-2  :9096 [wandb_run.py:_console_start():1898] atexit reg
+2023-01-24 10:53:27,217 INFO    Thread-2  :9096 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2023-01-24 10:53:27,217 INFO    Thread-2  :9096 [wandb_run.py:_redirect():1776] Redirecting console.
+2023-01-24 10:53:27,218 ERROR   Thread-2  :9096 [wandb_run.py:_redirect():1835] Failed to redirect.
+Traceback (most recent call last):
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1828, in _redirect
+    out_redir.install()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 702, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 652, in add_fd
+    self._register()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 637, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2023-01-24 10:53:27,220 INFO    Thread-2  :9096 [wandb_init.py:init():688] run started, returning control to user process
+2023-01-24 10:53:27,220 INFO    Thread-2  :9096 [wandb_run.py:_finish():1685] finishing run wandbdimar/MTLwarehouse-Sweep/mccdgmfv
+2023-01-24 10:53:27,220 INFO    Thread-2  :9096 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2023-01-24 10:53:27,221 INFO    Thread-2  :9096 [wandb_run.py:_restore():1839] restore
+2023-01-24 10:53:27,439 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  total_bytes: 784
+}
+
+2023-01-24 10:53:27,801 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 784
+}
+
+2023-01-24 10:53:27,902 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,003 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,104 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 784
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,206 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,307 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,408 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,509 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,611 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:28,960 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+
+2023-01-24 10:53:29,486 INFO    Thread-2  :9096 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8497
+  total_bytes: 8497
+}
+local_info {
+}
+
+2023-01-24 10:53:30,635 INFO    Thread-2  :9096 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2023-01-24 10:53:30,635 INFO    Thread-2  :9096 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2023-01-24 10:53:30,636 INFO    Thread-2  :9096 [wandb_run.py:_footer_sync_info():3060] logging synced files

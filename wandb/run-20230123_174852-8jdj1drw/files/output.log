@@ -1,0 +1,16 @@
+ResNetSingle
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+  0%|                                                                                                                                                                                                  | 0/164 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 438, in <module>
+    image_rgb_0 = wandb.Image(image.permute(0,2,3,1).cpu().numpy(), caption="RGB_0")
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/data_types/image.py", line 143, in __init__
+    self._initialize_from_data(data_or_path, mode)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/wandb/sdk/data_types/image.py", line 272, in _initialize_from_data
+    self.to_uint8(data), mode=mode or self.guess_mode(data)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/PIL/Image.py", line 2784, in fromarray
+    raise ValueError(f"Too many dimensions: {ndim} > {ndmax}.")
+ValueError: Too many dimensions: 4 > 3.

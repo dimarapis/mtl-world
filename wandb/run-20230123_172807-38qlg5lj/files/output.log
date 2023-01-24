@@ -1,0 +1,12 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+train_model.py:305: RuntimeWarning: invalid value encountered in true_divide
+  depth = (depth - np.min(depth)) / (np.max(depth) - np.min(depth))
+Traceback (most recent call last):
+  File "train_model.py", line 511, in <module>
+    print(test_loss.shape)
+AttributeError: 'list' object has no attribute 'shape'

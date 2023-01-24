@@ -1,0 +1,12 @@
+
+ResNetSingle
+  1%|██▌                                                                                                                                                                                       | 9/654 [00:00<00:29, 21.57it/s]
+Dataset: Nyuv2 | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+
+
+
+
+
+

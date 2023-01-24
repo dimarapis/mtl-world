@@ -1,0 +1,19 @@
+
+ResNetMTL_Split
+  0%|                                                                                                                                                 | 0/199 [00:00<?, ?it/s]
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+
+
+
+
+  3%|████▏                                                                                                                                    | 6/199 [00:09<05:08,  1.60s/it]
+Traceback (most recent call last):
+  File "train_model.py", line 381, in <module>
+    loss.backward()
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/autograd/__init__.py", line 156, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag
+KeyboardInterrupt

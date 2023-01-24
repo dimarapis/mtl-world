@@ -1,0 +1,18 @@
+
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 288, 384]),	Depth.shape torch.Size([4, 1, 288, 384]),    	Semantic.shape torch.Size([4, 288, 384]),	Normals.shape torch.Size([4, 3, 288, 384])
+  0%|                                                                                                                                                                                               | 0/164 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 433, in <module>
+    prediction_normals = rgb_visualizer(test_pred[2].squeeze(0).cpu().numpy())
+  File "train_model.py", line 327, in rgb_visualizer
+    rgb = np.transpose(image, (1, 2, 0))
+  File "<__array_function__ internals>", line 6, in transpose
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/core/fromnumeric.py", line 658, in transpose
+    return _wrapfunc(a, 'transpose', axes)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/numpy/core/fromnumeric.py", line 58, in _wrapfunc
+    return bound(*args, **kwds)
+ValueError: axes don't match array

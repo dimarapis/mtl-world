@@ -1,0 +1,4 @@
+
+ResNetSingle
+Dataset: Sim_Warehouse | Training Task: Depth | Primary Task: Depth in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: NONE
