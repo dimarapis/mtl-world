@@ -1,0 +1,20 @@
+Started logging in wandb
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg project when running a sweep.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg entity when running a sweep.
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+ 44%|██████████████████████████████████████▎                                                | 11/25 [00:37<00:47,  3.42s/it][34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.

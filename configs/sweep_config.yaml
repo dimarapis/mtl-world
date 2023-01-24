@@ -1,7 +1,7 @@
 method: random
 metric:
-  name: test_str
-  goal: minimize
+  name: test_metric
+  goal: maximize
 parameters:
   training.learning_rate:
     min: 0.00001

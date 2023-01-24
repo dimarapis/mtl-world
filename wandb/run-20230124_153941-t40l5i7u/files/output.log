@@ -1,0 +1,518 @@
+Started logging in wandb
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg project when running a sweep.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg entity when running a sweep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.49it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 1.9802 0.0671 Depth 1.2396 1.2396 Normals 0.4140 64.0390 || TEST: Semantic 2.5155 0.0447 Depth 1.2834 1.2834 Normals 0.4961 80.4075 | All -1.6477 | Best: All -1.6477
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+-1.6477484380425942 -1.6477484380425942
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.48it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 1.7242 0.0891 Depth 0.8635 0.8635 Normals 0.3262 55.0392 || TEST: Semantic 2.0846 0.0890 Depth 0.9186 0.9186 Normals 0.3899 50.0845 | All -0.9297 | Best: All -0.9297
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.48it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Semantic 1.6411 0.1044 Depth 0.8415 0.8415 Normals 0.3168 54.0037 || TEST: Semantic 1.7097 0.0972 Depth 0.7887 0.7887 Normals 0.3173 55.8459 | All -0.9262 | Best: All -0.9262
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:13<00:01,  1.45it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Semantic 1.6088 0.1117 Depth 0.8395 0.8395 Normals 0.3124 53.4049 || TEST: Semantic 1.9789 0.0913 Depth 0.8988 0.8988 Normals 0.3246 54.8197 | All -0.9858 | Best: All -0.9262
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:14<00:00,  1.49it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.48it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Semantic 1.5669 0.1236 Depth 0.8183 0.8183 Normals 0.3076 52.6419 || TEST: Semantic 1.8818 0.0978 Depth 0.8285 0.8285 Normals 0.3255 59.2902 | All -1.0024 | Best: All -0.9262
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.48it/s]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Semantic 1.5513 0.1276 Depth 0.8012 0.8012 Normals 0.3053 52.0701 || TEST: Semantic 1.6933 0.1182 Depth 0.7745 0.7745 Normals 0.3108 52.0843 | All -0.8451 | Best: All -0.8451
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:24<00:00,  3.39s/it]
+
+
+
+
+
+
+ 95%|████████████████████▉ | 20/21 [00:13<00:00,  1.47it/s]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Semantic 1.5177 0.1451 Depth 0.7872 0.7872 Normals 0.3026 51.7746 || TEST: Semantic 1.7968 0.1032 Depth 0.7835 0.7835 Normals 0.3163 56.3976 | All -0.9265 | Best: All -0.8451
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:13<00:00,  1.50it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:23<00:00,  3.33s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Semantic 1.5125 0.1479 Depth 0.7811 0.7811 Normals 0.2995 51.1694 || TEST: Semantic 1.6457 0.1277 Depth 0.7907 0.7907 Normals 0.3031 49.3649 | All -0.8076 | Best: All -0.8076
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+-0.8076136778794117 -0.8076136778794117
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:23<00:00,  3.33s/it]
+
+
+
+
+
+
+ 81%|█████████████████▊    | 17/21 [00:12<00:02,  1.42it/s]
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Semantic 1.4823 0.1651 Depth 0.7623 0.7623 Normals 0.2973 50.0174 || TEST: Semantic 1.7086 0.1222 Depth 0.7619 0.7619 Normals 0.3047 50.9819 | All -0.8176 | Best: All -0.8076
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:14<00:00,  1.44it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:23<00:00,  3.36s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0009 | TRAIN: Semantic 1.4568 0.1721 Depth 0.7564 0.7564 Normals 0.2932 49.3670 || TEST: Semantic 1.8193 0.1176 Depth 0.7876 0.7876 Normals 0.3121 54.0483 | All -0.8832 | Best: All -0.8076
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+adam 0.002153553591629979 Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    initial_lr: 0.002153553591629979
+    lr: 0.002153553591629979
+    maximize: False
+    weight_decay: 1e-05
+)
+-0.8831700228363627 -0.8076136778794117
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]

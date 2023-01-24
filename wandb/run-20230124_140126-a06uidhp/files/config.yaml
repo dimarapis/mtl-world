@@ -1,0 +1,37 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.9
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.16
+    start_time: 1674565286.26358
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 2
+      - 13
+      - 16
+      - 23
+      - 24
+      - 37
+      4: 3.9.16
+      5: 0.13.9
+      8:
+      - 5
+training.learning_rate:
+  desc: null
+  value: 0.005119386419601814
+training.optimizer:
+  desc: null
+  value: sgd

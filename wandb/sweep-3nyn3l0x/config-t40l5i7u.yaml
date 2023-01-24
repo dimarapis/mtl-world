@@ -1,0 +1,6 @@
+wandb_version: 1
+
+training.learning_rate:
+  value: 0.002153553591629979
+training.optimizer:
+  value: adam

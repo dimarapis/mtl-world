@@ -1,0 +1,165 @@
+{
+    "os": "Linux-5.4.0-050400-generic-x86_64-with-glibc2.27",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-01-24T15:59:41.642743",
+    "startedAt": "2023-01-24T15:59:40.902478",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/robotlabx/mtl-world/train_model.py",
+    "codePath": "train_model.py",
+    "git": {
+        "remote": "https://github.com/dimarapis/mtl-world.git",
+        "commit": "54fc1f56fd36f244c22cd479820ff9cd33621d88"
+    },
+    "email": "dimarapis@hotmail.com",
+    "root": "/home/robotlabx/mtl-world",
+    "host": "robotlabX",
+    "username": "robotlabx",
+    "executable": "/home/robotlabx/anaconda3/envs/multisim/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 1500.8789166666666,
+        "min": 800.0,
+        "max": 4766.666666666667
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1500.336,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1502.155,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.0,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.0,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.127,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.135,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.438,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1503.803,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.291,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1502.876,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.0,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1502.51,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.0,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1500.012,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1501.133,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1502.369,
+            "min": 800.0,
+            "max": 5200.0
+        },
+        {
+            "current": 1499.356,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1502.156,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1500.315,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1498.782,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1501.95,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1500.014,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1502.088,
+            "min": 800.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1500.248,
+            "min": 800.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "total": 398.4970474243164,
+        "used": 376.31237411499023
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25438322688
+        }
+    ],
+    "memory": {
+        "total": 31.17803955078125
+    }
+}

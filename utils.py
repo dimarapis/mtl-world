@@ -48,8 +48,8 @@ class ConfMatrix(object):
         self.mat = None
 
     def update(self, pred, target):
-        #print('pred.shape',pred.shape)
-        #print('target.shape',target.shape)
+        print('pred.shape',pred.shape)
+        print('target.shape',target.shape)
         
         n = self.num_classes
         #print('n',n)
@@ -162,6 +162,29 @@ def compute_loss_ole(pred, gt, task_id):
 
         # Cross Entropy Loss with Ignored Index (values are -1)
         #print(pred.shape,gt.shape,torch.min(pred),torch.max(pred),torch.min(gt),torch.max(gt))
+        #semantic_resized = torch.nn.functional.interpolate(gt, size=(360,640))#, mode='nearest')
+
+        #print(pred.shape,gt.shape)
+        import torchvision.transforms.functional as ttf
+        print(pred.shape,gt.shape)
+
+        #t = torch.randn([5, 1, 44, 44])
+        if gt.shape[2] == 720:
+            gt = ttf.resize(gt, size=(360,640))
+            #print(pred.shape,gt.shape)
+            gt = gt.squeeze(1)
+            print(pred.shape,gt.shape)
+
+
+        #print(type(t_resized))
+
+        #print(semantic_resized.shape)
+        #if pred.shape[1] == 1:
+        #    pred=pred.squeeze(1)
+        #    #loss = F.cross_entropy(pred, gt, ignore_index=-1)
+        #if gt.shape[1] == 1:
+        #    gt=gt.squeeze(1)
+        
         loss = F.cross_entropy(pred, gt, ignore_index=-1)
 
     if task_id in ['normal', 'normals', 'depth', 'disp', 'noise']:
@@ -227,7 +250,7 @@ class TaskMetric:
 
                 if task_id in ['seg', 'part_seg','semantic']:
                     # update confusion matrix (metric will be computed directly in the Confusion Matrix)
-
+                    print('lalala',pred.shape,gt.shape)
                     self.conf_mtx[task_id].update(pred.argmax(1).flatten(), gt.flatten())
 
                 if 'class' in task_id:

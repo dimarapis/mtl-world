@@ -1,0 +1,1 @@
+{"training_loss_depth": 0.8534660904662411, "training_loss_semantic": 0.07788044214248657, "training_loss_normals": 54.959390038064434, "test_metric": -1.1645005850983736, "Images_0": [], "Images_50": [], "Images_100": [], "Images_150": [], "_timestamp": 1674571172.0070436, "_runtime": 968.5930256843567, "_step": 9, "_wandb": {"runtime": 967}}

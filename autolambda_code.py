@@ -181,7 +181,7 @@ class SimWarehouse(data.Dataset):
 
         # calculate data length
         self.data_len = len(fnmatch.filter(os.listdir(self.data_path + '/rgb_npy'), '*.npy'))
-        self.noise = torch.rand(self.data_len, 1, 288, 384)
+        #self.noise = torch.rand(self.data_len, 1, 288, 384)
 
     def __getitem__(self, index):
         #print(index)
@@ -199,9 +199,15 @@ class SimWarehouse(data.Dataset):
             depth = torch.from_numpy(np.load(self.files[index]['depth'])).float() / 1000.0#, -1, 0)).float()
             normal = torch.from_numpy(np.moveaxis(np.load(self.files[index]['normals']), -1, 0)).float()
             #noise = self.noise[index].float()
-        
-        
+            #print(semantic.shape)
+            #semantic_resized = torch.nn.functional.interpolate(semantic, size=(360,640), mode='interpolate', align_corners=True)
+            #semantic_resized = transforms_f.resize(semantic, (360,640), Image.NEAREST)
+                
+
             data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
+            #data_dict = DataTransform(crop_size=[360, 640])(data_dict)
+            
+            #data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
             
             for task in data_dict.keys():
                 #print(task)
@@ -247,9 +253,14 @@ class SimWarehouse(data.Dataset):
             normal = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/normals_npy/{:d}.npy'.format(index)), -1, 0)).float()
             noise = self.noise[index].float()
 
-            data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
+            semantic_resized = semantic.squeeze(1)
+            print(semantic_resized.shape)
+            semantic_resized = torch.nn.functional.interpolate(semantic_resized, size=(360,640), mode='interpolate', align_corners=True)
+            data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic_resized, 'normals': normal}# 'noise': noise}
             #print(image)
             # apply data augmentation if required
+
+
             
             if self.augmentation:
                 data_dict = DataTransform(crop_size=[288, 384], scales=[1.0, 1.2, 1.5])(data_dict)

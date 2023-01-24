@@ -1,0 +1,32 @@
+DDRNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+ 16%|████████████████                                                                                    | 4/25 [00:00<00:04,  4.51it/s]
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 630, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 313, in training
+    for i,multitaskdata in ((enumerate(tqdm(train_loader)))):
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/robotlabx/mtl-world/autolambda_code.py", line 118, in __getitem__
+    normal = torch.from_numpy(np.moveaxis(np.load(self.data_path + '/normals_npy/{:d}.npy'.format(index)), -1, 0)).float()
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/numpy/lib/npyio.py", line 432, in load
+    return format.read_array(fid, allow_pickle=allow_pickle,
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/numpy/lib/format.py", line 801, in read_array
+    array = numpy.fromfile(fp, dtype=dtype, count=count)
+KeyboardInterrupt

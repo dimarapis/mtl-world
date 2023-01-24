@@ -203,7 +203,13 @@ def training(opt):
 
     #UNIVERSAL OPTIMIZERS AND LR SCHEDULER
     #CHANGE
-    optimizer = optim.Adam(params, lr=opt.training.learning_rate)#, eps=1e-3, amsgrad=True)#, momentum=0.9) 
+    optimizer_o = opt.training.optimizer_o
+    learning_rate = opt.training.learning_rate
+    if optimizer_o == 'sgd':
+        optimizer = optim.SGD(params, lr=learning_rate, weight_decay=opt.training.weight_decay)
+    elif optimizer_o == 'adam':
+        optimizer = optim.Adam(params, lr=opt.training.learning_rate, weight_decay=opt.training.weight_decay)
+    
     scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[15,20,25], gamma=0.1)
 
 
@@ -225,7 +231,7 @@ def training(opt):
         train_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/train/datalist_train_warehouse_sim.list', split='train'),batch_size=batch_size,num_workers=0, shuffle=True)#num_workers=0 otherwise there is an error. Need to see why
         test_loader = DataLoader(DecnetDataloader('dataset/sim_warehouse/test/datalist_test_warehouse_sim.list', split='eval'),batch_size=1)
         '''
-        dataset_path = os.path.joint(opt.data.path,opt.data.dataset)
+        dataset_path = os.path.join(opt.data.path,opt.data.dataset)
         dataset_path = 'dataset/sim_warehouse'
         batch_size = opt.data.batch_size 
         train_set = SimWarehouse(root=dataset_path, train=True, augmentation=True)
@@ -550,7 +556,7 @@ def training(opt):
 
 
 
-
+        print(optimizer_o,learning_rate, optimizer)
         if opt.network.tasks == "depth" or opt.network.tasks == "normals":
             if current_test_metric <= best_test_str:
                 best_test_str = current_test_metric

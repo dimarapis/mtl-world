@@ -1,0 +1,12 @@
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 624, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 249, in training
+    train_set = NYUv2(root=dataset_path, train=True, augmentation=True)
+  File "/home/robotlabx/mtl-world/autolambda_code.py", line 108, in __init__
+    self.data_len = len(fnmatch.filter(os.listdir(self.data_path + '/rgb_npy'), '*.npy'))
+FileNotFoundError: [Errno 2] No such file or directory: 'dataset/nyuv2/train/rgb_npy'

@@ -1,0 +1,43 @@
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Configure stats pid to 24538
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/.config/wandb/settings
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/mtl-world/wandb/settings
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'entity': 'wandbdimar', 'project': 'MTLwarehouse-Sweep', 'root_dir': '/home/robotlabx/mtl-world', 'sweep_id': 'hr0crm7n', 'run_id': 'gkuubb2y', 'sweep_param_path': '/home/robotlabx/mtl-world/wandb/sweep-hr0crm7n/config-gkuubb2y.yaml'}
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': '/home/robotlabx/mtl-world/train_model.py'}
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_init.py:_log_setup():478] Logging user logs to /home/robotlabx/mtl-world/wandb/run-20230124_124252-gkuubb2y/logs/debug.log
+2023-01-24 12:42:52,451 INFO    Thread-2  :24538 [wandb_init.py:_log_setup():479] Logging internal logs to /home/robotlabx/mtl-world/wandb/run-20230124_124252-gkuubb2y/logs/debug-internal.log
+2023-01-24 12:42:52,452 INFO    Thread-2  :24538 [wandb_init.py:init():518] calling init triggers
+2023-01-24 12:42:52,452 INFO    Thread-2  :24538 [wandb_init.py:init():521] wandb.init called with sweep_config: {'training.learning_rate': 0.009172162778780564, 'training.optimizer': 'adam'}
+config: {}
+2023-01-24 12:42:52,452 INFO    Thread-2  :24538 [wandb_init.py:init():571] starting backend
+2023-01-24 12:42:52,452 INFO    Thread-2  :24538 [wandb_init.py:init():575] setting up manager
+2023-01-24 12:42:52,455 INFO    Thread-2  :24538 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-24 12:42:52,458 INFO    Thread-2  :24538 [wandb_init.py:init():582] backend started and connected
+2023-01-24 12:42:52,462 INFO    Thread-2  :24538 [wandb_run.py:_config_callback():1249] config_cb None None {'training.learning_rate': 0.009172162778780564, 'training.optimizer': 'adam'}
+2023-01-24 12:42:52,463 INFO    Thread-2  :24538 [wandb_init.py:init():670] updated telemetry
+2023-01-24 12:42:52,472 INFO    Thread-2  :24538 [wandb_init.py:init():710] communicating run to backend with 60.0 second timeout
+2023-01-24 12:42:52,992 INFO    Thread-2  :24538 [wandb_run.py:_on_init():2121] communicating current version
+2023-01-24 12:42:53,228 INFO    Thread-2  :24538 [wandb_run.py:_on_init():2125] got version response 
+2023-01-24 12:42:53,229 INFO    Thread-2  :24538 [wandb_init.py:init():758] starting run threads in backend
+2023-01-24 12:42:54,444 INFO    Thread-2  :24538 [wandb_run.py:_console_start():2101] atexit reg
+2023-01-24 12:42:54,444 INFO    Thread-2  :24538 [wandb_run.py:_redirect():1959] redirect: SettingsConsole.WRAP_RAW
+2023-01-24 12:42:54,444 INFO    Thread-2  :24538 [wandb_run.py:_redirect():2024] Wrapping output streams.
+2023-01-24 12:42:54,444 INFO    Thread-2  :24538 [wandb_run.py:_redirect():2046] Redirects installed.
+2023-01-24 12:42:54,445 INFO    Thread-2  :24538 [wandb_init.py:init():798] run started, returning control to user process
+2023-01-24 12:42:54,449 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Configure stats pid to 24538
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/.config/wandb/settings
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/mtl-world/wandb/settings
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'entity': 'wandbdimar', 'project': 'MTLwarehouse-Sweep', 'root_dir': '/home/robotlabx/mtl-world', 'sweep_id': 'hr0crm7n', 'run_id': 'gkuubb2y', 'sweep_param_path': '/home/robotlabx/mtl-world/wandb/sweep-hr0crm7n/config-gkuubb2y.yaml'}
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': '/home/robotlabx/mtl-world/train_model.py'}
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_init.py:_log_setup():478] Logging user logs to /home/robotlabx/mtl-world/wandb/run-20230124_124254-gkuubb2y/logs/debug.log
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_init.py:_log_setup():479] Logging internal logs to /home/robotlabx/mtl-world/wandb/run-20230124_124254-gkuubb2y/logs/debug-internal.log
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_init.py:init():518] calling init triggers
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_init.py:init():521] wandb.init called with sweep_config: {'training.learning_rate': 0.009172162778780564, 'training.optimizer': 'adam'}
+config: {'data': {'path': 'dataset', 'dataset': 'nyuv2', 'augmentation.trigger': False, 'batch_size': 32, 'input_size': None}, 'network': {'tasks': 'all', 'weighting': 'equal', 'backbone': 'ResNet', 'mtl_architecture': 'Split', 'pretrained': False, 'grad_method': None}, 'training': {'epochs': 10, 'optimizer': 'adam', 'learning_rate': 0.009172162778780564, 'weight_decay': 1e-05, 'early_stop': False, 'scheduler': 'multisteplr', 'step': 10, 'loss_function': 'cross_entropy', 't_checkpoint': False, 'o_checkpoint': None}, 'reproduceability': {'t_seed': True, 'o_seed': 29}, 'wandb': {'t_logger': True, 'project_name': 'MTLwarehouse', 'entity': 'wandbdimar'}, 'sweep': {'sweep_t': True, 'sweep_o': 'configs/sweep_config.yaml'}}
+2023-01-24 12:42:54,450 INFO    Thread-2  :24538 [wandb_init.py:init():566] wandb.init() called when a run is still active
+2023-01-24 12:59:07,665 INFO    Thread-2  :24538 [wandb_run.py:_finish():1844] finishing run wandbdimar/MTLwarehouse-Sweep/gkuubb2y
+2023-01-24 12:59:07,665 INFO    Thread-2  :24538 [wandb_run.py:_atexit_cleanup():2070] got exitcode: 0
+2023-01-24 12:59:07,665 INFO    Thread-2  :24538 [wandb_run.py:_restore():2053] restore
+2023-01-24 12:59:07,665 INFO    Thread-2  :24538 [wandb_run.py:_restore():2059] restore done
+2023-01-24 12:59:14,262 INFO    Thread-2  :24538 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2023-01-24 12:59:14,263 INFO    Thread-2  :24538 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2023-01-24 12:59:14,265 INFO    Thread-2  :24538 [wandb_run.py:_footer_sync_info():3383] logging synced files

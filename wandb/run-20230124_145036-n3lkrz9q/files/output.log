@@ -1,0 +1,495 @@
+Started logging in wandb
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg project when running a sweep.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg entity when running a sweep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.29s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.2486 0.0678 Depth 1.2600 1.2600 Normals 0.4147 70.4026 || TEST: Semantic 2.1708 0.0497 Depth 1.5118 1.5118 Normals 0.3962 78.2613 | All -1.7577 | Best: All -1.7577
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.31s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.45it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 1.9429 0.0756 Depth 0.8825 0.8825 Normals 0.3556 55.7752 || TEST: Semantic 1.9911 0.0649 Depth 0.8483 0.8483 Normals 0.3528 60.6789 | All -1.0610 | Best: All -1.0610
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.50it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.45it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Semantic 1.8578 0.0799 Depth 0.8689 0.8689 Normals 0.3491 54.7782 || TEST: Semantic 2.9982 0.0732 Depth 1.5992 1.5992 Normals 0.9912 35.0851 | All -1.1529 | Best: All -1.0610
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:14<00:00,  1.50it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:26<00:00,  3.46s/it]
+
+
+
+
+
+
+100%|██████████████████████| 21/21 [00:14<00:00,  1.45it/s]
+  0%|                               | 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0003 | TRAIN: Semantic 1.8205 0.0821 Depth 0.8602 0.8602 Normals 0.3460 54.4659 || TEST: Semantic 3.9671 0.0604 Depth 1.6544 1.6544 Normals 1.0145 39.4463 | All -1.2629 | Best: All -1.0610
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.31s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.47it/s]
+Entering evaluation phase...
+Epoch 0004 | TRAIN: Semantic 1.7911 0.0866 Depth 0.8533 0.8533 Normals 0.3420 54.6732 || TEST: Semantic 1.9897 0.0765 Depth 0.8690 0.8690 Normals 0.3778 55.0010 | All -0.9808 | Best: All -0.9808
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0005 | TRAIN: Semantic 1.7715 0.0878 Depth 0.8389 0.8389 Normals 0.3390 54.2961 || TEST: Semantic 2.1943 0.0677 Depth 1.0873 1.0873 Normals 0.3976 51.9908 | All -1.0821 | Best: All -0.9808
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 86%|██████████████████▊   | 18/21 [00:12<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0006 | TRAIN: Semantic 1.7537 0.0909 Depth 0.8472 0.8472 Normals 0.3370 54.0494 || TEST: Semantic 2.2414 0.0635 Depth 0.9402 0.9402 Normals 0.4165 52.6529 | All -1.0013 | Best: All -0.9808
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.30s/it]
+
+
+
+
+
+
+ 81%|█████████████████▊    | 17/21 [00:11<00:02,  1.47it/s]
+Entering evaluation phase...
+Epoch 0007 | TRAIN: Semantic 1.7440 0.0922 Depth 0.8333 0.8333 Normals 0.3355 54.2600 || TEST: Semantic 1.8802 0.0858 Depth 0.8720 0.8720 Normals 0.3608 53.5458 | All -0.9539 | Best: All -0.9539
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+-0.9539030916252139 -0.9539030916252139
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.29s/it]
+
+
+
+
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+  0%|                               | 0/25 [00:00<?, ?it/s]
+Entering evaluation phase...
+Epoch 0008 | TRAIN: Semantic 1.7284 0.0938 Depth 0.8364 0.8364 Normals 0.3337 54.2098 || TEST: Semantic 1.9476 0.0787 Depth 0.8783 0.8783 Normals 0.3591 54.1354 | All -0.9722 | Best: All -0.9539
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.29s/it]
+
+
+
+
+
+
+ 95%|████████████████████▉ | 20/21 [00:13<00:00,  1.43it/s]
+Entering evaluation phase...
+Epoch 0009 | TRAIN: Semantic 1.7145 0.0952 Depth 0.8250 0.8250 Normals 0.3320 54.0025 || TEST: Semantic 1.9417 0.0844 Depth 0.8814 0.8814 Normals 0.3587 53.1185 | All -0.9546 | Best: All -0.9539
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.007651287459303539 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.007651287459303539
+    lr: 0.007651287459303539
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+-0.9546162223476132 -0.9539030916252139
+
+100%|██████████████████████| 21/21 [00:14<00:00,  1.48it/s]

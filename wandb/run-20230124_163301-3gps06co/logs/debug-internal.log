@@ -1,0 +1,182 @@
+2023-01-24 16:33:01,312 INFO    StreamThr :19010 [internal.py:wandb_internal():87] W&B internal server running at pid: 19010, started at: 2023-01-24 16:33:01.312123
+2023-01-24 16:33:01,314 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: status
+2023-01-24 16:33:01,317 INFO    WriterThread:19010 [datastore.py:open_for_write():85] open: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/run-3gps06co.wandb
+2023-01-24 16:33:01,317 DEBUG   SenderThread:19010 [sender.py:send():334] send: header
+2023-01-24 16:33:01,327 DEBUG   SenderThread:19010 [sender.py:send():334] send: run
+2023-01-24 16:33:01,805 INFO    SenderThread:19010 [dir_watcher.py:__init__():216] watching files in: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files
+2023-01-24 16:33:01,805 INFO    SenderThread:19010 [sender.py:_start_run_threads():1065] run started: 3gps06co with start time 1674574381.312893
+2023-01-24 16:33:01,805 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: summary_record
+2023-01-24 16:33:01,805 INFO    SenderThread:19010 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-24 16:33:01,808 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: check_version
+2023-01-24 16:33:01,808 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: check_version
+2023-01-24 16:33:01,995 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: run_start
+2023-01-24 16:33:01,999 DEBUG   HandlerThread:19010 [system_info.py:__init__():31] System info init
+2023-01-24 16:33:01,999 DEBUG   HandlerThread:19010 [system_info.py:__init__():46] System info init done
+2023-01-24 16:33:01,999 INFO    HandlerThread:19010 [system_monitor.py:start():151] Starting system monitor
+2023-01-24 16:33:01,999 INFO    SystemMonitor:19010 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-24 16:33:01,999 INFO    HandlerThread:19010 [system_monitor.py:probe():172] Collecting system info
+2023-01-24 16:33:02,000 INFO    SystemMonitor:19010 [interfaces.py:start():168] Started cpu
+2023-01-24 16:33:02,001 INFO    SystemMonitor:19010 [interfaces.py:start():168] Started disk
+2023-01-24 16:33:02,001 INFO    SystemMonitor:19010 [interfaces.py:start():168] Started gpu
+2023-01-24 16:33:02,002 INFO    SystemMonitor:19010 [interfaces.py:start():168] Started memory
+2023-01-24 16:33:02,003 INFO    SystemMonitor:19010 [interfaces.py:start():168] Started network
+2023-01-24 16:33:02,030 DEBUG   HandlerThread:19010 [system_info.py:probe():195] Probing system
+2023-01-24 16:33:02,036 DEBUG   HandlerThread:19010 [system_info.py:_probe_git():180] Probing git
+2023-01-24 16:33:02,050 DEBUG   HandlerThread:19010 [system_info.py:_probe_git():188] Probing git done
+2023-01-24 16:33:02,051 DEBUG   HandlerThread:19010 [system_info.py:probe():241] Probing system done
+2023-01-24 16:33:02,051 DEBUG   HandlerThread:19010 [system_monitor.py:probe():181] {'os': 'Linux-5.4.0-050400-generic-x86_64-with-glibc2.27', 'python': '3.9.16', 'heartbeatAt': '2023-01-24T15:33:02.030353', 'startedAt': '2023-01-24T15:33:01.303262', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/robotlabx/mtl-world/train_model.py', 'codePath': 'train_model.py', 'git': {'remote': 'https://github.com/dimarapis/mtl-world.git', 'commit': '54fc1f56fd36f244c22cd479820ff9cd33621d88'}, 'email': 'dimarapis@hotmail.com', 'root': '/home/robotlabx/mtl-world', 'host': 'robotlabX', 'username': 'robotlabx', 'executable': '/home/robotlabx/anaconda3/envs/multisim/bin/python', 'cpu_count': 16, 'cpu_count_logical': 24, 'cpu_freq': {'current': 1583.1912499999999, 'min': 800.0, 'max': 4766.666666666667}, 'cpu_freq_per_core': [{'current': 1500.095, 'min': 800.0, 'max': 5200.0}, {'current': 1501.602, 'min': 800.0, 'max': 5200.0}, {'current': 1500.869, 'min': 800.0, 'max': 5200.0}, {'current': 1500.05, 'min': 800.0, 'max': 5200.0}, {'current': 1500.0, 'min': 800.0, 'max': 5200.0}, {'current': 1500.22, 'min': 800.0, 'max': 5200.0}, {'current': 1500.0, 'min': 800.0, 'max': 5200.0}, {'current': 1502.245, 'min': 800.0, 'max': 5200.0}, {'current': 1500.0, 'min': 800.0, 'max': 5200.0}, {'current': 1501.587, 'min': 800.0, 'max': 5200.0}, {'current': 1502.918, 'min': 800.0, 'max': 5200.0}, {'current': 1499.985, 'min': 800.0, 'max': 5200.0}, {'current': 1497.0, 'min': 800.0, 'max': 5200.0}, {'current': 1570.643, 'min': 800.0, 'max': 5200.0}, {'current': 2490.92, 'min': 800.0, 'max': 5200.0}, {'current': 2443.652, 'min': 800.0, 'max': 5200.0}, {'current': 1499.422, 'min': 800.0, 'max': 3900.0}, {'current': 1496.502, 'min': 800.0, 'max': 3900.0}, {'current': 1494.282, 'min': 800.0, 'max': 3900.0}, {'current': 1501.137, 'min': 800.0, 'max': 3900.0}, {'current': 1499.743, 'min': 800.0, 'max': 3900.0}, {'current': 1495.815, 'min': 800.0, 'max': 3900.0}, {'current': 1499.484, 'min': 800.0, 'max': 3900.0}, {'current': 1498.419, 'min': 800.0, 'max': 3900.0}], 'disk': {'total': 398.4970474243164, 'used': 376.2871742248535}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25438322688}], 'memory': {'total': 31.17803955078125}}
+2023-01-24 16:33:02,051 INFO    HandlerThread:19010 [system_monitor.py:probe():182] Finished collecting system info
+2023-01-24 16:33:02,051 INFO    HandlerThread:19010 [system_monitor.py:probe():185] Publishing system info
+2023-01-24 16:33:02,051 DEBUG   HandlerThread:19010 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-01-24 16:33:02,052 DEBUG   HandlerThread:19010 [system_info.py:_save_pip():67] Saving pip packages done
+2023-01-24 16:33:02,052 DEBUG   HandlerThread:19010 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-01-24 16:33:02,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_created():275] file/dir created: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/conda-environment.yaml
+2023-01-24 16:33:02,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_created():275] file/dir created: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/requirements.txt
+2023-01-24 16:33:02,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_created():275] file/dir created: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-summary.json
+2023-01-24 16:33:03,248 DEBUG   HandlerThread:19010 [system_info.py:_save_conda():86] Saving conda packages done
+2023-01-24 16:33:03,248 INFO    HandlerThread:19010 [system_monitor.py:probe():187] Finished publishing system info
+2023-01-24 16:33:03,250 DEBUG   SenderThread:19010 [sender.py:send():334] send: files
+2023-01-24 16:33:03,250 INFO    SenderThread:19010 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2023-01-24 16:33:03,253 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: stop_status
+2023-01-24 16:33:03,253 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: stop_status
+2023-01-24 16:33:03,473 DEBUG   SenderThread:19010 [sender.py:send():334] send: telemetry
+2023-01-24 16:33:03,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/conda-environment.yaml
+2023-01-24 16:33:03,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_created():275] file/dir created: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log
+2023-01-24 16:33:03,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_created():275] file/dir created: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-metadata.json
+2023-01-24 16:33:03,843 INFO    Thread-16 :19010 [upload_job.py:push():143] Uploaded file /tmp/tmpcee_8znowandb/9488regj-wandb-metadata.json
+2023-01-24 16:33:05,806 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log
+2023-01-24 16:33:06,335 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: status_report
+2023-01-24 16:33:06,336 DEBUG   SenderThread:19010 [sender.py:send():334] send: exit
+2023-01-24 16:33:06,336 INFO    SenderThread:19010 [sender.py:send_exit():557] handling exit code: 1
+2023-01-24 16:33:06,336 INFO    SenderThread:19010 [sender.py:send_exit():559] handling runtime: 4
+2023-01-24 16:33:06,337 INFO    SenderThread:19010 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-24 16:33:06,337 INFO    SenderThread:19010 [sender.py:send_exit():565] send defer
+2023-01-24 16:33:06,337 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,337 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 0
+2023-01-24 16:33:06,338 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,338 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 0
+2023-01-24 16:33:06,338 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 1
+2023-01-24 16:33:06,338 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,338 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 1
+2023-01-24 16:33:06,338 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,338 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 1
+2023-01-24 16:33:06,338 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 2
+2023-01-24 16:33:06,338 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,338 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 2
+2023-01-24 16:33:06,338 INFO    HandlerThread:19010 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-24 16:33:06,338 DEBUG   SystemMonitor:19010 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-24 16:33:06,338 DEBUG   SystemMonitor:19010 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-24 16:33:06,338 DEBUG   SystemMonitor:19010 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-24 16:33:06,339 INFO    HandlerThread:19010 [interfaces.py:finish():175] Joined cpu
+2023-01-24 16:33:06,339 INFO    HandlerThread:19010 [interfaces.py:finish():175] Joined disk
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [interfaces.py:finish():175] Joined gpu
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [interfaces.py:finish():175] Joined memory
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [interfaces.py:finish():175] Joined network
+2023-01-24 16:33:06,365 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 2
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 3
+2023-01-24 16:33:06,365 DEBUG   SenderThread:19010 [sender.py:send():334] send: stats
+2023-01-24 16:33:06,365 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 3
+2023-01-24 16:33:06,365 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 3
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 4
+2023-01-24 16:33:06,365 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 4
+2023-01-24 16:33:06,365 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 4
+2023-01-24 16:33:06,365 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 5
+2023-01-24 16:33:06,365 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,365 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 5
+2023-01-24 16:33:06,366 DEBUG   SenderThread:19010 [sender.py:send():334] send: summary
+2023-01-24 16:33:06,366 INFO    SenderThread:19010 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-24 16:33:06,366 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,366 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 5
+2023-01-24 16:33:06,366 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 6
+2023-01-24 16:33:06,366 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:06,366 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 6
+2023-01-24 16:33:06,366 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:06,366 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 6
+2023-01-24 16:33:06,368 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: status_report
+2023-01-24 16:33:06,807 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-summary.json
+2023-01-24 16:33:07,020 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 7
+2023-01-24 16:33:07,020 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:07,020 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 7
+2023-01-24 16:33:07,020 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:07,020 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 7
+2023-01-24 16:33:07,337 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: poll_exit
+2023-01-24 16:33:07,807 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log
+2023-01-24 16:33:07,807 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/config.yaml
+2023-01-24 16:33:08,061 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 8
+2023-01-24 16:33:08,061 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: poll_exit
+2023-01-24 16:33:08,061 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:08,061 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 8
+2023-01-24 16:33:08,062 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:08,062 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 8
+2023-01-24 16:33:08,084 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 9
+2023-01-24 16:33:08,084 DEBUG   SenderThread:19010 [sender.py:send():334] send: artifact
+2023-01-24 16:33:08,084 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:08,087 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 9
+2023-01-24 16:33:08,338 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: poll_exit
+2023-01-24 16:33:08,808 INFO    Thread-13 :19010 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log
+2023-01-24 16:33:09,231 INFO    SenderThread:19010 [sender.py:send_artifact():1415] sent artifact job-https___github.com_dimarapis_mtl-world.git_train_model.py - {'id': 'QXJ0aWZhY3Q6MzQxMTY2NjM4', 'digest': '7c895f3833c25ec1bfd4c9523c7740c4', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_dimarapis_mtl-world.git_train_model.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUwNDM0MDM0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzQxMTY2NjM4', 'versionIndex': 1}}, 'version': 'v1'}
+2023-01-24 16:33:09,231 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:09,231 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 9
+2023-01-24 16:33:09,232 INFO    SenderThread:19010 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-01-24 16:33:09,809 INFO    SenderThread:19010 [dir_watcher.py:finish():392] scan: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files
+2023-01-24 16:33:09,809 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-summary.json wandb-summary.json
+2023-01-24 16:33:09,809 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/config.yaml config.yaml
+2023-01-24 16:33:09,810 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/conda-environment.yaml conda-environment.yaml
+2023-01-24 16:33:09,810 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log output.log
+2023-01-24 16:33:09,813 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/requirements.txt requirements.txt
+2023-01-24 16:33:09,814 INFO    SenderThread:19010 [dir_watcher.py:finish():406] scan save: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-metadata.json wandb-metadata.json
+2023-01-24 16:33:09,814 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 10
+2023-01-24 16:33:09,814 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: poll_exit
+2023-01-24 16:33:09,815 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:09,820 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 10
+2023-01-24 16:33:09,820 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:09,820 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 10
+2023-01-24 16:33:09,820 INFO    SenderThread:19010 [file_pusher.py:finish():160] shutting down file pusher
+2023-01-24 16:33:10,388 INFO    Thread-17 :19010 [upload_job.py:push():143] Uploaded file /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/wandb-summary.json
+2023-01-24 16:33:10,396 INFO    Thread-20 :19010 [upload_job.py:push():143] Uploaded file /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/output.log
+2023-01-24 16:33:10,408 INFO    Thread-18 :19010 [upload_job.py:push():143] Uploaded file /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/config.yaml
+2023-01-24 16:33:10,422 INFO    Thread-21 :19010 [upload_job.py:push():143] Uploaded file /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/requirements.txt
+2023-01-24 16:33:10,451 INFO    Thread-19 :19010 [upload_job.py:push():143] Uploaded file /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/files/conda-environment.yaml
+2023-01-24 16:33:10,651 INFO    Thread-12 :19010 [sender.py:transition_state():585] send defer: 11
+2023-01-24 16:33:10,652 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:10,652 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 11
+2023-01-24 16:33:10,652 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:10,652 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 11
+2023-01-24 16:33:10,653 INFO    SenderThread:19010 [file_pusher.py:join():165] waiting for file pusher
+2023-01-24 16:33:10,653 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 12
+2023-01-24 16:33:10,653 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:10,653 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 12
+2023-01-24 16:33:10,653 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:10,653 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 12
+2023-01-24 16:33:10,814 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 13
+2023-01-24 16:33:10,815 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:10,815 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 13
+2023-01-24 16:33:10,815 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:10,815 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 13
+2023-01-24 16:33:10,815 INFO    SenderThread:19010 [sender.py:transition_state():585] send defer: 14
+2023-01-24 16:33:10,816 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: defer
+2023-01-24 16:33:10,816 INFO    HandlerThread:19010 [handler.py:handle_request_defer():170] handle defer: 14
+2023-01-24 16:33:10,816 DEBUG   SenderThread:19010 [sender.py:send():334] send: final
+2023-01-24 16:33:10,816 DEBUG   SenderThread:19010 [sender.py:send():334] send: footer
+2023-01-24 16:33:10,816 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: defer
+2023-01-24 16:33:10,816 INFO    SenderThread:19010 [sender.py:send_request_defer():581] handle sender defer: 14
+2023-01-24 16:33:10,817 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: poll_exit
+2023-01-24 16:33:10,817 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: poll_exit
+2023-01-24 16:33:10,818 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: server_info
+2023-01-24 16:33:10,819 DEBUG   SenderThread:19010 [sender.py:send_request():361] send_request: server_info
+2023-01-24 16:33:10,821 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: get_summary
+2023-01-24 16:33:10,822 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: sampled_history
+2023-01-24 16:33:11,045 INFO    MainThread:19010 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2023-01-24 16:33:11,045 INFO    MainThread:19010 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2023-01-24 16:33:11,045 INFO    MainThread:19010 [wandb_run.py:_footer_sync_info():3383] logging synced files
+2023-01-24 16:33:11,046 DEBUG   HandlerThread:19010 [handler.py:handle_request():144] handle_request: shutdown
+2023-01-24 16:33:11,046 INFO    HandlerThread:19010 [handler.py:finish():841] shutting down handler
+2023-01-24 16:33:11,819 INFO    WriterThread:19010 [datastore.py:close():299] close: /home/robotlabx/mtl-world/wandb/run-20230124_163301-3gps06co/run-3gps06co.wandb
+2023-01-24 16:33:12,045 INFO    SenderThread:19010 [sender.py:finish():1491] shutting down sender
+2023-01-24 16:33:12,045 INFO    SenderThread:19010 [file_pusher.py:finish():160] shutting down file pusher
+2023-01-24 16:33:12,045 INFO    SenderThread:19010 [file_pusher.py:join():165] waiting for file pusher

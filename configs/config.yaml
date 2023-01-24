@@ -1,21 +1,21 @@
 data: 
   path: dataset
-  dataset: nyuv2 #Options: nyuv2, sim_warehouse
+  dataset: sim_warehouse #Options: nyuv2, sim_warehouse
   augmentation.trigger: False
-  batch_size: 64
+  batch_size: 16
   input_size: null
 
 network: 
   tasks: all #Options: all,semantic,depth,normals
   weighting: equal #Options: equal,dwa,uncert,autolambda,geometric
-  backbone: ResNet #Options: Resnet, SegNet, DDRNet
+  backbone: DDRNet #Options: Resnet, SegNet, DDRNet
   mtl_architecture: Split #Options: Split, MTAN
   pretrained: False
   grad_method: null #Options: graddrop, pcgrad, cagrad
 
 training: 
   epochs: 10
-  optimizer: sgd #Options: SGD, ADAM, ADAMW
+  optimizer_o: adam #Options: SGD, ADAM, ADAMW
   learning_rate: 0.0001
   weight_decay: 0.00001
   early_stop: False
@@ -30,10 +30,10 @@ reproduceability:
   o_seed: 29
 
 wandb:
-  t_logger: True
+  t_logger: False
   project_name: MTLwarehouse
   entity: wandbdimar
 
 sweep: 
-  sweep_t: True
+  sweep_t: False
   sweep_o: 'configs/sweep_config.yaml'

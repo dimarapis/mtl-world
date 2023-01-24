@@ -1,0 +1,110 @@
+DDRNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+ 28%|████████████████████████████                                                                        | 7/25 [00:01<00:03,  5.50it/s]
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+
+ 72%|███████████████████████████████████████████████████████████████████████▎                           | 18/25 [00:03<00:01,  5.61it/s]
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:04<00:00,  5.44it/s]
+ 29%|████████████████████████████▌                                                                       | 6/21 [00:00<00:02,  7.35it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 3.4988 0.0310 Depth 6.5472 6.5472 Normals 2.8179 42.9125 || TEST: Semantic 3.2333 0.0214 Depth 5.9985 5.9985 Normals 3.0055 36.3278 | All -4.0183 | Best: All -4.0183
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+sgd 0.0001 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.0001
+    lr: 0.0001
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+-4.018302831657237 -4.018302831657237
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:02<00:00,  7.38it/s]
+  0%|                                                                                                            | 0/25 [00:00<?, ?it/s]
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+
+ 44%|███████████████████████████████████████████▌                                                       | 11/25 [00:02<00:02,  5.69it/s]
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+
+ 88%|███████████████████████████████████████████████████████████████████████████████████████            | 22/25 [00:03<00:00,  5.88it/s]
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:04<00:00,  5.70it/s]
+ 76%|███████████████████████████████████████████████████████████████████████████▍                       | 16/21 [00:01<00:00,  9.67it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 3.4754 0.0302 Depth 6.3233 6.3233 Normals 2.7778 42.7913 || TEST: Semantic 3.2053 0.0252 Depth 4.5525 4.5525 Normals 2.4819 45.7444 | All -3.2329 | Best: All -3.2329
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.0001 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.0001
+    lr: 0.0001
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+-3.2328715218839315 -3.2328715218839315
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+torch.Size([32, 13, 288, 384]) torch.Size([32, 288, 384])
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:02<00:00,  9.87it/s]
+ 24%|████████████████████████                                                                            | 6/25 [00:01<00:03,  5.47it/s]
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 630, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 317, in training
+    image = multitaskdata['rgb'].to(device)
+KeyboardInterrupt

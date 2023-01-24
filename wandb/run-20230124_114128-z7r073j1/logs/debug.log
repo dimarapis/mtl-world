@@ -1,0 +1,24 @@
+2023-01-24 11:41:28,873 INFO    MainThread:10399 [wandb_setup.py:_flush():68] Configure stats pid to 10399
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/.config/wandb/settings
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_setup.py:_flush():68] Loading settings from /home/robotlabx/mtl-world/wandb/settings
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_model.py', 'program': '/home/robotlabx/mtl-world/train_model.py'}
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_init.py:_log_setup():478] Logging user logs to /home/robotlabx/mtl-world/wandb/run-20230124_114128-z7r073j1/logs/debug.log
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_init.py:_log_setup():479] Logging internal logs to /home/robotlabx/mtl-world/wandb/run-20230124_114128-z7r073j1/logs/debug-internal.log
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_init.py:init():518] calling init triggers
+2023-01-24 11:41:28,874 INFO    MainThread:10399 [wandb_init.py:init():521] wandb.init called with sweep_config: {}
+config: {'data': {'path': 'dataset', 'dataset': 'nyuv2', 'augmentation.trigger': False, 'batch_size': 64, 'input_size': None}, 'network': {'tasks': 'all', 'weighting': 'equal', 'backbone': 'ResNet', 'mtl_architecture': 'Split', 'pretrained': False, 'grad_method': None}, 'training': {'epochs': 10, 'optimizer': 'sgd', 'learning_rate': 0.0001, 'weight_decay': 1e-05, 'early_stop': False, 'scheduler': 'multisteplr', 'step': 10, 'loss_function': 'cross_entropy', 't_checkpoint': False, 'o_checkpoint': None}, 'reproduceability': {'t_seed': True, 'o_seed': 29}, 'wandb': {'t_logger': True, 'project_name': 'MTLwarehouse', 'entity': 'wandbdimar'}, 'sweep': {'sweep_t': False, 'sweep_o': 'configs/sweep_config.yaml'}}
+2023-01-24 11:41:28,875 INFO    MainThread:10399 [wandb_init.py:init():571] starting backend
+2023-01-24 11:41:28,875 INFO    MainThread:10399 [wandb_init.py:init():575] setting up manager
+2023-01-24 11:41:28,879 INFO    MainThread:10399 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-24 11:41:28,884 INFO    MainThread:10399 [wandb_init.py:init():582] backend started and connected
+2023-01-24 11:41:28,887 INFO    MainThread:10399 [wandb_init.py:init():670] updated telemetry
+2023-01-24 11:41:28,894 INFO    MainThread:10399 [wandb_init.py:init():710] communicating run to backend with 60.0 second timeout
+2023-01-24 11:41:29,576 INFO    MainThread:10399 [wandb_run.py:_on_init():2121] communicating current version
+2023-01-24 11:41:30,010 INFO    MainThread:10399 [wandb_run.py:_on_init():2125] got version response 
+2023-01-24 11:41:30,010 INFO    MainThread:10399 [wandb_init.py:init():758] starting run threads in backend
+2023-01-24 11:41:31,232 INFO    MainThread:10399 [wandb_run.py:_console_start():2101] atexit reg
+2023-01-24 11:41:31,233 INFO    MainThread:10399 [wandb_run.py:_redirect():1959] redirect: SettingsConsole.WRAP_RAW
+2023-01-24 11:41:31,233 INFO    MainThread:10399 [wandb_run.py:_redirect():2024] Wrapping output streams.
+2023-01-24 11:41:31,233 INFO    MainThread:10399 [wandb_run.py:_redirect():2046] Redirects installed.
+2023-01-24 11:41:31,233 INFO    MainThread:10399 [wandb_init.py:init():798] run started, returning control to user process

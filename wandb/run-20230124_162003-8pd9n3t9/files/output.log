@@ -1,0 +1,12 @@
+ResNetMTL_Split
+Dataset: Sim_Warehouse | Training Task: Depth + Semantic + Normals | Primary Task: Depth + Semantic + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 630, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 237, in training
+    train_set = SimWarehouse(root=dataset_path, train=True, augmentation=True)
+  File "/home/robotlabx/mtl-world/autolambda_code.py", line 166, in __init__
+    with open(os.path.join(self.root, self.data_file), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './dataset/sim_warehouse/train/datalist_train_warehouse_sim.list'

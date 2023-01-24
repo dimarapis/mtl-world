@@ -1,0 +1,61 @@
+Started logging in wandb
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg project when running a sweep.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg entity when running a sweep.
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:21<00:00,  3.28s/it]
+
+
+
+
+
+
+ 90%|██████████████████████████████████████████████████████████████████████████████▋        | 19/21 [00:12<00:01,  1.48it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.4817 0.0526 Depth 1.7553 1.7553 Normals 0.4193 75.4953 || TEST: Semantic 2.3893 0.0467 Depth 1.4974 1.4974 Normals 0.4288 83.5216 | All -1.8292 | Best: All -1.8292
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+sgd 0.002648670264225964
+Saving full model
+100%|███████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 48%|█████████████████████████████████████████▊                                             | 12/25 [00:39<00:43,  3.31s/it][34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.

@@ -1,0 +1,30 @@
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([64, 3, 288, 384]),	Depth.shape torch.Size([64, 1, 288, 384]),        	Semantic.shape torch.Size([64, 288, 384]),	Normals.shape torch.Size([64, 3, 288, 384])
+  0%|                                                                                                                   | 0/13 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 624, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 317, in training
+    train_pred = model(image)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/robotlabx/mtl-world/models/model_ResNet.py", line 281, in forward
+    x = self.shared_layer4(x)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torchvision/models/resnet.py", line 146, in forward
+    out = self.conv1(x)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution

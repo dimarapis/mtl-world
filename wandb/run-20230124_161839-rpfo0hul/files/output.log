@@ -1,0 +1,27 @@
+ResNetMTL_Split
+Dataset: Sim_Warehouse | Training Task: Depth + Semantic + Normals | Primary Task: Depth + Semantic + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 630, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 206, in training
+    optimizer_o = opt.training.optimizer
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/dictconfig.py", line 355, in __getattr__
+    self._format_and_raise(
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/dictconfig.py", line 442, in _get_impl
+    node = self._get_child(
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/basecontainer.py", line 73, in _get_child
+    child = self._get_node(
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/omegaconf/dictconfig.py", line 480, in _get_node
+    raise ConfigKeyError(f"Missing key {key!s}")
+omegaconf.errors.ConfigAttributeError: Missing key optimizer
+    full_key: training.optimizer
+    object_type=dict

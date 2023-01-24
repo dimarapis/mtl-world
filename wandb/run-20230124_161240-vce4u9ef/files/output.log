@@ -1,0 +1,168 @@
+Started logging in wandb
+ResNetMTL_Split
+Dataset: Nyuv2 | Training Task: Semantic + Depth + Normals | Primary Task: Semantic + Depth + Normals in Multi-task / Auxiliary Learning Mode with RESNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([32, 3, 288, 384]),	Depth.shape torch.Size([32, 1, 288, 384]),        	Semantic.shape torch.Size([32, 288, 384]),	Normals.shape torch.Size([32, 3, 288, 384])
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg project when running a sweep.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Ignored wandb.init() arg entity when running a sweep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.29s/it]
+
+
+
+
+
+
+ 90%|███████████████████▉  | 19/21 [00:12<00:01,  1.46it/s]
+Entering evaluation phase...
+Epoch 0000 | TRAIN: Semantic 2.3223 0.0740 Depth 1.3575 1.3575 Normals 0.4293 71.7463 || TEST: Semantic 2.2828 0.0499 Depth 1.3482 1.3482 Normals 0.3765 75.9413 | All -1.6186 | Best: All -1.6186
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+Variable does not exist
+sgd 0.006314214437899049 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.006314214437899049
+    lr: 0.006314214437899049
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.31s/it]
+
+
+
+
+
+ 81%|█████████████████▊    | 17/21 [00:11<00:02,  1.48it/s]
+Entering evaluation phase...
+Epoch 0001 | TRAIN: Semantic 1.9986 0.0756 Depth 0.8714 0.8714 Normals 0.3557 55.6944 || TEST: Semantic 2.1371 0.0745 Depth 0.9099 0.9099 Normals 0.4066 57.6708 | All -1.0482 | Best: All -1.0482
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.006314214437899049 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.006314214437899049
+    lr: 0.006314214437899049
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+
+100%|██████████████████████| 21/21 [00:13<00:00,  1.51it/s]
+-1.0481894193310621 -1.0481894193310621
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████| 25/25 [01:22<00:00,  3.29s/it]
+
+
+
+
+
+
+ 95%|████████████████████▉ | 20/21 [00:13<00:00,  1.48it/s]
+Entering evaluation phase...
+Epoch 0002 | TRAIN: Semantic 1.8953 0.0782 Depth 0.8657 0.8657 Normals 0.3507 54.5283 || TEST: Semantic 2.2062 0.0760 Depth 0.9505 0.9505 Normals 0.4950 54.3811 | All -1.0240 | Best: All -1.0240
+Task Weighting | Semantic 1.0000 Depth 1.0000 Normals 1.0000
+sgd 0.006314214437899049 SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    initial_lr: 0.006314214437899049
+    lr: 0.006314214437899049
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 1e-05
+)
+Saving full model
+100%|██████████████████████| 21/21 [00:13<00:00,  1.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 44%|█████████▋            | 11/25 [00:37<00:48,  3.44s/it][34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.

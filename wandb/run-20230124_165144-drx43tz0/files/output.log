@@ -1,0 +1,20 @@
+DDRNetMTL_Split
+Dataset: Sim_Warehouse | Training Task: Depth + Semantic + Normals | Primary Task: Depth + Semantic + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Traceback (most recent call last):
+  File "/home/robotlabx/mtl-world/train_model.py", line 630, in <module>
+    training(opt)
+  File "/home/robotlabx/mtl-world/train_model.py", line 272, in training
+    train_sample = next(iter(train_loader))
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/robotlabx/anaconda3/envs/multisim/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/robotlabx/mtl-world/autolambda_code.py", line 198, in __getitem__
+    semantic = torch.from_numpy(np.load(self.files[index]['semantic']).astype(np.int32)#.long()
+TypeError: can't convert np.ndarray of type numpy.uint32. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
