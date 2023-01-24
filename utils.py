@@ -170,8 +170,8 @@ def compute_loss_ole(pred, gt, task_id):
         #t = torch.randn([5, 1, 44, 44])
         if gt.shape[2] == 720:
             gt = ttf.resize(gt, size=(360,640))
-            #print(pred.shape,gt.shape)
             gt = gt.squeeze(1)
+        print(pred.shape,gt.shape)
 
 
         #print(type(t_resized))
