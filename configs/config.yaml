@@ -2,7 +2,7 @@ data:
   path: dataset
   dataset: sim_warehouse #Options: nyuv2, sim_warehouse
   augmentation.trigger: False
-  batch_size: 16
+  batch_size: 4
   input_size: null
 
 network: 

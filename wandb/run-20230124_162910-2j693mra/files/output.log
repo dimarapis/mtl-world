@@ -1,0 +1,20 @@
+DDRNetMTL_Split
+Dataset: Sim_Warehouse | Training Task: Depth + Semantic + Normals | Primary Task: Depth + Semantic + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Data sanity check. RGB.shape: torch.Size([4, 3, 360, 640]),	Depth.shape torch.Size([4, 1, 360, 640]),        	Semantic.shape torch.Size([4, 1, 720, 1280]),	Normals.shape torch.Size([4, 3, 360, 640])
+  0%|                                                                                                                                                                            | 0/480 [00:00<?, ?it/s]/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py:3635: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode)
+  0%|                                                                                                                                                                            | 0/480 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 624, in <module>
+    training(opt)
+  File "train_model.py", line 329, in training
+    train_loss = [compute_loss_ole(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
+  File "train_model.py", line 329, in <listcomp>
+    train_loss = [compute_loss_ole(train_pred[i], train_target[task_id], task_id) for i, task_id in enumerate(train_tasks)]
+  File "/home/dim/mdpi_robotics/mtl-world/utils.py", line 165, in compute_loss_ole
+    loss = F.cross_entropy(pred, gt, ignore_index=-1)
+  File "/home/dim/anaconda3/envs/pytorchenv/lib/python3.7/site-packages/torch/nn/functional.py", line 2846, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: only batches of spatial targets supported (3D tensors) but got targets of size: : [4, 1, 720, 1280]

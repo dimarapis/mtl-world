@@ -107,8 +107,8 @@ def training(opt):
     if opt.network.tasks == 'all':
             
         if opt.data.dataset == 'sim_warehouse':
-            train_tasks = {'depth': 1, 'semantic': 23, 'normals': 3}
-            pri_tasks = {'depth': 1, 'semantic': 23, 'normals': 3}
+            train_tasks = {'semantic': 23, 'depth': 1, 'normals': 3}
+            pri_tasks = {'semantic': 23, 'depth': 1, 'normals': 3}
         elif opt.data.dataset == 'nyuv2':
             train_tasks = {'semantic': 13, 'depth': 1 , 'normals': 3}
             pri_tasks = {'semantic': 13, 'depth': 1, 'normals': 3}
@@ -317,7 +317,17 @@ def training(opt):
             image = multitaskdata['rgb'].to(device)
             #print(multitaskdata)
             train_target = {task_id: multitaskdata[task_id].to(device) for task_id in train_tasks.keys()}
+            #print(train_target)
+            import torchvision.transforms.functional as ttf
 
+            #if gt.shape[2] == 720:
+            semantic_gt = multitaskdata['semantic'].to(device)
+            resized_semantic_gt = ttf.resize(semantic_gt, size=(360,640)).squeeze(1)
+            #print(pred.shape,gt.shape)
+            #gt = gt.squeeze(1)
+            #print(pred.shape,gt.shape)
+
+            train_target['semantic'] = resized_semantic_gt
             optimizer.zero_grad()
             #print(image.shape)
             train_pred = model(image)

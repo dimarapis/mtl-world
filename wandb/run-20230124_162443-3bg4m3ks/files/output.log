@@ -1,0 +1,11 @@
+
+DDRNetMTL_Split
+Dataset: Sim_Warehouse | Training Task: Depth + Semantic + Normals | Primary Task: Depth + Semantic + Normals in Multi-task / Auxiliary Learning Mode with DDRNET
+Applying Multi-task Methods: Weighting-based: Equal + Gradient-based: None
+STEP. Loading datasets...
+Traceback (most recent call last):
+  File "train_model.py", line 624, in <module>
+    training(opt)
+  File "train_model.py", line 228, in training
+    dataset_path = os.path.joint(opt.data.path,opt.data.dataset)
+AttributeError: module 'posixpath' has no attribute 'joint'

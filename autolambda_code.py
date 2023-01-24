@@ -202,9 +202,18 @@ class SimWarehouse(data.Dataset):
             #print(semantic.shape)
             #semantic_resized = torch.nn.functional.interpolate(semantic, size=(360,640), mode='interpolate', align_corners=True)
             #semantic_resized = transforms_f.resize(semantic, (360,640), Image.NEAREST)
+            #semantic_resized = semantic.squeeze(1)
+            #semantic_resized = torch.nn.functional.interpolate(semantic, size=(360,640), mode='interpolate', align_corners=True)
+            #print(semantic_resized.shape)
+
+
+            #t = torch.randn([5, 1, 44, 44])
+            #if semantic.shape[1] == 720:
+            
+            data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
                 
 
-            data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
+            #data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
             #data_dict = DataTransform(crop_size=[360, 640])(data_dict)
             
             #data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic, 'normals': normal}# 'noise': noise}
@@ -254,7 +263,6 @@ class SimWarehouse(data.Dataset):
             noise = self.noise[index].float()
 
             semantic_resized = semantic.squeeze(1)
-            print(semantic_resized.shape)
             semantic_resized = torch.nn.functional.interpolate(semantic_resized, size=(360,640), mode='interpolate', align_corners=True)
             data_dict = {'file': file, 'rgb': image, 'depth': depth, 'semantic': semantic_resized, 'normals': normal}# 'noise': noise}
             #print(image)
